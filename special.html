@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>SPECIAL | Karen Serubia</title>
+  
+    <script src="js/main.js" defer></script>
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/motion.css">
+    <link rel="stylesheet" href="css/special.css">
+  </head>
+
+<body class="special-page">
+
+  <!-- HEADER -->
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Karen Serubia home">
+    <span class="brand-moon" aria-hidden="true">☾</span>
+    <span class="brand-copy">
+      <span class="brand-name">Karen Serubia</span>
+      <span class="brand-tagline">THE MOONLIT SANCTUARY</span>
+    </span>
+  </a>
+
+  <button class="menu-toggle" type="button"
+    aria-label="メニューを開く"
+    aria-expanded="false"
+    aria-controls="global-nav">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="global-nav" id="global-nav" aria-label="メインメニュー">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="family.html">FAMILY</a>
+    <a href="schedule.html">SCHEDULE</a>
+    <a href="memories.html">MEMORIES</a>
+    <a href="letter.html">LETTER</a>
+    <a href="music.html">MUSIC</a>
+    <a href="special.html" class="active">SPECIAL</a>
+  </nav>
+</header>
+
+
+  <main>
+
+    <!-- 01. THE GATE -->
+    <section class="special-gate">
+
+      <div class="gate-frame">
+   <!-- THE WORLD BEYOND THE GATE -->
+      <div class="gate-world" aria-hidden="true">
+        <img
+          src="images/special/boundary-garden.png"
+          alt=""
+          class="gate-world-image"
+        >
+      </div>
+        <div class="gate-content">
+
+          <p class="eyebrow">WELCOME TO THE SECRET GARDEN</p>
+
+          <h1>The Secret Garden</h1>
+
+          <div class="gate-moon">☾</div>
+
+          <h2>月夜にだけ開かれる、秘密の庭。</h2>
+
+          <p class="gate-description">
+            月明かりに導かれたあなたへ。<br>
+            この庭の奥にある物語を、どうぞご覧ください。
+          </p>
+
+          <button class="gate-button" id="open-gate" type="button">
+            <span>OPEN THE GATE</span>
+            <span class="gate-arrow">→</span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+<!-- 02. GARDEN LETTER -->
+<section class="garden-letter" id="garden-letter">
+
+    <div class="special-section-inner">
+  
+      <p class="eyebrow">A MESSAGE FROM KAREN</p>
+  
+      <h2>Garden Letter</h2>
+  
+      <!-- 封筒 -->
+      <div class="envelope-area" id="envelope-area">
+  
+        <p class="envelope-guide">
+          A LETTER FOR YOU
+        </p>
+  
+        <button
+          type="button"
+          class="envelope-button"
+          id="envelope-trigger"
+          aria-label="カレンからの手紙を開く"
+          aria-controls="letter-content"
+          aria-expanded="false"
+        >
+          <img
+            src="images/special/garden-envelope.png"
+            alt="三日月と蝶の封蝋が施されたカレンからの手紙"
+          >
+          <span class="envelope-open-text">
+            OPEN THE LETTER
+          </span>
+        </button>
+  
+      </div>
+  
+      <!-- 手紙本文 -->
+      <div class="letter-content" id="letter-content" hidden>
+  
+        <div class="letter-paper">
+            <img
+              src="images/special/moonlight-ivy.png"
+              alt=""
+              class="letter-ivy">
+
+            <div class="letter-seal">
+                <span>☾</span>
+                <img
+                  src="images/special/stained-glass-butterfly.png"
+                  alt=""
+                  class="letter-butterfly"
+                >
+              </div>
+  
+          <h3>Dear Visitor,</h3>
+  
+          <p>ようこそ、秘密の庭へ。</p>
+  
+          <p>
+            ここは、月明かりの下でだけ出逢える、<br>
+            小さな物語の庭。
+          </p>
+  
+          <p>
+            日々の喧騒から少し離れて、<br>
+            どうかゆっくりと歩いてみてください。
+          </p>
+  
+          <p>
+            この庭に咲く花も、隠された記憶も、<br>
+            あなたとの出逢いを待っていました。
+          </p>
+  
+          <p>
+            今宵のひとときが、あなたにとって<br>
+            特別なものになりますように。
+          </p>
+  
+          <p class="letter-signature">
+            With love, Karen
+          </p>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </section>
+  
+
+
+    <!-- 03. SECRET ARCHIVE -->
+    <section class="secret-archive">
+
+      <div class="special-section-inner">
+
+        <p class="eyebrow">THE ARCHIVE OF SECRETS</p>
+
+        <h2>Secret Archive</h2>
+
+        <p class="section-description">
+          この庭に残された、特別な記録たち。
+        </p>
+
+        <div class="archive-grid">
+
+  <!-- SPECIAL NOTICE -->
+  <button type="button" class="archive-card" data-archive="notice">
+
+    <p class="archive-category">SPECIAL NOTICE</p>
+
+    <h3>月夜の庭からの<br>お知らせ</h3>
+
+    <span class="archive-status">PUBLIC</span>
+
+    <span class="archive-arrow">↗</span>
+
+  </button>
+
+  <!-- MEMORIAL CONTENT -->
+  <button type="button" class="archive-card" data-archive="memorial">
+
+    <p class="archive-category">MEMORIAL CONTENT</p>
+
+    <h3>一周年の記憶を<br>辿って</h3>
+
+    <span class="archive-status">PUBLIC</span>
+
+    <span class="archive-arrow">↗</span>
+
+  </button>
+
+  <!-- FAMILY PROJECT -->
+  <button type="button" class="archive-card" data-archive="family">
+
+    <p class="archive-category">FAMILY PROJECT</p>
+
+    <h3>次の企画に<br>ついて</h3>
+
+    <span class="archive-status">COMING SOON</span>
+
+    <span class="archive-arrow">↗</span>
+
+  </button>
+
+</div>
+
+
+
+      </div>
+
+    </section>
+
+
+    <!-- 04. HIDDEN ROOM -->
+    <section class="hidden-room">
+
+      <div class="special-section-inner">
+
+        <p class="eyebrow">BEYOND THE GARDEN</p>
+
+        <h2>The Hidden Room</h2>
+
+        <p class="section-description">
+          まだ知られていない、もうひとつの物語。
+        </p>
+
+        <a href="hidden-room.html" class="hidden-room-link">
+
+          <div class="hidden-room-content">
+
+            <span class="hidden-room-symbol">☾</span>
+
+            <h3>Enter the Hidden Room</h3>
+
+            <p>
+              秘密の扉の向こうへ。
+            </p>
+
+            <span class="hidden-room-arrow">DISCOVER MORE →</span>
+
+          </div>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- 05. LAST MESSAGE -->
+    <section class="special-ending">
+
+      <div class="special-section-inner">
+
+        <p class="eyebrow">UNTIL WE MEET AGAIN</p>
+
+        <div class="ending-moon">☾</div>
+
+        <h2>Until We Meet Again</h2>
+
+        <p>
+          月の光が届く夜に、またこの庭で逢いましょう。
+        </p>
+
+        <p>
+          この場所に残した記憶が、<br>
+          あなたの心にも咲き続けますように。
+        </p>
+
+        <a href="index.html" class="back-home">
+          BACK TO HOME ↑
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- SECRET ARCHIVE MODAL -->
+  <div class="archive-modal" id="archive-modal" aria-hidden="true">
+
+    <div class="archive-modal-backdrop" data-close-archive></div>
+
+    <div
+      class="archive-modal-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="archive-modal-title"
+    >
+
+      <button
+        type="button"
+        class="archive-modal-close"
+        id="archive-modal-close"
+        aria-label="閉じる"
+      >
+        ×
+      </button>
+
+      <p class="eyebrow" id="archive-modal-category">
+        SPECIAL NOTICE
+      </p>
+
+      <h2 id="archive-modal-title">
+        月夜の庭からのお知らせ
+      </h2>
+
+      <div class="archive-modal-divider">☾ ✧ ☽</div>
+
+      <div class="archive-modal-body" id="archive-modal-body">
+        <p>ここに記録が表示されます。</p>
+      </div>
+
+      <p class="archive-modal-signature">
+        With love, Karen
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="about-footer">
+
+    <p>
+      © Karen Serubia — THE MOONLIT SANCTUARY
+    </p>
+
+    <a href="index.html">
+      BACK TO HOME ↑
+    </a>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="js/motion.js"></script>
+  <script src="js/special.js"></script>
+
+</body>
+</html>

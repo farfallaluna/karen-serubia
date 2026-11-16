@@ -1,0 +1,424 @@
+/* ========================================
+   WORDS OF MOONLIGHT
+   Karen Serubia
+======================================== */
+
+.words-page {
+    background: #090b1b;
+    color: #eee8f8;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.words-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 28px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.words-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #f0e5ff;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.words-logo span:first-child {
+    font-size: 30px;
+    color: #d7b9ff;
+}
+
+.words-header nav {
+    display: flex;
+    gap: 30px;
+}
+
+.words-header nav a {
+    color: #d7cce8;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 2px;
+    transition: color .3s ease;
+}
+
+.words-header nav a:hover {
+    color: #d6b3ff;
+}
+
+/* HERO */
+.words-hero {
+    min-height: 780px;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 24px 80px;
+    box-sizing: border-box;
+    background:
+        radial-gradient(ellipse at 50% 35%, rgba(100, 79, 150, .28), transparent 48%),
+        linear-gradient(180deg, #11132d 0%, #17152f 55%, #090b1b 100%);
+}
+
+.words-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 25%, rgba(255,255,255,.65) 1px, transparent 2px),
+        radial-gradient(circle at 80% 20%, rgba(211,190,255,.6) 1px, transparent 2px),
+        radial-gradient(circle at 70% 75%, rgba(255,255,255,.5) 1px, transparent 2px),
+        radial-gradient(circle at 25% 80%, rgba(255,255,255,.4) 1px, transparent 2px);
+    background-size: 240px 240px;
+    pointer-events: none;
+}
+
+.words-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+}
+
+.words-eyebrow {
+    display: block;
+    color: #c8a9ec;
+    font-size: 10px;
+    letter-spacing: 5px;
+    margin-bottom: 28px;
+}
+
+.words-moon {
+    color: #e3caff;
+    font-size: 76px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 35px rgba(206, 171, 255, .65);
+}
+
+.words-hero h1 {
+    color: #f4eaff;
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(38px, 7vw, 76px);
+    letter-spacing: 3px;
+    margin: 0 0 25px;
+}
+
+.words-hero h2 {
+    color: #d8c3ef;
+    font-size: clamp(15px, 2vw, 20px);
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.words-hero-content > p {
+    color: #c5bad8;
+    font-size: 13px;
+    line-height: 2.6;
+    letter-spacing: 2px;
+}
+
+.words-scroll {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 55px;
+    color: #d5c2ed;
+    text-decoration: none;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.words-scroll span {
+    font-size: 20px;
+}
+
+/* COMMON SECTION */
+.words-intro,
+.words-philosophy {
+    padding: 120px 8%;
+}
+
+.words-section-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.words-section-heading .words-eyebrow {
+    margin-bottom: 18px;
+}
+
+.words-section-heading h2 {
+    color: #eee1ff;
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0 0 18px;
+}
+
+.words-section-heading > p {
+    color: #b9a9cd;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+/* INTRO */
+.words-intro {
+    background:
+        radial-gradient(ellipse at 50% 50%, rgba(79, 64, 119, .2), transparent 65%),
+        #0b0d20;
+}
+
+.words-intro-text {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    color: #d4c8e4;
+    font-size: 14px;
+    line-height: 2.8;
+    letter-spacing: 1.5px;
+}
+
+.words-intro-text p {
+    margin-bottom: 25px;
+}
+
+.words-signature {
+    margin-top: 45px;
+    color: #d2b2f2;
+    font-family: Georgia, serif;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+/* PHILOSOPHY */
+.words-philosophy {
+    background:
+        linear-gradient(180deg, #0b0d20, #121329 50%, #0b0d20);
+}
+
+.philosophy-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.philosophy-card {
+    position: relative;
+    padding: 48px 38px;
+    min-height: 310px;
+    box-sizing: border-box;
+    text-align: center;
+    background: linear-gradient(145deg, rgba(91, 75, 132, .22), rgba(24, 24, 52, .5));
+    border: 1px solid rgba(205, 174, 240, .22);
+    transition: transform .4s ease, border-color .4s ease, box-shadow .4s ease;
+}
+
+.philosophy-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(219, 190, 255, .65);
+    box-shadow: 0 12px 40px rgba(123, 89, 177, .16);
+}
+
+.philosophy-number {
+    position: absolute;
+    top: 18px;
+    left: 22px;
+    color: #9c86bb;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.philosophy-symbol {
+    color: #d8b8ff;
+    font-size: 38px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(211, 176, 255, .35);
+}
+
+.philosophy-card h3 {
+    color: #eee2ff;
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0 0 12px;
+}
+
+.philosophy-japanese {
+    color: #c5a5e9;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.philosophy-card > p:last-child {
+    color: #c3b8d3;
+    font-size: 12px;
+    line-height: 2.4;
+    letter-spacing: 1px;
+}
+
+/* QUOTE */
+.words-quote {
+    padding: 140px 24px;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at center, rgba(99, 75, 143, .3), transparent 65%),
+        #101126;
+}
+
+.words-quote-inner {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.quote-moon {
+    color: #e0c5ff;
+    font-size: 54px;
+    margin: 25px 0;
+    text-shadow: 0 0 30px rgba(208, 172, 255, .55);
+}
+
+.words-quote blockquote {
+    margin: 0;
+    color: #f1e5ff;
+    font-size: clamp(21px, 4vw, 34px);
+    line-height: 2.1;
+    letter-spacing: 3px;
+}
+
+.words-quote-inner > p {
+    color: #bcaed0;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    line-height: 2.2;
+    margin-top: 35px;
+}
+
+/* ENDING */
+.words-ending {
+    padding: 120px 24px;
+    text-align: center;
+    background: linear-gradient(180deg, #101126, #080a18);
+}
+
+.words-ending-inner {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.ending-moon {
+    color: #d9baff;
+    font-size: 52px;
+    margin-bottom: 25px;
+    text-shadow: 0 0 25px rgba(210, 174, 255, .5);
+}
+
+.words-ending h2 {
+    color: #eee2ff;
+    font-family: Georgia, serif;
+    font-size: clamp(28px, 5vw, 43px);
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.words-ending p {
+    color: #c4b8d5;
+    font-size: 13px;
+    letter-spacing: 2px;
+    line-height: 2.4;
+    margin-bottom: 45px;
+}
+
+.words-ending a {
+    color: #d5b8f3;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 3px;
+    transition: color .3s ease;
+}
+
+.words-ending a:hover {
+    color: #fff;
+}
+
+/* FOOTER */
+.words-footer {
+    padding: 25px 15px;
+    text-align: center;
+    background: #080a18;
+    border-top: 1px solid rgba(200, 170, 235, .12);
+}
+
+.words-footer p {
+    color: #9386a7;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+
+    .words-header {
+        padding: 20px 5%;
+    }
+
+    .words-logo {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .words-header nav {
+        gap: 12px;
+    }
+
+    .words-header nav a {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .words-hero {
+        min-height: 680px;
+    }
+
+    .words-intro,
+    .words-philosophy {
+        padding: 90px 7%;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .philosophy-card {
+        min-height: auto;
+        padding: 45px 25px;
+    }
+
+    .words-quote {
+        padding: 100px 25px;
+    }
+
+    .words-ending {
+        padding: 90px 20px;
+    }
+}

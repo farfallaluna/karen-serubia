@@ -1,0 +1,785 @@
+/* =================================
+   KAREN SERUBIA - ABOUT PAGE
+================================= */
+
+.about-page {
+    margin: 0;
+    color: #f4edf9;
+    background: #090d20;
+    font-family: "Noto Serif JP", "Yu Mincho", serif;
+    overflow-x: hidden;
+  }
+  
+  .about-page * {
+    box-sizing: border-box;
+  }
+  
+  .about-page a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+
+  /* COMMON */
+  
+  .section-wrap {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+  }
+  
+  .eyebrow {
+    color: #d9b77f;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+  }
+  
+  .moon-divider {
+    margin: 24px 0;
+    color: #e7c58e;
+    font-size: 23px;
+    text-align: center;
+  }
+  
+  
+  /* INTRODUCTION */
+  
+  .about-hero {
+    position: relative;
+    min-height: 650px;
+    display: grid;
+    place-items: center;
+    padding: 100px 20px;
+    text-align: center;
+    background:
+      linear-gradient(
+        rgba(8, 12, 31, 0.48),
+        rgba(8, 12, 31, 0.78)
+      ),
+      url("../images/moon-clouds.png") center / cover no-repeat;
+  }
+  
+  .about-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(
+        circle at 50% 40%,
+        transparent 10%,
+        rgba(7, 10, 28, 0.35) 100%
+      );
+  }
+  
+  .about-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+  }
+  
+  .about-hero h1 {
+    margin: 28px 0;
+    color: #f6e9e9;
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 6vw, 72px);
+    font-weight: normal;
+    line-height: 1.25;
+    text-shadow: 0 0 25px rgba(183, 139, 255, 0.35);
+  }
+  
+  .about-hero h2 {
+    font-size: clamp(19px, 3vw, 27px);
+    font-weight: normal;
+    letter-spacing: 3px;
+  }
+  
+  .hero-description {
+    margin-top: 35px;
+    color: #e2d8e9;
+    font-size: 15px;
+    line-height: 2.4;
+  }
+  
+  .scroll-label {
+    margin-top: 70px;
+    color: #cbb38e;
+    font-family: Georgia, serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+  
+  .scroll-line {
+    display: block;
+    width: 1px;
+    height: 45px;
+    margin: 12px auto 0;
+    background: linear-gradient(#e7c58e, transparent);
+  }
+  
+  
+  /* PROFILE */
+  
+  .profile-section {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.85fr) 1.15fr;
+    align-items: center;
+    gap: 75px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  
+  .profile-image {
+    position: relative;
+  }
+  
+  .profile-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center 25%;
+    border: 1px solid rgba(221, 190, 145, 0.55);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  }
+  
+  .image-caption {
+    display: block;
+    margin-top: 12px;
+    color: #cbb38e;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  
+  .profile-content h2 {
+    margin: 20px 0;
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: normal;
+    line-height: 1.35;
+  }
+  
+  .profile-message {
+    color: #d8d2e0;
+    font-size: 14px;
+    line-height: 2.2;
+  }
+  
+  .profile-data {
+    margin-top: 35px;
+    border-top: 1px solid rgba(221, 190, 145, 0.4);
+  }
+  
+  .profile-data div {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 15px;
+    padding: 17px 5px;
+    border-bottom: 1px solid rgba(221, 190, 145, 0.25);
+  }
+  
+  .profile-data dt {
+    color: #d9b77f;
+    font-family: Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+  
+  .profile-data dd {
+    margin: 0;
+    color: #f1eaf4;
+    font-size: 14px;
+  }
+  
+  
+  /* BRAND STORY */
+  
+  .story-section {
+    padding: 110px 7%;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(12, 10, 32, 0.9),
+        rgba(12, 10, 32, 0.82)
+      ),
+      url("../images/starfield.png") center / cover no-repeat;
+    border-top: 1px solid rgba(221, 190, 145, 0.2);
+    border-bottom: 1px solid rgba(221, 190, 145, 0.2);
+  }
+  
+  .story-inner {
+    width: min(1050px, 100%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.35fr 1fr;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .story-initial {
+    color: rgba(173, 119, 206, 0.75);
+    font-family: Georgia, serif;
+    font-size: clamp(150px, 22vw, 260px);
+    font-weight: normal;
+    text-align: center;
+    line-height: 1;
+  }
+  
+  .story-content h2 {
+    margin: 20px 0 35px;
+    font-size: clamp(24px, 4vw, 38px);
+    font-weight: normal;
+    letter-spacing: 2px;
+  }
+  
+  .story-content > p:not(.eyebrow):not(.story-english) {
+    color: #ded5e6;
+    font-size: 14px;
+    line-height: 2.5;
+  }
+  
+  .story-english {
+    margin-top: 45px;
+    color: #e7c5e8;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-style: italic;
+    text-align: center;
+  }
+  
+  
+  /* ACTIVITIES */
+  
+  .activities-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  
+  .section-heading {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .section-heading h2 {
+    margin: 15px 0;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: normal;
+  }
+  
+  .section-heading > p:last-child {
+    color: #c9bfd2;
+    font-size: 13px;
+  }
+  
+  .activity-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  
+  .activity-card {
+    min-height: 230px;
+    padding: 30px 20px;
+    text-align: center;
+    background: linear-gradient(
+      145deg,
+      rgba(48, 37, 76, 0.8),
+      rgba(15, 20, 43, 0.9)
+    );
+    border: 1px solid rgba(221, 190, 145, 0.3);
+    transition:
+      transform 0.4s ease,
+      border-color 0.4s ease,
+      background 0.4s ease;
+  }
+  
+  .activity-card:hover {
+    transform: translateY(-7px);
+    border-color: #d9b77f;
+    background: rgba(75, 52, 104, 0.8);
+  }
+  
+  .activity-icon {
+    color: #d9b77f;
+    font-size: 30px;
+  }
+  
+  .activity-card h3 {
+    margin: 18px 0 12px;
+    color: #e8d3b0;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  
+  .activity-card p {
+    color: #d1c8dc;
+    font-size: 12px;
+    line-height: 2;
+  }
+  
+  
+  /* FINAL MESSAGE */
+  
+  .final-section {
+    position: relative;
+    padding: 120px 20px;
+    text-align: center;
+    background:
+      linear-gradient(
+        rgba(8, 12, 31, 0.68),
+        rgba(8, 12, 31, 0.83)
+      ),
+      url("../images/moon-water.png") center / cover no-repeat;
+  }
+  
+  .final-content {
+    max-width: 750px;
+    margin: auto;
+  }
+  
+  .final-content h2 {
+    margin: 25px 0;
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 5vw, 52px);
+    font-weight: normal;
+    line-height: 1.4;
+  }
+  
+  .final-content > p:not(.eyebrow):not(.signature) {
+    color: #e1d8e8;
+    font-size: 14px;
+    line-height: 2.5;
+  }
+  
+  .signature {
+    margin-top: 50px;
+    color: #e7c58e;
+    font-family: Georgia, serif;
+    font-size: 26px;
+    font-style: italic;
+  }
+  
+  
+  /* FOOTER */
+  
+  .about-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px 5%;
+    background: #080b19;
+    border-top: 1px solid rgba(221, 190, 145, 0.3);
+  }
+  
+  .about-footer p,
+  .about-footer a {
+    color: #b9a9c6;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+  
+  
+  /* TABLET */
+  
+  @media (max-width: 900px) {
+  
+    .profile-section {
+      gap: 35px;
+    }
+  
+    .activity-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  
+  /* MOBILE */
+  
+  @media (max-width: 600px) {
+    .about-hero {
+      min-height: 570px;
+      padding: 80px 20px;
+    }
+  
+    .about-hero h1 {
+      font-size: 39px;
+    }
+  
+    .hero-description {
+      font-size: 13px;
+    }
+  
+    .profile-section {
+      grid-template-columns: 1fr;
+      gap: 45px;
+      padding-top: 75px;
+      padding-bottom: 75px;
+    }
+  
+    .profile-image {
+      width: min(85%, 360px);
+      margin: auto;
+    }
+  
+    .profile-content h2 {
+      font-size: 34px;
+    }
+  
+    .profile-data div {
+      grid-template-columns: 100px 1fr;
+      gap: 10px;
+    }
+  
+    .profile-data dd {
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+  
+    .story-section {
+      padding: 75px 7%;
+    }
+  
+    .story-inner {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  
+    .story-initial {
+      font-size: 130px;
+    }
+  
+    .story-content h2 {
+      font-size: 25px;
+    }
+  
+    .story-content > p:not(.eyebrow):not(.story-english) {
+      font-size: 13px;
+    }
+  
+    .activities-section {
+      padding-top: 75px;
+      padding-bottom: 75px;
+    }
+  
+    .section-heading h2 {
+      font-size: 34px;
+    }
+  
+    .activity-grid {
+      gap: 10px;
+    }
+  
+    .activity-card {
+      min-height: 205px;
+      padding: 22px 12px;
+    }
+  
+    .activity-card p {
+      font-size: 11px;
+    }
+  
+    .final-section {
+      padding: 85px 20px;
+    }
+  
+    .final-content > p:not(.eyebrow):not(.signature) {
+      font-size: 12px;
+    }
+  
+    .about-footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  
+  /* MOTION ACCESSIBILITY */
+  
+  @media (prefers-reduced-motion: reduce) {
+    .about-page *,
+    .about-page *::before,
+    .about-page *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+/* =========================
+   Scroll Reveal Animation
+========================= */
+
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+      opacity 1.2s ease,
+      transform 1.2s cubic-bezier(.22, 1, .36, 1);
+  }
+  
+  [data-reveal="left"] {
+    transform: translateX(-45px);
+  }
+  
+  [data-reveal="right"] {
+    transform: translateX(45px);
+  }
+  
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  
+  /* Activity cards */
+  .activity-card {
+    transition:
+      opacity 1s ease,
+      transform 1s ease,
+      box-shadow .5s ease;
+  }
+  
+  .activity-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(150, 100, 255, .2);
+  }
+  
+  /* Motion accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+  /* Activitiesカードを順番に表示 */
+.activity-card[data-reveal]:nth-child(1) {
+    transition-delay: 0s;
+  }
+  
+  .activity-card[data-reveal]:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  
+  .activity-card[data-reveal]:nth-child(3) {
+    transition-delay: 0.4s;
+  }
+  
+  .activity-card[data-reveal]:nth-child(4) {
+    transition-delay: 0.6s;
+  }
+  /* ABOUT：雲に差し込む月光 */
+.about-hero {
+    position: relative;
+    isolation: isolate;
+  }
+  
+  .about-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+  
+    background:
+      radial-gradient(
+        ellipse at 30% 42%,
+        rgba(190, 175, 255, 0.30),
+        transparent 48%
+      ),
+      radial-gradient(
+        ellipse at 75% 35%,
+        rgba(150, 175, 255, 0.25),
+        transparent 45%
+      );
+  
+    animation: cloudMoonGlow 8s ease-in-out infinite alternate;
+  }
+  
+  @keyframes cloudMoonGlow {
+    from {
+      opacity: 0.45;
+      filter: blur(8px);
+    }
+  
+    to {
+      opacity: 1;
+      filter: blur(18px);
+    }
+  }
+
+/* =====================================
+   ACTIVITIES - EXPANDABLE CARDS
+===================================== */
+
+.activity-grid {
+  align-items: start;
+}
+
+.activity-card {
+  overflow: hidden;
+  padding: 0;
+  border-radius: 5px;
+  background: linear-gradient(
+    145deg,
+    rgba(48, 37, 76, 0.85),
+    rgba(15, 20, 43, 0.95)
+  );
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.5s ease;
+}
+
+.activity-card:hover {
+  transform: none;
+  border-color: rgba(217, 183, 127, 0.8);
+  box-shadow: 0 10px 35px rgba(150, 100, 255, 0.16);
+}
+
+/* カードのクリック部分 */
+
+.activity-trigger {
+  display: flex;
+  width: 100%;
+  min-height: 230px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+
+.activity-trigger h3 {
+  margin: 18px 0 12px;
+  color: #e8d3b0;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.activity-trigger p {
+  color: #d1c8dc;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.activity-open {
+  margin-top: 18px;
+  color: #d9b77f;
+  font-family: Georgia, serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  transition: letter-spacing 0.3s ease;
+}
+
+.activity-trigger:hover .activity-open {
+  letter-spacing: 3px;
+}
+
+/* 展開エリア */
+
+.activity-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: center;
+  padding: 0 25px 28px;
+  animation: activityReveal 0.6s ease both;
+}
+
+.activity-detail[hidden] {
+  display: none;
+}
+
+.activity-detail img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid rgba(221, 190, 145, 0.45);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.activity-detail-text h4 {
+  margin: 12px 0;
+  color: #ead6ae;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.activity-detail-text p:last-child {
+  color: #d8d2e0;
+  font-size: 13px;
+  line-height: 2.2;
+}
+
+.activity-detail-text .eyebrow {
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.activity-card.is-open {
+  grid-column: 1 / -1;
+  border-color: rgba(217, 183, 127, 0.75);
+  box-shadow:
+    0 0 20px rgba(174, 139, 255, 0.12),
+    0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes activityReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* スマートフォン */
+
+@media (max-width: 600px) {
+  .activity-detail {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0 18px 22px;
+  }
+
+  .activity-detail img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .activity-trigger {
+    min-height: 205px;
+    padding: 22px 12px;
+  }
+}
+
+/* モーション軽減 */
+
+@media (prefers-reduced-motion: reduce) {
+  .activity-detail {
+    animation: none;
+  }
+}
+/* PROFILE：文字を中央揃えに */
+.profile-content {
+  text-align: center;
+}
+
+.profile-data dt,
+.profile-data dd {
+  text-align: center;
+}

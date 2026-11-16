@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>MUSIC | Karen Serubia</title>
+  
+    <script src="js/main.js" defer></script>
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/motion.css">
+    <link rel="stylesheet" href="css/music.css">
+  </head>
+
+<body class="music-page">
+  <div class="moon-mist" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Karen Serubia home">
+    <span class="brand-moon" aria-hidden="true">☾</span>
+    <span class="brand-copy">
+      <span class="brand-name">Karen Serubia</span>
+      <span class="brand-tagline">THE MOONLIT SANCTUARY</span>
+    </span>
+  </a>
+
+  <button class="menu-toggle" type="button"
+    aria-label="メニューを開く"
+    aria-expanded="false"
+    aria-controls="global-nav">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="global-nav" id="global-nav" aria-label="メインメニュー">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="family.html">FAMILY</a>
+    <a href="schedule.html">SCHEDULE</a>
+    <a href="memories.html">MEMORIES</a>
+    <a href="letter.html">LETTER</a>
+    <a href="music.html" class="active">MUSIC</a>
+    <a href="special.html">SPECIAL</a>
+  </nav>
+</header>
+
+
+  <main>
+
+    <!-- 01. MUSIC HERO -->
+    <section class="music-hero">
+
+      <div class="music-hero-inner">
+
+        <p class="eyebrow">KAREN'S MUSIC ROOM</p>
+
+        <h1>Melodies in the Moonlight</h1>
+
+        <div class="moon-divider">☾</div>
+
+        <h2>月明かりにほどける音色</h2>
+
+        <p class="hero-description">
+          この歌が、あなたの帰り道を照らせますように。
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- 02. MUSIC CONTENT -->
+    <section class="music-content section-wrap">
+
+      <div class="music-layout">
+
+        <!-- PLAYLIST -->
+        <div class="music-playlist">
+
+          <div class="music-section-heading">
+            <p class="eyebrow">ORIGINAL MUSIC</p>
+
+            <h2>Songs from Karen's world</h2>
+
+            <p>
+              Karen Serubiaの世界で生まれた、オリジナル楽曲たち。
+            </p>
+          </div>
+
+
+          <!-- TRACK LIST -->
+          <div class="track-list" id="track-list">
+            <!-- JavaScriptで楽曲を生成 -->
+          </div>
+
+        </div>
+
+
+        <!-- DECORATION -->
+        <div class="music-decoration">
+          <img
+            src="images/music/music-room.png"
+            alt="Karen's Moonlit Music Room"
+          >
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 03. MUSIC POLICY -->
+    <section class="music-policy">
+
+      <div class="music-policy-inner">
+
+        <p class="eyebrow">MUSIC POLICY</p>
+
+        <h2>音楽を大切にするために</h2>
+
+        <div class="moon-divider">☾</div>
+
+        <p>
+          掲載楽曲はKaren Serubiaのオリジナル作品です。
+          無断転載・再配布・無断利用を禁止します。
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- 04. MUSIC PLAYER -->
+  <div class="music-player" id="music-player">
+
+    <div class="player-track-info">
+
+      <div class="player-cover" id="player-cover">
+        <img
+          id="player-cover-image"
+          src=""
+          alt="Now Playing"
+        >
+      </div>
+      
+
+      <div class="player-track-text">
+        <p id="player-title">Select a Song</p>
+        <span id="player-artist">Karen Serubia</span>
+      </div>
+
+    </div>
+
+
+    <div class="player-controls">
+
+      <button id="prev-track" type="button" aria-label="Previous">
+        |◀
+      </button>
+
+      <button id="play-toggle" type="button" aria-label="Play">
+        ▶
+      </button>
+
+      <button id="next-track" type="button" aria-label="Next">
+        ▶|
+      </button>
+
+    </div>
+
+
+    <div class="player-progress">
+
+      <span id="current-time">0:00</span>
+
+      <input
+        type="range"
+        id="seek-bar"
+        min="0"
+        max="100"
+        value="0"
+        aria-label="Playback position"
+      >
+
+      <span id="duration">0:00</span>
+
+    </div>
+
+
+    <div class="player-volume">
+
+      <span>♪</span>
+
+      <input
+        type="range"
+        id="volume-bar"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0.7"
+        aria-label="Volume"
+      >
+
+    </div>
+
+  </div>
+
+
+  <!-- AUDIO -->
+  <audio id="audio-element" preload="metadata"></audio>
+
+
+  <!-- FOOTER -->
+  <footer class="about-footer">
+
+    <p>
+      © Karen Serubia — THE MOONLIT SANCTUARY
+    </p>
+
+    <a href="index.html">
+      BACK TO HOME ↑
+    </a>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="js/motion.js"></script>
+  <script src="js/music-data.js"></script>
+  <script src="js/music.js"></script>
+  <script src="js/music-scroll.js"></script>
+</body>
+</html>

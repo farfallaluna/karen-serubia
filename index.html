@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script>
+    try {
+      if (sessionStorage.getItem("bookOpeningPlayed")) {
+        document.documentElement.classList.add("book-opening-skip");
+      }
+    } catch (error) {
+      // sessionStorageが使えない場合は通常表示
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101329">
+  <meta name="description" content="Karen Serubia — THE MOONLIT SANCTUARY">
+  <title>Karen Serubia｜THE MOONLIT SANCTUARY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/motion.css">
+  <link rel="stylesheet" href="css/book-opening.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/book-opening.js" defer></script>
+</head>
+<body>
+
+<!-- BOOK OPENING -->
+<div class="book-opening" id="book-opening" aria-label="物語の扉を開いています">
+  <div class="book-scene">
+    <div class="book-light"></div>
+
+    <div class="storybook" id="storybook">
+
+      <!-- 表紙の下に最初から存在するページ -->
+<div class="book-pages">
+  <div class="spread-page spread-left"></div>
+  <div class="spread-page spread-right"></div>
+</div>
+
+<!-- 見開きページに浮かび上がるメッセージ -->
+<div class="book-message">
+  <p>ここから先は、</p>
+  <p>あなたと私だけの秘密。</p>
+  <span>✧ THE MOONLIT SANCTUARY ✧</span>
+</div>
+
+<!-- ページの厚み -->
+<div class="book-pages-edge"></div>
+
+      <!-- 表紙 -->
+      <div class="book-cover">
+        <div class="cover-decoration">
+          <span class="cover-moon">☾</span>
+          <span class="cover-title">Karen Serubia</span>
+          <span class="cover-subtitle">THE MOONLIT SANCTUARY</span>
+          <span class="cover-butterfly">𓂃 ࣪˖ ִֶָ𐀔 𓂃 ࣪</span>
+          <span class="cover-ornament">✧ ✩₊˚.⋆☾⋆⁺₊✧ ✧</span>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="book-opening-caption">
+      A STORY BEGINS UNDER THE MOONLIGHT
+    </p>
+  </div>
+</div>
+
+
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Karen Serubia home">
+        <span class="brand-moon" aria-hidden="true">☾</span>
+        <span class="brand-copy">
+          <span class="brand-name">Karen Serubia</span>
+          <span class="brand-tagline">THE MOONLIT SANCTUARY</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="global-nav" id="global-nav" aria-label="メインメニュー">
+        <a class="active" href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="family.html">FAMILY</a>
+        <a href="schedule.html">SCHEDULE</a>
+        <a href="memories.html">MEMORIES</a>
+        <a href="letter.html">LETTER</a>
+        <a href="music.html">MUSIC</a>
+        <a href="special.html">SPECIAL</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="ambient-glow" aria-hidden="true"></div>
+      <div class="stars" aria-hidden="true"></div>
+      <!--動く装飾レイヤー-->
+      <div class="motion-layer" aria-hidden="true">
+        <div class="motion-light"></div>
+        <div class="motion-water"></div>
+        <div class="motion-stars"></div>
+        <!-- 藤の花 -->
+     <img class="motion-wisteria"
+          src="images/wisteria.png" alt="">
+    <!-- 舞い散る花びら -->
+    <div class="petal-field" aria-hidden="true">
+      <span class="petal petal-1"></span>
+      <span class="petal petal-2"></span>
+      <span class="petal petal-3"></span>
+      <span class="petal petal-4"></span>
+      <span class="petal petal-5"></span>
+      <span class="petal petal-6"></span>
+      <span class="petal petal-7"></span>
+      <span class="petal petal-8"></span>
+    </div>
+
+<!-- 青い蝶 -->
+    <img class="motion-butterfly"
+          src="images/butterflies.png" alt="">
+      </div>  
+      
+<section class="welcome-panel" aria-labelledby="welcome-title">
+
+  <p class="eyebrow hero-reveal" style="--delay: 0.2s">
+    A PLACE UNDER THE MOONLIGHT
+  </p>
+
+  <h1 id="welcome-title" class="hero-title">
+    <span class="welcome-word" style="--delay: 0.5s">Welcome</span><br>
+    <span class="welcome-jp" style="--delay: 1.5s">ようこそ、</span><br>
+    <span class="welcome-jp" style="--delay: 2s">私たちの月夜へ。</span>
+  </h1>
+
+  <div class="ornament hero-reveal" style="--delay: 2.6s" aria-hidden="true">
+    <span>✧</span><i></i><b>☾</b><i></i><span>✧</span>
+  </div>
+
+  <div class="welcome-copy">
+    <p class="hero-reveal" style="--delay: 2.9s">
+      数ある夜の中から、<br>
+      あなたがここへ辿り着いてくれたことを<br>
+      心から嬉しく思います。
+    </p>
+
+    <p class="hero-reveal" style="--delay: 3.3s">
+      ここは、日常の喧騒から少し離れて、<br>
+      心を休め、笑い合い、<br>
+      大切な時間を分かち合う場所。
+    </p>
+
+    <p class="hero-reveal" style="--delay: 3.7s">
+      どうぞ、心ゆくまでお楽しみくださいませ。
+    </p>
+  </div>
+
+  <p class="signature hero-reveal" style="--delay: 4.2s">
+    Karen Serubia <span>✧</span>
+  </p>
+
+</section>
+
+
+      <a class="enter-button" href="content.html">
+        <span class="enter-small">✧ &nbsp; WELCOME &nbsp; ✧</span>
+        <span class="enter-main">ENTER</span>
+        <span class="enter-sub">THE SANCTUARY</span>
+      </a>
+
+      <aside class="music-box" aria-label="Karen's Music Box">
+        <div class="music-heading"><span>🦋</span> Karen's Music Box <span>🥀</span></div>
+        <div class="music-content">
+          <div class="album-art" aria-hidden="true">☾</div>
+          <div class="track-info">
+            <strong id="track-title">忘却より深く</strong>
+            <span>Karen Serubia</span>
+            <div class="track-time"><span id="current-time">0:00</span><span id="duration">--:--</span></div>
+            <input id="seek" class="seek" type="range" min="0" max="100" value="0" aria-label="再生位置">
+          </div>
+          <button id="play-button" class="play-button" type="button" aria-label="音楽を再生">▶</button>
+        </div>
+        <div class="music-footnote" id="music-status">再生ボタンを押すと音楽が流れます</div>
+        <audio id="bgm" preload="metadata">
+          <source src="audio/忘却より深く.mp3" type="audio/mpeg">
+        </audio>
+      </aside>
+
+      <div class="butterfly butterfly-one" aria-hidden="true"></div>
+      <div class="butterfly butterfly-two" aria-hidden="true"></div>
+      <div class="bottom-caption">A place to return beneath the moonlight.</div>
+    </main>
+  </div>
+</body>
+</html>

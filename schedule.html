@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCHEDULE | Karen Serubia</title>
+  
+    <script src="js/main.js" defer></script>
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/motion.css">
+    <link rel="stylesheet" href="css/schedule.css">
+  </head>
+
+<body class="schedule-page">
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Karen Serubia home">
+      <span class="brand-moon" aria-hidden="true">☾</span>
+      <span class="brand-copy">
+        <span class="brand-name">Karen Serubia</span>
+        <span class="brand-tagline">THE MOONLIT SANCTUARY</span>
+      </span>
+    </a>
+  
+    <button class="menu-toggle" type="button"
+      aria-label="メニューを開く"
+      aria-expanded="false"
+      aria-controls="global-nav">
+      <span></span><span></span><span></span>
+    </button>
+  
+    <nav class="global-nav" id="global-nav" aria-label="メインメニュー">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="family.html">FAMILY</a>
+      <a href="schedule.html" class="active">SCHEDULE</a>
+      <a href="memories.html">MEMORIES</a>
+      <a href="letter.html">LETTER</a>
+      <a href="music.html">MUSIC</a>
+      <a href="special.html">SPECIAL</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 01. HERO -->
+    <section class="schedule-hero">
+      <div class="schedule-hero-inner">
+      <div class="schedule-moon-art">
+      <img src="images/moon-stars.png" alt="Moon and Crescent">
+      </div>  
+
+        <p class="eyebrow">SCHEDULE / MOON CALENDAR</p>
+
+        <h1>Moon Calendar</h1>
+
+        <div class="moon-divider">☾</div>
+
+        <h2>月の満ち欠けと、次の約束</h2>
+
+        <p class="hero-description">
+          同じ夜空の下で、また会える日を。
+        </p>
+      </div>
+    </section>
+
+    <!-- 02. CALENDAR -->
+    <section class="calendar-section section-wrap">
+
+      <div class="calendar-heading">
+        <div>
+          <p class="eyebrow">MOON CALENDAR</p>
+          <h2 id="calendar-month">November 2026</h2>
+          <div class="moon-divider">☾</div>
+        </div>
+
+        <div class="calendar-controls">
+          <button id="prev-month" type="button" aria-label="前の月">←</button>
+          <button id="today-month" type="button">TODAY</button>
+          <button id="next-month" type="button" aria-label="次の月">→</button>
+        </div>
+      </div>
+
+      <div class="calendar-grid" id="calendar-grid">
+        <!-- JavaScriptでカレンダーを生成 -->
+      </div>
+
+      <div class="calendar-legend">
+        <span class="legend-wave">WAVE</span>
+        <span class="legend-music">MUSIC</span>
+        <span class="legend-collab">COLLAB</span>
+        <span class="legend-special">SPECIAL</span>
+      </div>
+
+      <div class="event-detail" id="event-detail" aria-live="polite">
+        <p>日付を選択すると、イベントの詳細が表示されます。</p>
+      </div>
+
+    </section>
+
+    <!-- 03. UPCOMING EVENTS -->
+    <section class="upcoming-section section-wrap">
+
+      <div class="section-heading">
+        <p class="eyebrow">UPCOMING EVENTS</p>
+        <h2>Our next nights together</h2>
+        <div class="moon-divider">☾</div>
+      </div>
+
+      <div class="upcoming-list" id="upcoming-list">
+        <!-- JavaScriptでイベント一覧を生成 -->
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="about-footer">
+    <p>© Karen Serubia — THE MOONLIT SANCTUARY</p>
+    <a href="index.html">BACK TO HOME ↑</a>
+  </footer>
+
+  <script src="js/motion.js"></script>
+  <script src="js/schedule-data.js"></script>
+  <script src="js/schedule.js"></script>
+  <script src="js/schedule-motion.js"></script>
+
+</body>
+</html>

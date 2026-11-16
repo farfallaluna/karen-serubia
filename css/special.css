@@ -1,0 +1,1359 @@
+/* =========================================
+   SPECIAL PAGE
+   The Secret Garden
+   Karen Serubia — The Moonlit Sanctuary
+========================================= */
+
+.special-page {
+    background: #090817;
+    color: #f5e9e8;
+    overflow-x: hidden;
+    padding-bottom: 0;
+  }
+  
+  .special-page main {
+    overflow: hidden;
+  }
+  
+  .special-section-inner {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+  
+  .special-page .eyebrow {
+    color: #dfbd91;
+    font-family: Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .special-page h2 {
+    color: #f5e8e5;
+    font-family: Georgia, serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+  
+  .section-description {
+    color: rgba(245, 230, 230, 0.75);
+    font-size: 13px;
+    line-height: 2;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  
+  /* =========================================
+     01. THE GATE
+  ========================================= */
+  
+  .special-gate {
+    position: relative;
+    min-height: 850px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 145px 25px 100px;
+  
+    background:
+      linear-gradient(
+        180deg,
+        rgba(87, 67, 133, 0.35),
+        rgba(9, 8, 23, 0.95) 55%,
+        #090817 100%
+      ),
+      url("../images/special/castle-gate.png")
+      center center / cover no-repeat,
+      radial-gradient(
+        ellipse at center,
+        #39306e,
+        #111027 65%,
+        #090817
+      );
+  }
+  
+  .special-gate::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  
+    background:
+      radial-gradient(
+        circle at 50% 40%,
+        rgba(169, 137, 235, 0.2),
+        transparent 48%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(7, 6, 22, 0.35),
+        transparent 50%,
+        rgba(7, 6, 22, 0.35)
+      );
+  }
+  
+  .special-gate::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  
+    background: linear-gradient(
+      180deg,
+      transparent 75%,
+      #090817 100%
+    );
+  }
+  
+  
+  /* 額縁 */
+  
+  .gate-frame {
+    position: relative;
+    z-index: 2;
+  
+    width: 100%;
+    max-width: 1050px;
+    min-height: 540px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 65px 35px;
+  
+    border: 1px solid rgba(220, 185, 145, 0.8);
+    outline: 1px solid rgba(220, 185, 145, 0.25);
+    outline-offset: 9px;
+  
+    background:
+    radial-gradient(
+      ellipse at center,
+      #292044,
+      #100e25 75%
+    );
+  
+    overflow: hidden;
+  
+    box-shadow:
+      0 0 45px rgba(0, 0, 0, 0.45),
+      inset 0 0 55px rgba(125, 93, 180, 0.12);
+  
+    backdrop-filter: blur(5px);
+  }
+  
+  .gate-content {
+    position: relative;
+    z-index: 4;
+    max-width: 720px;
+    text-align: center;
+  }
+  
+  .gate-content h1 {
+    color: #fff0e8;
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 6vw, 68px);
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    text-shadow: 0 0 25px rgba(190, 160, 255, 0.4);
+  }
+  
+  .gate-moon {
+    color: #e8c995;
+    font-size: 42px;
+    margin: 25px auto;
+    text-shadow: 0 0 20px rgba(232, 201, 149, 0.5);
+  }
+  
+  .gate-content h2 {
+    font-size: clamp(18px, 2.5vw, 25px);
+    letter-spacing: 0.12em;
+    margin-bottom: 25px;
+  }
+  
+  .gate-description {
+    color: rgba(255, 240, 235, 0.85);
+    font-size: 13px;
+    line-height: 2.4;
+    letter-spacing: 0.08em;
+  }
+  
+  .gate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  
+    min-width: 250px;
+    margin-top: 40px;
+    padding: 20px 28px;
+  
+    border: 1px solid #e5c39b;
+    background: linear-gradient(
+      135deg,
+      rgba(69, 46, 103, 0.95),
+      rgba(24, 18, 52, 0.95)
+    );
+  
+    color: #fff0e8;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+  
+    cursor: pointer;
+    transition: all 0.35s ease;
+  }
+  
+  .gate-button:hover {
+    background: rgba(117, 85, 157, 0.9);
+    box-shadow: 0 0 25px rgba(190, 150, 220, 0.3);
+    transform: translateY(-4px);
+  }
+  
+  .gate-arrow {
+    color: #e8c995;
+    font-size: 20px;
+  }
+  
+  
+  /* =========================================
+   GARDEN LETTER — ANTIQUE PAPER
+========================================= */
+
+.letter-paper {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 75px 85px;
+  
+    border: 1px solid #c5a77d;
+  
+    background:
+      radial-gradient(
+        ellipse at 10% 10%,
+        rgba(255, 255, 255, 0.65),
+        transparent 45%
+      ),
+      radial-gradient(
+        ellipse at 90% 90%,
+        rgba(157, 119, 85, 0.13),
+        transparent 50%
+      ),
+      linear-gradient(
+        135deg,
+        #f5e8d2,
+        #e9d7bb 55%,
+        #f3e4cd
+      );
+  
+    color: #49352f;
+  
+    box-shadow:
+      0 20px 55px rgba(0, 0, 0, 0.4),
+      inset 0 0 45px rgba(112, 73, 53, 0.1);
+  }
+  
+  /* 内側の二重装飾枠 */
+  .letter-paper::before {
+    content: "";
+    position: absolute;
+    inset: 14px;
+  
+    border: 1px solid rgba(163, 125, 78, 0.55);
+    outline: 1px solid rgba(163, 125, 78, 0.2);
+    outline-offset: 5px;
+  
+    pointer-events: none;
+  }
+  
+  /* 四隅のゴールド装飾 */
+  .letter-paper::after {
+    content: "✧";
+    position: absolute;
+    top: 22px;
+    left: 25px;
+  
+    color: #ad8958;
+    font-size: 22px;
+  
+    text-shadow:
+      0 0 8px rgba(173, 137, 88, 0.3),
+      0 0 1px #ad8958;
+  
+    pointer-events: none;
+  }
+  
+  /* 月の封蝋 */
+  .letter-seal {
+    position: relative;
+    z-index: 1;
+  
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 40px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    border: 2px solid #a98a62;
+    border-radius: 50%;
+  
+    background:
+      radial-gradient(circle, #f4e4c7, #d9bd91);
+  
+    color: #75563e;
+    font-size: 27px;
+  
+    box-shadow:
+      0 4px 12px rgba(83, 54, 34, 0.2),
+      inset 0 0 8px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* 宛名 */
+  .letter-paper h3 {
+    color: #684b39;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: 400;
+  
+    margin-bottom: 35px;
+    letter-spacing: 0.04em;
+  }
+  
+  /* 手紙本文 */
+  .letter-paper p {
+    position: relative;
+    z-index: 1;
+  
+    color: #594438;
+    font-size: 14px;
+    line-height: 2.7;
+    letter-spacing: 0.07em;
+  
+    margin-bottom: 22px;
+  }
+  
+  /* Karenの署名 */
+  .letter-signature {
+    margin-top: 55px;
+    margin-bottom: 10px !important;
+  
+    text-align: right;
+  
+    color: #896b56 !important;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 23px !important;
+    letter-spacing: 0.04em !important;
+  }
+  
+  /* スマートフォン */
+  @media (max-width: 600px) {
+    .letter-paper {
+      padding: 60px 35px;
+    }
+  
+    .letter-paper p {
+      font-size: 12px;
+      line-height: 2.5;
+    }
+  
+    .letter-paper h3 {
+      font-size: 19px;
+    }
+  
+    .letter-signature {
+      font-size: 20px !important;
+    }
+  }
+
+  
+  
+  
+  /* =========================================
+     03. SECRET ARCHIVE
+  ========================================= */
+  
+  .secret-archive {
+    position: relative;
+    padding: 110px 20px 130px;
+  
+    background:
+      radial-gradient(
+        ellipse at 50% 40%,
+        rgba(79, 61, 130, 0.18),
+        transparent 70%
+      ),
+      #0b091b;
+  
+    border-top: 1px solid rgba(225, 190, 170, 0.2);
+    border-bottom: 1px solid rgba(225, 190, 170, 0.2);
+  }
+  
+  .secret-archive h2 {
+    margin-bottom: 20px;
+  }
+  
+  .archive-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 60px;
+  }
+  
+  .archive-card {
+    position: relative;
+    min-height: 270px;
+    padding: 35px 30px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    border: 1px solid rgba(207, 178, 148, 0.5);
+  
+    background:
+      linear-gradient(
+        145deg,
+        rgba(35, 27, 62, 0.7),
+        rgba(13, 12, 33, 0.9)
+      );
+  
+    transition: all 0.35s ease;
+  }
+  
+  .archive-card:hover {
+    border-color: #e4c49c;
+    background: rgba(75, 57, 111, 0.45);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  }
+  
+  .archive-category {
+    color: #d9bd98;
+    font-family: Georgia, serif;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
+  
+  .archive-card h3 {
+    color: #f5e8e5;
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 400;
+    line-height: 1.7;
+  }
+  
+  .archive-status {
+    color: #c9b5c6;
+    font-family: Georgia, serif;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+  }
+  
+  .archive-arrow {
+    position: absolute;
+    right: 25px;
+    bottom: 28px;
+    color: #e5c39b;
+    font-size: 20px;
+  }
+  
+  
+  /* =========================================
+     04. HIDDEN ROOM
+  ========================================= */
+  
+  .hidden-room {
+    position: relative;
+    padding: 120px 20px 140px;
+  
+    background:
+      radial-gradient(
+        ellipse at center,
+        rgba(100, 76, 159, 0.23),
+        transparent 65%
+      ),
+      #090817;
+  }
+  
+  .hidden-room h2 {
+    margin-bottom: 20px;
+  }
+  
+  .hidden-room-link {
+    display: block;
+    max-width: 850px;
+    margin: 55px auto 0;
+  
+    border: 1px solid rgba(220, 185, 145, 0.7);
+    outline: 1px solid rgba(220, 185, 145, 0.2);
+    outline-offset: 7px;
+  
+    background:
+      linear-gradient(
+        135deg,
+        rgba(48, 34, 79, 0.8),
+        rgba(15, 13, 35, 0.95)
+      );
+  
+    transition: all 0.4s ease;
+  }
+  
+  .hidden-room-link:hover {
+    border-color: #f0d5a8;
+    box-shadow: 0 0 40px rgba(150, 115, 205, 0.25);
+    transform: translateY(-5px);
+  }
+  
+  .hidden-room-content {
+    padding: 65px 25px;
+    text-align: center;
+  }
+  
+  .hidden-room-symbol {
+    display: block;
+    color: #e8c995;
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+  
+  .hidden-room-content h3 {
+    color: #fff0e8;
+    font-family: Georgia, serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+  
+  .hidden-room-content p {
+    color: rgba(245, 230, 230, 0.8);
+    font-size: 13px;
+    margin-top: 20px;
+  }
+  
+  .hidden-room-arrow {
+    display: inline-block;
+    margin-top: 35px;
+    color: #e5c39b;
+    font-family: Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+  }
+  
+  
+  /* =========================================
+     05. LAST MESSAGE
+  ========================================= */
+  
+  .special-ending {
+    position: relative;
+    padding: 120px 20px 130px;
+    text-align: center;
+  
+    background:
+      radial-gradient(
+        ellipse at center top,
+        rgba(112, 91, 169, 0.2),
+        transparent 65%
+      ),
+      #0b091b;
+  
+    border-top: 1px solid rgba(225, 190, 170, 0.25);
+  }
+  
+  .ending-moon {
+    color: #e8c995;
+    font-size: 38px;
+    margin: 25px auto;
+    text-shadow: 0 0 20px rgba(232, 201, 149, 0.4);
+  }
+  
+  .special-ending h2 {
+    margin-bottom: 30px;
+  }
+  
+  .special-ending p {
+    color: rgba(245, 230, 230, 0.8);
+    font-size: 13px;
+    line-height: 2.3;
+    margin-bottom: 15px;
+  }
+  
+  .back-home {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 15px 35px;
+  
+    border: 1px solid rgba(220, 185, 145, 0.75);
+  
+    color: #f5e8e5;
+    font-family: Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+  
+    transition: all 0.3s ease;
+  }
+  
+  .back-home:hover {
+    background: rgba(120, 91, 157, 0.35);
+    border-color: #f0d5a8;
+  }
+  
+  
+  /* =========================================
+     06. RESPONSIVE
+  ========================================= */
+  
+  @media (max-width: 900px) {
+  
+    .special-gate {
+      min-height: 750px;
+    }
+  
+    .gate-frame {
+      min-height: 480px;
+    }
+  
+    .archive-grid {
+      grid-template-columns: 1fr;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .archive-card {
+      min-height: 220px;
+    }
+  
+  }
+  
+  @media (max-width: 600px) {
+  
+    .special-gate {
+      min-height: 680px;
+      padding: 120px 20px 80px;
+    }
+  
+    .gate-frame {
+      min-height: 450px;
+      padding: 45px 20px;
+      outline-offset: 5px;
+    }
+  
+    .gate-content h1 {
+      font-size: 36px;
+    }
+  
+    .gate-content h2 {
+      font-size: 17px;
+    }
+  
+    .gate-description {
+      font-size: 11px;
+    }
+  
+    .gate-button {
+      min-width: 220px;
+      padding: 17px 20px;
+      gap: 15px;
+    }
+  
+    .garden-letter,
+    .secret-archive,
+    .hidden-room,
+    .special-ending {
+      padding: 80px 18px;
+    }
+  
+    .letter-paper {
+      padding: 45px 25px;
+    }
+  
+    .letter-paper p {
+      font-size: 12px;
+    }
+  
+    .archive-grid {
+      gap: 18px;
+      margin-top: 40px;
+    }
+  
+    .archive-card {
+      min-height: 210px;
+      padding: 28px 24px;
+    }
+  
+    .hidden-room-content {
+      padding: 50px 20px;
+    }
+  
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .special-page *,
+    .special-page *::before,
+    .special-page *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+/* =========================================
+   THE OPENING GATE
+   古城の石門が開く演出
+========================================= */
+
+.special-gate {
+    isolation: isolate;
+  }
+  
+  /* 左右の石門画像 */
+.gate-frame::before,
+.gate-frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  width: 50%;
+
+  background-image: url("../images/special/castle-gate.png");
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+
+  border: 1px solid rgba(220, 185, 145, 0.65);
+
+  transition:
+    transform 1.8s cubic-bezier(0.7, 0, 0.2, 1),
+    opacity 1.5s ease;
+
+  pointer-events: none;
+}
+
+.gate-frame::before {
+  left: 0;
+  background-position: left center;
+  transform-origin: left center;
+  border-right: 1px solid #d8bd98;
+}
+
+.gate-frame::after {
+  right: 0;
+  background-position: right center;
+  transform-origin: right center;
+  border-left: 1px solid #d8bd98;
+}
+  
+  /* 開いた状態 */
+  .special-gate.gate-opening .gate-frame::before {
+    transform: perspective(900px) rotateY(-105deg);
+    opacity: 0;
+  }
+  
+  .special-gate.gate-opening .gate-frame::after {
+    transform: perspective(900px) rotateY(105deg);
+    opacity: 0;
+  }
+  
+  /* 中の文字も少し明るく */
+  .special-gate.gate-opening .gate-content {
+    opacity: 0;
+    transform: scale(1.04);
+    transition: opacity 1s ease, transform 1.5s ease;
+  }
+  
+  /* 奥から広がる霧 */
+  .special-gate.gate-opening::after {
+    background:
+      radial-gradient(
+        ellipse at center,
+        rgba(177, 155, 225, 0.35),
+        transparent 65%
+      ),
+      linear-gradient(
+        180deg,
+        transparent 65%,
+        #090817 100%
+      );
+  
+    animation: gardenGateMist 2s ease forwards;
+  }
+  
+  @keyframes gardenGateMist {
+    0% {
+      opacity: 0.3;
+      filter: blur(5px);
+    }
+  
+    50% {
+      opacity: 1;
+      filter: blur(25px);
+    }
+  
+    100% {
+      opacity: 0.65;
+      filter: blur(12px);
+    }
+  }
+  
+  /* 動きを減らす設定 */
+  @media (prefers-reduced-motion: reduce) {
+    .gate-frame::before,
+    .gate-frame::after,
+    .gate-content {
+      transition: none !important;
+    }
+  }
+/* =========================================
+   GARDEN LETTER — ENVELOPE
+========================================= */
+
+.envelope-area {
+    max-width: 650px;
+    margin: 55px auto 0;
+    text-align: center;
+  }
+  
+  .envelope-guide {
+    color: #dfbd91;
+    font-family: Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    margin-bottom: 25px;
+  }
+  
+  .envelope-button {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  
+    border: 1px solid rgba(220, 185, 145, 0.65);
+    background: transparent;
+  
+    cursor: pointer;
+    overflow: hidden;
+  
+    box-shadow:
+      0 15px 45px rgba(0, 0, 0, 0.45),
+      0 0 35px rgba(126, 91, 180, 0.2);
+  
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
+  }
+  
+  .envelope-button img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.7s ease;
+  }
+  
+  .envelope-button:hover {
+    transform: translateY(-6px);
+  
+    box-shadow:
+      0 20px 55px rgba(0, 0, 0, 0.5),
+      0 0 45px rgba(160, 125, 210, 0.35);
+  }
+  
+  .envelope-button:hover img {
+    transform: scale(1.04);
+  }
+  
+  .envelope-open-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  
+    padding: 18px;
+  
+    color: #fff0e8;
+    background: linear-gradient(
+      transparent,
+      rgba(12, 9, 29, 0.9)
+    );
+  
+    font-family: Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+  }
+  
+  .envelope-button:focus-visible {
+    outline: 2px solid #e8c995;
+    outline-offset: 6px;
+  }
+  
+  /* 手紙本文 */
+  .letter-content {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  
+  .letter-content[hidden] {
+    display: none;
+  }
+  
+  .letter-content.is-opening {
+    animation: letterReveal 1.2s ease both;
+  }
+  
+  @keyframes letterReveal {
+    from {
+      opacity: 0;
+      transform: translateY(35px);
+      filter: blur(8px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+  
+  /* スマートフォン */
+  @media (max-width: 600px) {
+    .envelope-area {
+      margin-top: 40px;
+    }
+  
+    .envelope-open-text {
+      padding: 13px;
+      font-size: 10px;
+    }
+  }
+  .envelope-area.envelope-closing {
+    opacity: 0;
+    transform: translateY(-25px) scale(0.96);
+    filter: blur(8px);
+    transition:
+      opacity 0.65s ease,
+      transform 0.65s ease,
+      filter 0.65s ease;
+  }
+/* =========================================
+   LETTER — GOLDEN CORNER ORNAMENTS
+========================================= */
+
+.letter-paper {
+    background-image:
+      radial-gradient(
+        circle at 0 0,
+        rgba(166, 126, 76, 0.16),
+        transparent 20%
+      ),
+      radial-gradient(
+        circle at 100% 0,
+        rgba(166, 126, 76, 0.16),
+        transparent 20%
+      ),
+      radial-gradient(
+        circle at 0 100%,
+        rgba(166, 126, 76, 0.16),
+        transparent 20%
+      ),
+      radial-gradient(
+        circle at 100% 100%,
+        rgba(166, 126, 76, 0.16),
+        transparent 20%
+      ),
+      linear-gradient(
+        135deg,
+        #f5e8d2,
+        #e9d7bb 55%,
+        #f3e4cd
+      );
+  }
+  
+  .letter-paper {
+    overflow: hidden;
+  }
+  
+  .letter-paper::after {
+    content: "❧";
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    color: #ad8958;
+    font-size: 27px;
+    transform: rotate(-45deg);
+    opacity: 0.8;
+  }
+/* Letter Butterfly Ornament */
+
+.letter-seal {
+    position: relative;
+  }
+  
+  .letter-seal span:first-child {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .letter-butterfly {
+    position: absolute;
+    top: -42px;
+    right: -65px;
+  
+    width: 100px;
+    height: auto;
+  
+    border: none;
+    border-radius: 0;
+  
+    filter:
+      drop-shadow(0 0 7px rgba(100, 130, 220, 0.45));
+  
+    transform: rotate(12deg);
+    pointer-events: none;
+  }
+/* =========================================
+   GARDEN LETTER — MOONLIT IVY
+========================================= */
+
+.letter-paper {
+    overflow: hidden;
+  }
+  
+  .letter-ivy {
+    position: absolute;
+    top: -5px;
+    left: 0;
+  
+    width: 100%;
+    height: auto;
+  
+    opacity: 0.78;
+  
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  /* 手紙の文字は蔦より前に表示 */
+  .letter-paper h3,
+  .letter-paper p,
+  .letter-seal {
+    position: relative;
+    z-index: 2;
+  }
+/* ARCHIVE BUTTON RESET */
+
+button.archive-card {
+    width: 100%;
+    font-family: inherit;
+    text-align: left;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  button.archive-card:focus-visible {
+    outline: 2px solid #e8c995;
+    outline-offset: 5px;
+  }
+/* =========================================
+   SECRET ARCHIVE — MODAL
+========================================= */
+
+.archive-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.archive-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.archive-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 4, 17, 0.82);
+  backdrop-filter: blur(7px);
+}
+
+.archive-modal-panel {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 680px;
+  max-height: 85vh;
+  overflow-y: auto;
+
+  padding: 65px 55px;
+
+  border: 1px solid rgba(220, 185, 145, 0.75);
+
+  background:
+    radial-gradient(
+      ellipse at top,
+      rgba(92, 68, 133, 0.35),
+      transparent 65%
+    ),
+    linear-gradient(145deg, #19132f, #0b091b);
+
+  box-shadow:
+    0 20px 80px rgba(0, 0, 0, 0.55),
+    inset 0 0 35px rgba(160, 125, 210, 0.08);
+
+  color: #f5e8e5;
+
+  transform: translateY(25px) scale(0.97);
+  transition: transform 0.4s ease;
+}
+
+.archive-modal.is-open .archive-modal-panel {
+  transform: translateY(0) scale(1);
+}
+
+.archive-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+
+  border: none;
+  background: transparent;
+
+  color: #e8c995;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.archive-modal-panel .eyebrow {
+  margin-bottom: 20px;
+}
+
+.archive-modal-panel h2 {
+  font-size: clamp(23px, 4vw, 34px);
+  line-height: 1.6;
+}
+
+.archive-modal-divider {
+  margin: 30px 0;
+  text-align: center;
+  color: #e8c995;
+  letter-spacing: 0.5em;
+}
+
+.archive-modal-body {
+  color: rgba(245, 230, 230, 0.88);
+  font-size: 14px;
+  line-height: 2.5;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.archive-modal-signature {
+  margin-top: 40px;
+  text-align: right;
+  color: #d9bd98;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 19px;
+}
+
+@media (max-width: 600px) {
+  .archive-modal {
+    padding: 15px;
+  }
+
+  .archive-modal-panel {
+    padding: 55px 25px;
+  }
+
+  .archive-modal-body {
+    font-size: 12px;
+  }
+}
+
+/* =================================
+   MEMORIES FOOTER
+================================= */
+
+.special-page .about-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 8%;
+  border-top: 1px solid rgba(210, 190, 255, 0.2);
+  background: rgba(10, 9, 28, 0.85);
+}
+
+.special-page .about-footer p {
+  margin: 0;
+  color: #c9bdd9;
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+
+.special-page .about-footer a {
+  color: #e6d8ff;
+  font-family: Georgia, serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.special-page .about-footer a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(210, 180, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .special-page .about-footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 20px;
+  }
+}
+/* =================================
+   SECRET GARDEN — WORLD BEYOND GATE
+================================= */
+
+.gate-frame {
+  position: relative;
+  isolation: isolate;
+}
+
+/* 境界樹の景色 */
+
+.gate-world {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 2s ease 0.8s;
+}
+
+.gate-world-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.08);
+  transition: transform 5s ease;
+}
+
+/* 門が開いたら景色を見せる */
+
+.special-gate.gate-opening .gate-world {
+  opacity: 1;
+}
+
+.special-gate.gate-opening .gate-world-image {
+  transform: scale(1);
+}
+
+/* 門の前面に扉を配置 */
+
+.gate-frame::before,
+.gate-frame::after {
+  z-index: 2;
+}
+
+/* タイトルとボタンは最前面 */
+
+.gate-content {
+  z-index: 4;
+}
+/* =================================
+   GOLDEN STARDUST ANIMATION
+================================= */
+
+.golden-stardust {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.golden-stardust.is-active {
+  opacity: 1;
+}
+
+.golden-star {
+  position: absolute;
+  display: block;
+  color: #ffe7a3;
+  font-size: var(--size);
+  text-shadow:
+    0 0 5px #fff4c7,
+    0 0 12px #f5c75e,
+    0 0 22px #e9a92e;
+  opacity: 0;
+  transform: translateY(30px) scale(0.3);
+}
+
+.golden-stardust.is-active .golden-star {
+  animation: goldenStarFloat var(--duration) ease-out var(--delay) infinite;
+}
+
+@keyframes goldenStarFloat {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 35px, 0) scale(0.3) rotate(0deg);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translate3d(
+      calc(var(--drift) * 0.3),
+      0,
+      0
+    ) scale(1) rotate(45deg);
+  }
+
+  75% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(
+      var(--drift),
+      -150px,
+      0
+    ) scale(0.2) rotate(180deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .golden-stardust.is-active .golden-star {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+
+  
+  
+  
+    

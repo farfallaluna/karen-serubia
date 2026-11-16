@@ -1,0 +1,211 @@
+/* =========================
+   CONNECT PAGE
+========================= */
+
+.connect-header {
+    width: 100%;
+    padding: 24px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(221, 190, 255, 0.2);
+    background: rgba(13, 10, 32, 0.85);
+  }
+  
+  .connect-logo {
+    color: #e9d9ff;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+  
+  .connect-back {
+    color: #d8c5f5;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .connect-back:hover {
+    color: #e9c982;
+  }
+  
+  .connect-main {
+    min-height: 85vh;
+    padding: 100px 20px 80px;
+    background:
+      radial-gradient(ellipse at 50% 15%, rgba(105, 72, 151, 0.3), transparent 55%),
+      linear-gradient(180deg, #17122f 0%, #0b0a1c 100%);
+    color: #f5edff;
+    text-align: center;
+  }
+  
+  .connect-hero {
+    margin: 0 auto 65px;
+  }
+  
+  .connect-eyebrow {
+    display: block;
+    margin-bottom: 18px;
+    color: #d6b978;
+    font-size: 11px;
+    letter-spacing: 5px;
+  }
+  
+  .connect-hero h1 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 8vw, 76px);
+    font-weight: 400;
+    letter-spacing: 12px;
+    color: #f4eaff;
+    text-shadow: 0 0 25px rgba(193, 156, 255, 0.35);
+  }
+  
+  .connect-subtitle {
+    margin: 15px 0 25px;
+    color: #d8c4f0;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    letter-spacing: 3px;
+  }
+  
+  .connect-intro {
+    color: #c9bfdc;
+    font-size: 13px;
+    line-height: 2.2;
+    letter-spacing: 1px;
+  }
+  
+  .connect-links {
+    width: min(100%, 620px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+  
+  .connect-card {
+    position: relative;
+    min-height: 155px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid rgba(218, 192, 255, 0.3);
+    background: linear-gradient(
+      145deg,
+      rgba(73, 53, 107, 0.55),
+      rgba(25, 20, 48, 0.8)
+    );
+    color: #f6edff;
+    text-align: left;
+    text-decoration: none;
+    transition: transform 0.35s ease, border-color 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+  
+  .connect-card:hover {
+    transform: translateY(-5px);
+    border-color: #d8bd83;
+    box-shadow: 0 10px 35px rgba(177, 139, 230, 0.2);
+  }
+  
+  .connect-number {
+    margin-bottom: 12px;
+    color: #d6b978;
+    font-family: Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+  
+  .connect-platform {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    letter-spacing: 2px;
+  }
+  
+  .connect-description {
+    margin-top: 8px;
+    color: #bdb0d1;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+  
+  .connect-arrow {
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+    color: #e4ca91;
+    font-size: 20px;
+  }
+  
+  .connect-message {
+    margin: 75px auto 0;
+    color: #d6c7e8;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    line-height: 2.2;
+    letter-spacing: 1px;
+  }
+  
+  .connect-footer {
+    padding: 25px 15px;
+    background: #090817;
+    color: #a99abf;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+  
+  /* Mobile */
+  
+  @media (max-width: 600px) {
+    .connect-header {
+      padding: 20px 5%;
+    }
+  
+    .connect-logo {
+      font-size: 15px;
+    }
+  
+    .connect-main {
+      padding: 75px 18px 60px;
+    }
+  
+    .connect-hero {
+      margin-bottom: 45px;
+    }
+  
+    .connect-hero h1 {
+      letter-spacing: 7px;
+    }
+  
+    .connect-links {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+  
+    .connect-card {
+      min-height: 130px;
+    }
+  
+    .connect-message {
+      margin-top: 55px;
+    }
+  }
+/* CONNECT 背景画像 */
+
+.connect-main {
+  background:
+    linear-gradient(
+      rgba(11, 8, 30, 0.55),
+      rgba(11, 8, 30, 0.75)
+    ),
+    url("../images/connect-background.png")
+    center center / cover no-repeat;
+} 

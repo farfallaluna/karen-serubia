@@ -1,0 +1,679 @@
+/* ========================================
+   SELECT COLLECTION
+   Karen Serubia
+======================================== */
+
+.select-collection-page {
+    background:
+      radial-gradient(ellipse at 50% 10%, rgba(91, 73, 139, 0.22), transparent 45%),
+      #090b1b;
+    color: #eee9f8;
+    overflow-x: hidden;
+  }
+  
+  /* HEADER */
+  
+  .sc-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 28px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(220, 204, 255, 0.12);
+    background: rgba(8, 10, 27, 0.35);
+    backdrop-filter: blur(12px);
+  }
+  
+  .sc-back,
+  .sc-logo {
+    color: #e7ddfa;
+    text-decoration: none;
+    transition: 0.4s ease;
+  }
+  
+  .sc-back {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+  
+  .sc-logo {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    letter-spacing: 2px;
+  }
+  
+  .sc-back:hover,
+  .sc-logo:hover {
+    color: #d7b978;
+  }
+  
+  /* HERO */
+  
+  .sc-hero {
+    position: relative;
+    min-height: 680px;
+    padding: 170px 24px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at 50% 45%, rgba(107, 84, 160, 0.3), transparent 48%),
+      linear-gradient(180deg, #111329 0%, #17132d 55%, #0c0e20 100%);
+  }
+  
+  .sc-hero::before,
+  .sc-hero::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(218, 199, 255, 0.13);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  
+  .sc-hero::before {
+    width: 520px;
+    height: 520px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow:
+      0 0 80px rgba(161, 132, 224, 0.08),
+      inset 0 0 80px rgba(161, 132, 224, 0.06);
+  }
+  
+  .sc-hero::after {
+    width: 420px;
+    height: 420px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .sc-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+  }
+  
+  .sc-eyebrow {
+    margin-bottom: 24px;
+    color: #cbb9e8;
+    font-size: 10px;
+    letter-spacing: 5px;
+  }
+  
+  .sc-hero h1 {
+    margin: 0;
+    color: #f3edf9;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 7vw, 76px);
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-shadow: 0 0 35px rgba(204, 181, 255, 0.25);
+  }
+  
+  .sc-hero-subtitle {
+    margin-top: 28px;
+    color: #e0d2f4;
+    font-size: 14px;
+    letter-spacing: 5px;
+  }
+  
+  .sc-hero-line {
+    display: block;
+    width: 70px;
+    height: 1px;
+    margin: 34px auto;
+    background: linear-gradient(90deg, transparent, #d9bd83, transparent);
+  }
+  
+  .sc-hero-description {
+    color: #c8bfd9;
+    font-size: 13px;
+    line-height: 2.6;
+    letter-spacing: 1.5px;
+  }
+  
+  /* INTRODUCTION */
+  
+  .sc-intro {
+    padding: 120px 24px;
+    text-align: center;
+    background: linear-gradient(180deg, #0c0e20, #111127);
+  }
+  
+  .sc-intro h2 {
+    margin-bottom: 35px;
+    color: #eee5fa;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: clamp(21px, 3vw, 30px);
+    font-weight: 400;
+    letter-spacing: 4px;
+  }
+  
+  .sc-intro > p:last-child {
+    color: #bdb3d0;
+    font-size: 13px;
+    line-height: 2.8;
+    letter-spacing: 1.5px;
+  }
+  
+  /* COLLECTION */
+  
+  .sc-collection {
+    padding: 100px 7% 130px;
+    background:
+      radial-gradient(ellipse at 50% 50%, rgba(91, 69, 130, 0.15), transparent 65%),
+      #111127;
+  }
+  
+  .sc-section-heading {
+    margin-bottom: 65px;
+    text-align: center;
+  }
+  
+  .sc-section-heading h2 {
+    margin: 0 0 18px;
+    color: #f0e8fa;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 3px;
+  }
+  
+  .sc-section-heading > p:last-child {
+    color: #bdb3d0;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+  
+  .sc-collection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+  
+  /* COLLECTION CARD */
+  
+  .sc-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(207, 187, 238, 0.2);
+    background: rgba(24, 22, 48, 0.72);
+    transition: transform 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease;
+  }
+  
+  .sc-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(220, 190, 139, 0.65);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.28);
+  }
+  
+  .sc-card-image {
+    position: relative;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 50% 45%, rgba(178, 148, 225, 0.22), transparent 40%),
+      linear-gradient(145deg, #292343, #111326 70%);
+  }
+  
+  .sc-card-image::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgba(220, 200, 245, 0.24);
+    border-radius: 50%;
+    box-shadow: 0 0 45px rgba(185, 154, 232, 0.12);
+  }
+  
+  .sc-card-image::after {
+    content: "✧";
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    color: rgba(226, 208, 250, 0.55);
+    font-size: 28px;
+    text-shadow: 0 0 15px rgba(218, 194, 255, 0.4);
+  }
+  
+  .sc-card-image span {
+    position: relative;
+    z-index: 2;
+    color: #E2C477;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-shadow:
+      0 0 5px rgba(226, 196, 119, 0.4),
+      0 0 15px rgba(226, 196, 119, 0.25);
+  }
+  
+  .sc-card-content {
+    padding: 30px 28px 35px;
+  }
+  
+  .sc-card-category {
+    margin-bottom: 14px;
+    color: #cbb17c;
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+  
+  .sc-card-content h3 {
+    margin: 0 0 18px;
+    color: #eee5fa;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  
+  .sc-card-content > p:last-child {
+    margin: 0;
+    color: #bdb3d0;
+    font-size: 12px;
+    line-height: 2.2;
+    letter-spacing: 1px;
+  }
+  
+  /* MESSAGE */
+  
+  .sc-message {
+    padding: 130px 24px;
+    text-align: center;
+    background:
+      radial-gradient(ellipse at 50% 40%, rgba(112, 88, 155, 0.2), transparent 60%),
+      #0c0e20;
+  }
+  
+  .sc-message h2 {
+    margin-bottom: 35px;
+    color: #eee5fa;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: clamp(21px, 3vw, 30px);
+    font-weight: 400;
+    letter-spacing: 4px;
+  }
+  
+  .sc-message > p:not(.sc-eyebrow):not(.sc-signature) {
+    color: #c8bfd9;
+    font-size: 13px;
+    line-height: 2.8;
+    letter-spacing: 1.5px;
+  }
+  
+  .sc-signature {
+    margin-top: 55px;
+    color: #d9c18f;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    letter-spacing: 2px;
+  }
+  
+  /* ENDING */
+  
+  .sc-ending {
+    padding: 100px 24px 110px;
+    text-align: center;
+    background: linear-gradient(180deg, #111127, #090b1b);
+  }
+  
+  .sc-ending > p {
+    margin-bottom: 25px;
+    color: #cbb17c;
+    font-size: 9px;
+    letter-spacing: 4px;
+  }
+  
+  .sc-ending h2 {
+    margin-bottom: 38px;
+    color: #eee5fa;
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+  
+  .sc-ending a {
+    display: inline-block;
+    padding: 14px 30px;
+    border: 1px solid rgba(218, 195, 148, 0.55);
+    color: #e5d5b4;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: 0.4s ease;
+  }
+  
+  .sc-ending a:hover {
+    color: #111127;
+    background: #d9c18f;
+  }
+  
+  /* FOOTER */
+  
+  .sc-footer {
+    padding: 25px 20px;
+    border-top: 1px solid rgba(220, 204, 255, 0.12);
+    background: #090b1b;
+    text-align: center;
+  }
+  
+  .sc-footer p {
+    margin: 0;
+    color: #8e849f;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+  
+  /* RESPONSIVE */
+  
+  @media screen and (max-width: 768px) {
+    .sc-header {
+      padding: 22px 5%;
+    }
+  
+    .sc-back {
+      font-size: 8px;
+      letter-spacing: 1px;
+    }
+  
+    .sc-logo {
+      font-size: 15px;
+    }
+  
+    .sc-hero {
+      min-height: 600px;
+      padding: 150px 22px 100px;
+    }
+  
+    .sc-hero::before {
+      width: 350px;
+      height: 350px;
+    }
+  
+    .sc-hero::after {
+      width: 290px;
+      height: 290px;
+    }
+  
+    .sc-hero-subtitle {
+      font-size: 12px;
+      letter-spacing: 3px;
+    }
+  
+    .sc-hero-description {
+      font-size: 11px;
+      line-height: 2.4;
+    }
+  
+    .sc-intro {
+      padding: 90px 20px;
+    }
+  
+    .sc-collection {
+      padding: 80px 6% 100px;
+    }
+  
+    .sc-section-heading h2 {
+      font-size: 34px;
+    }
+  
+    .sc-collection-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+      max-width: 480px;
+    }
+  
+    .sc-card-image {
+      height: 230px;
+    }
+  
+    .sc-message {
+      padding: 100px 20px;
+    }
+  
+    .sc-ending {
+      padding: 80px 20px;
+    }
+  }
+  
+  @media screen and (max-width: 380px) {
+    .sc-back {
+      font-size: 7px;
+    }
+  
+    .sc-logo {
+      font-size: 13px;
+    }
+  
+    .sc-card-content {
+      padding: 25px 20px 30px;
+    }
+  }
+
+/* =====================================
+   SELECT COLLECTION - MODAL
+===================================== */
+
+/* カードをクリックできるようにする */
+
+.sc-card {
+  cursor: pointer;
+}
+
+/* ポップアップ全体 */
+
+.sc-modal[hidden] {
+  display: none;
+}
+
+.sc-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+/* 背景 */
+
+.sc-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 5, 20, 0.88);
+  backdrop-filter: blur(9px);
+}
+
+/* ウィンドウ */
+
+.sc-modal-window {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 760px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 45px;
+  border: 1px solid rgba(217, 183, 127, 0.7);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(43, 32, 76, 0.98),
+      rgba(10, 16, 43, 0.99)
+    );
+  box-shadow:
+    0 0 35px rgba(137, 100, 255, 0.2),
+    0 20px 70px rgba(0, 0, 0, 0.5);
+  animation: scModalOpen 0.45s ease both;
+}
+
+/* 閉じるボタン */
+
+.sc-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  border: none;
+  background: transparent;
+  color: #e8d3b0;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* タイトル・文章 */
+
+.sc-modal-content {
+  text-align: center;
+}
+
+.sc-modal-content h2 {
+  margin: 15px 0;
+  color: #ead6ae;
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.sc-modal-subtitle {
+  margin-bottom: 25px;
+  color: #d8cce8;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.sc-modal-description {
+  margin: 25px auto;
+  color: #ded8e8;
+  font-size: 13px;
+  line-height: 2.3;
+}
+
+/* メイン画像 */
+
+.sc-modal-image img {
+  display: block;
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  border: 1px solid rgba(217, 183, 127, 0.4);
+}
+
+/* ギャラリー */
+
+.sc-modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.sc-modal-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid rgba(217, 183, 127, 0.3);
+}
+
+/* リンク */
+
+.sc-modal-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 13px 30px;
+  border: 1px solid rgba(217, 183, 127, 0.7);
+  color: #ead6ae;
+  font-family: Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.sc-modal-link:hover {
+  background: rgba(217, 183, 127, 0.15);
+}
+
+/* 表示アニメーション */
+
+@keyframes scModalOpen {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* スマートフォン */
+
+@media (max-width: 600px) {
+  .sc-modal {
+    padding: 12px;
+  }
+
+  .sc-modal-window {
+    padding: 45px 20px 25px;
+    max-height: 90vh;
+  }
+
+  .sc-modal-content h2 {
+    font-size: 25px;
+  }
+
+  .sc-modal-gallery {
+    gap: 7px;
+  }
+}
+/* =====================================
+   SELECT COLLECTION - EXTRA CONTENT
+===================================== */
+
+.sc-modal-extra {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.sc-modal-extra p {
+  color: #ded8e8;
+  font-size: 13px;
+  line-height: 2.3;
+  text-align: center;
+}
+
+.sc-modal-extra img,
+.sc-modal-extra video {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border: 1px solid rgba(217, 183, 127, 0.4);
+}
+
+.sc-modal-extra audio {
+  display: block;
+  width: 100%;
+}

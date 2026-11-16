@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Collection | Karen Serubia</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/select-collection.css">
+</head>
+
+<body class="select-collection-page">
+
+  <!-- HEADER -->
+  <header class="sc-header">
+    <a href="hidden-room.html" class="sc-back">← THE HIDDEN ROOM</a>
+    <a href="index.html" class="sc-logo">Karen Serubia</a>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="sc-hero">
+      <div class="sc-hero-content">
+        <p class="sc-eyebrow">A CURATED WORLD OF BEAUTY</p>
+        <h1>Select Collection</h1>
+        <p class="sc-hero-subtitle">選び抜かれた、特別な物語。</p>
+        <span class="sc-hero-line"></span>
+        <p class="sc-hero-description">
+          心に留めておきたいもの。
+          美しいと感じたもの。
+          そして、私だけの物語を彩るもの。
+          <br>
+          ここには、私が大切に選んだ世界の欠片を集めました。
+        </p>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="sc-intro">
+      <p class="sc-eyebrow">THE ART OF SELECTION</p>
+      <h2>私を形づくる、美しい断片。</h2>
+      <p>
+        好きという気持ちに、理由はいらない。
+        <br>
+        ひとつひとつの出逢いが、私の感性をつくっていく。
+        <br>
+        そんな小さな宝物たちを、ここに。
+      </p>
+    </section>
+
+    <!-- COLLECTION -->
+    <section class="sc-collection">
+      <div class="sc-section-heading">
+        <p class="sc-eyebrow">MY FAVORITE THINGS</p>
+        <h2>Collections</h2>
+        <p>私の世界を彩る、特別なコレクション。</p>
+      </div>
+
+      <div class="sc-collection-grid">
+
+        <article class="sc-card" data-collection="visual-poetry"
+        role="button" tabindex="0" aria-haspopup="dialog">
+          <div class="sc-card-image">
+            <span>01</span>
+          </div>
+          <div class="sc-card-content">
+            <p class="sc-card-category">ART & DESIGN</p>
+            <h3>Visual Poetry</h3>
+            <p>心を惹きつける色彩と造形。美しいと感じたものたち。</p>
+          </div>
+        </article>
+
+        <article class="sc-card" data-collection="melodies"
+         role="button" tabindex="0" aria-haspopup="dialog">
+          <div class="sc-card-image">
+            <span>02</span>
+          </div>
+          <div class="sc-card-content">
+            <p class="sc-card-category">MUSIC & SOUND</p>
+            <h3>Melodies of My Soul</h3>
+            <p>記憶や感情に寄り添う、忘れられない音楽。</p>
+          </div>
+        </article>
+
+        <article class="sc-card" data-collection="fragments"
+         role="button" tabindex="0" aria-haspopup="dialog">
+          <div class="sc-card-image">
+            <span>03</span>
+          </div>
+          <div class="sc-card-content">
+            <p class="sc-card-category">WORDS & BOOKS</p>
+            <h3>Fragments of Words</h3>
+            <p>心に残った言葉や、何度も読み返したい物語。</p>
+          </div>
+        </article>
+
+        <article class="sc-card" data-collection="treasures"
+         role="button" tabindex="0" aria-haspopup="dialog">
+          <div class="sc-card-image">
+            <span>04</span>
+          </div>
+          <div class="sc-card-content">
+            <p class="sc-card-category">FAVORITES</p>
+            <h3>Little Treasures</h3>
+            <p>日常の中で見つけた、小さくてかけがえのない宝物。</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- COLLECTION MODAL -->
+    <div class="sc-modal" id="collection-modal" hidden>
+      <div class="sc-modal-overlay"></div>
+
+      <div class="sc-modal-window"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title">
+
+        <button class="sc-modal-close" type="button"
+          aria-label="閉じる">×</button>
+
+        <div class="sc-modal-content">
+
+          <p class="sc-eyebrow" id="modal-category">
+            ART & DESIGN
+          </p>
+
+          <h2 id="modal-title">Visual Poetry</h2>
+
+          <p class="sc-modal-subtitle" id="modal-subtitle">
+            心を惹きつける、美しい断片。
+          </p>
+
+          <div class="sc-modal-image">
+            <img id="modal-main-image"
+              src="images/collection-visual-poetry.jpg"
+              alt="">
+          </div>
+
+          <p class="sc-modal-description" id="modal-description">
+            心を惹きつける色彩と造形。
+            美しいと感じたものたちを集めたコレクション。
+          </p>
+
+          <div class="sc-modal-gallery" id="modal-gallery">
+            <img src="images/collection-visual-poetry-01.jpg" alt="">
+            <img src="images/collection-visual-poetry-02.jpg" alt="">
+            <img src="images/collection-visual-poetry-03.jpg" alt="">
+          </div>
+          <div class="sc-modal-extra" id="modal-extra"></div>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- /COLLECTION MODAL -->
+
+
+    <!-- MESSAGE -->
+    <section class="sc-message">
+      <p class="sc-eyebrow">A NOTE FROM KAREN</p>
+      <h2>美しいものは、心の中に残る。</h2>
+      <p>
+        何を選び、何を愛し、何を大切にするのか。
+        <br>
+        その選択のひとつひとつが、私という存在をつくっていく。
+        <br>
+        ここで見つけた何かが、あなたの心にも残りますように。
+      </p>
+      <p class="sc-signature">Karen Serubia</p>
+    </section>
+
+    <!-- ENDING -->
+    <section class="sc-ending">
+      <p>EVERYTHING HAS ITS OWN STORY.</p>
+      <h2>Until We Meet Again.</h2>
+      <a href="hidden-room.html">Return to The Hidden Room</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="sc-footer">
+    <p>© Karen Serubia. All Rights Reserved.</p>
+  </footer>
+  <script src="js/select-collection.js"></script>
+
+</body>
+</html>

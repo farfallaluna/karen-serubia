@@ -1,0 +1,1039 @@
+
+/* =========================================
+   SCHEDULE — MOON CALENDAR
+========================================= */
+
+.schedule-page {
+    background:
+      radial-gradient(ellipse at 50% 20%, rgba(54, 73, 150, 0.18), transparent 55%),
+      linear-gradient(180deg, #0d1025 0%, #11152e 55%, #0b1024 100%);
+    color: #f0eaff;
+    overflow-x: hidden;
+  }
+  
+  /* HERO */
+  .schedule-hero {
+    min-height: 78vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    isolation: isolate;
+    overflow: hidden;
+  
+    background:
+      radial-gradient(circle at 75% 30%, rgba(90, 110, 220, 0.25), transparent 25%),
+      radial-gradient(ellipse at 50% 70%, rgba(70, 80, 170, 0.2), transparent 60%);
+  }
+  
+  .schedule-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(ellipse at 50% 50%,
+        rgba(140, 155, 255, 0.12),
+        transparent 65%);
+    animation: scheduleGlow 9s ease-in-out infinite alternate;
+  }
+  
+  .schedule-hero-inner {
+    width: min(90%, 900px);
+    padding: 120px 20px 100px;
+  }
+  
+  .schedule-hero h1 {
+    margin: 28px 0;
+    font-family: Georgia, serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 30px rgba(150, 170, 255, 0.35);
+  }
+  
+  .schedule-hero h2 {
+    margin-top: 28px;
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+  }
+  
+  .schedule-hero .hero-description {
+    margin-top: 25px;
+    color: #c7cce9;
+    letter-spacing: 0.1em;
+    line-height: 2.2;
+  }
+  
+  /* COMMON SECTION */
+  .schedule-page .section-wrap {
+    width: min(1100px, 88%);
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+  
+  /* CALENDAR HEADING */
+  .calendar-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 25px;
+    margin-bottom: 45px;
+  }
+  
+  .calendar-heading h2 {
+    margin-top: 15px;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    color: #e8e5ff;
+  }
+  
+  .calendar-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .calendar-controls button {
+    padding: 12px 17px;
+    color: #e5e0ff;
+    border: 1px solid rgba(180, 190, 255, 0.25);
+    background: rgba(70, 80, 150, 0.12);
+    cursor: pointer;
+    font-family: Georgia, serif;
+    letter-spacing: 0.08em;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  
+  .calendar-controls button:hover {
+    background: rgba(110, 125, 210, 0.25);
+    box-shadow: 0 0 18px rgba(120, 145, 255, 0.2);
+  }
+  
+  /* CALENDAR GRID */
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    border-top: 1px solid rgba(190, 190, 255, 0.3);
+    border-left: 1px solid rgba(190, 190, 255, 0.3);
+  }
+  
+  .calendar-day {
+    min-height: 135px;
+    padding: 13px;
+    border-right: 1px solid rgba(190, 190, 255, 0.25);
+    border-bottom: 1px solid rgba(190, 190, 255, 0.25);
+    background: rgba(20, 27, 60, 0.28);
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  
+  .calendar-day:hover {
+    background: rgba(90, 105, 180, 0.15);
+  }
+  
+  .calendar-weekday {
+    min-height: auto;
+    padding: 17px 5px;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    color: #c9c8ed;
+    background: rgba(90, 95, 155, 0.12);
+  }
+  
+  .calendar-date {
+    display: block;
+    margin-bottom: 12px;
+    color: #e5e1ff;
+    font-family: Georgia, serif;
+    font-size: 0.95rem;
+  }
+  
+  .calendar-day.is-outside {
+    opacity: 0.35;
+  }
+  
+  .calendar-day.is-today {
+    background: rgba(120, 135, 220, 0.16);
+    box-shadow: inset 0 0 0 1px rgba(175, 185, 255, 0.45);
+  }
+  
+  .calendar-day.is-selected {
+    background: rgba(130, 115, 210, 0.22);
+    box-shadow: inset 0 0 0 1px rgba(205, 185, 255, 0.6);
+  }
+  
+  .calendar-event {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 5px 4px;
+    border: 0;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 0.65rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+  }
+  
+  .event-wave { background: rgba(130, 105, 210, 0.8); }
+  .event-music { background: rgba(75, 115, 205, 0.85); }
+  .event-collab { background: rgba(155, 105, 195, 0.85); }
+  .event-special { background: rgba(190, 145, 85, 0.85); }
+  
+  .calendar-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 28px 0 45px;
+  }
+  
+  .calendar-legend span {
+    padding: 6px 12px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+  
+  .legend-wave { background: rgba(130, 105, 210, 0.8); }
+  .legend-music { background: rgba(75, 115, 205, 0.85); }
+  .legend-collab { background: rgba(155, 105, 195, 0.85); }
+  .legend-special { background: rgba(190, 145, 85, 0.85); }
+  
+  /* SELECTED EVENT DETAIL */
+  .event-detail {
+    min-height: 100px;
+    padding: 28px;
+    border: 1px solid rgba(190, 190, 255, 0.2);
+    background: rgba(35, 40, 85, 0.18);
+    color: #d8d5ef;
+    line-height: 2;
+  }
+  
+  .event-detail h3 {
+    margin-bottom: 10px;
+    color: #eee8ff;
+    font-family: Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+  }
+  
+  .event-detail p {
+    margin: 5px 0;
+  }
+  
+  /* UPCOMING EVENTS */
+  .schedule-page .section-heading {
+    margin-bottom: 55px;
+    text-align: left;
+  }
+  
+  .schedule-page .section-heading h2 {
+    margin: 15px 0;
+    color: #e9e4ff;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+  }
+  
+  .upcoming-item {
+    display: grid;
+    grid-template-columns: 110px 1fr 150px 35px;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 10px;
+    border-top: 1px solid rgba(190, 190, 255, 0.25);
+    color: inherit;
+    text-decoration: none;
+    transition: background 0.4s, padding 0.4s;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  
+  .upcoming-item:last-child {
+    border-bottom: 1px solid rgba(190, 190, 255, 0.25);
+  }
+  
+  .upcoming-item:hover {
+    padding-left: 20px;
+    background: rgba(100, 110, 190, 0.08);
+  }
+  
+  .upcoming-date {
+    color: #d8c5a6;
+    font-family: Georgia, serif;
+    letter-spacing: 0.08em;
+  }
+  
+  .upcoming-info h3 {
+    margin-bottom: 8px;
+    color: #eee8ff;
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  
+  .upcoming-info p {
+    color: #c5c4df;
+    font-size: 0.88rem;
+    line-height: 1.8;
+  }
+  
+  .upcoming-time {
+    color: #d4d3ee;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  
+  .upcoming-arrow {
+    color: #d9c8ff;
+    font-size: 1.4rem;
+    transition: transform 0.3s;
+  }
+  
+  .upcoming-item:hover .upcoming-arrow {
+    transform: translateX(6px);
+  }
+  
+  /* ANIMATION */
+  @keyframes scheduleGlow {
+    from {
+      opacity: 0.4;
+      transform: scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+  
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .schedule-hero {
+      min-height: 65vh;
+    }
+  
+    .schedule-page .section-wrap {
+      padding: 75px 0;
+    }
+  
+    .calendar-heading {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  
+    .calendar-day {
+      min-height: 90px;
+      padding: 7px 4px;
+    }
+  
+    .calendar-date {
+      font-size: 0.8rem;
+    }
+  
+    .calendar-event {
+      font-size: 0.55rem;
+      padding: 4px 2px;
+    }
+  
+    .upcoming-item {
+      grid-template-columns: 75px 1fr 25px;
+      gap: 12px;
+      padding: 23px 5px;
+    }
+  
+    .upcoming-time {
+      grid-column: 2;
+      text-align: left;
+    }
+  
+    .upcoming-arrow {
+      grid-column: 3;
+      grid-row: 1 / 3;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .schedule-hero::before {
+      animation: none;
+    }
+  
+    .calendar-controls button,
+    .calendar-day,
+    .upcoming-item,
+    .upcoming-arrow {
+      transition: none;
+    }
+  }
+/* =========================================
+   MOONLIGHT EVENT EFFECT
+========================================= */
+
+/* イベントがある日 */
+.calendar-day.has-event {
+    position: relative;
+    background:
+      radial-gradient(
+        circle at 50% 45%,
+        rgba(174, 143, 255, 0.19),
+        transparent 75%
+      );
+    box-shadow:
+      inset 0 0 22px rgba(160, 135, 255, 0.10);
+    transition:
+      background 0.5s ease,
+      box-shadow 0.5s ease,
+      transform 0.4s ease;
+  }
+  
+  /* 日付セルにふんわり光 */
+  .calendar-day.has-event::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #d9c5ff;
+    box-shadow:
+      0 0 7px #d9c5ff,
+      0 0 16px rgba(177, 143, 255, 0.9);
+    animation: moonPulse 3s ease-in-out infinite;
+  }
+  
+  /* イベントラベル */
+  .calendar-day.has-event .calendar-event {
+    box-shadow:
+      0 0 8px rgba(174, 143, 255, 0.25);
+    transition:
+      transform 0.35s ease,
+      box-shadow 0.35s ease,
+      filter 0.35s ease;
+  }
+  
+  /* マウスを乗せたとき */
+  .calendar-day.has-event:hover {
+    background:
+      radial-gradient(
+        circle at 50% 45%,
+        rgba(174, 143, 255, 0.28),
+        transparent 80%
+      );
+    box-shadow:
+      inset 0 0 28px rgba(160, 135, 255, 0.18),
+      0 0 18px rgba(130, 115, 220, 0.12);
+  }
+  
+  .calendar-day.has-event:hover .calendar-event {
+    transform: translateY(-2px);
+    filter: brightness(1.15);
+    box-shadow:
+      0 0 13px rgba(190, 165, 255, 0.5);
+  }
+  
+  /* 月明かりの呼吸 */
+  @keyframes moonPulse {
+    0%, 100% {
+      opacity: 0.55;
+      transform: scale(0.85);
+    }
+  
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+  
+  /* 動きを減らす設定 */
+  @media (prefers-reduced-motion: reduce) {
+    .calendar-day.has-event::before {
+      animation: none;
+    }
+  }
+
+/* =========================================
+   MOONLIGHT EVENT DETAIL ANIMATION
+========================================= */
+
+.event-detail {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s cubic-bezier(.22, 1, .36, 1),
+      box-shadow 0.6s ease,
+      border-color 0.6s ease;
+  }
+  
+  .event-detail.is-updating {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  
+  .event-detail.is-active {
+    border-color: rgba(190, 165, 255, 0.55);
+    box-shadow:
+      0 0 18px rgba(145, 125, 235, 0.12),
+      inset 0 0 25px rgba(145, 125, 235, 0.08);
+  }
+  
+  /* 詳細内の文章を順番に表示 */
+  .event-detail.is-active h3,
+  .event-detail.is-active p {
+    animation: detailAppear 0.7s ease both;
+  }
+  
+  .event-detail.is-active h3 {
+    animation-delay: 0.1s;
+  }
+  
+  .event-detail.is-active p:nth-of-type(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .event-detail.is-active p:nth-of-type(2) {
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes detailAppear {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* 選択した日付の発光 */
+  .calendar-day.is-selected {
+    position: relative;
+    box-shadow:
+      inset 0 0 25px rgba(180, 150, 255, 0.25),
+      0 0 15px rgba(170, 140, 255, 0.18);
+    transition: box-shadow 0.5s ease;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .event-detail,
+    .calendar-day.is-selected {
+      transition: none;
+    }
+  
+    .event-detail.is-active h3,
+    .event-detail.is-active p {
+      animation: none;
+    }
+  }  
+/* =========================================
+   FLOATING MOON ART
+========================================= */
+
+.schedule-moon-art {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    position: relative;
+    animation: moonFloat 6s ease-in-out infinite;
+  }
+  
+  .schedule-moon-art img {
+    display: block;
+    width: min(275px, 65vw);
+    height: auto;
+    object-fit: contain;
+  
+    mix-blend-mode: screen;
+  
+    filter:
+      drop-shadow(0 0 10px rgba(125, 150, 255, 0.45))
+      drop-shadow(0 0 25px rgba(155, 125, 255, 0.35));
+  
+    animation: moonShimmer 4s ease-in-out infinite;
+  }
+  
+  /* ゆっくり浮遊 */
+  @keyframes moonFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+  
+  /* 月の光が呼吸する */
+  @keyframes moonShimmer {
+    0%, 100% {
+      filter:
+        drop-shadow(0 0 8px rgba(125, 150, 255, 0.35))
+        drop-shadow(0 0 18px rgba(155, 125, 255, 0.25));
+    }
+  
+    50% {
+      filter:
+        drop-shadow(0 0 16px rgba(150, 180, 255, 0.8))
+        drop-shadow(0 0 35px rgba(180, 145, 255, 0.65));
+    }
+  }
+  
+  /* スマホ */
+  @media (max-width: 768px) {
+    .schedule-moon-art {
+      margin-bottom: 15px;
+    }
+  
+    .schedule-moon-art img {
+      width: min(230px, 65vw);
+    }
+  }
+  
+  /* 動きを減らす設定 */
+  @media (prefers-reduced-motion: reduce) {
+    .schedule-moon-art,
+    .schedule-moon-art img {
+      animation: none;
+    }
+  }
+/* =================================
+   MOONLIT EVENT LETTER
+================================= */
+
+.event-detail {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 24px;
+    background: rgba(5, 5, 20, 0.78);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  
+  .event-detail.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .event-detail-inner {
+    position: relative;
+    width: min(560px, 100%);
+    max-height: 85vh;
+    overflow-y: auto;
+  
+    padding: 42px 38px;
+    color: #f5edff;
+    text-align: center;
+  
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(113, 83, 180, 0.35), transparent 65%),
+      linear-gradient(145deg, rgba(28, 25, 58, 0.98), rgba(8, 15, 39, 0.98));
+  
+    border: 1px solid rgba(211, 184, 255, 0.55);
+    outline: 1px solid rgba(211, 184, 255, 0.16);
+    outline-offset: 7px;
+  
+    box-shadow:
+      0 0 35px rgba(130, 91, 220, 0.25),
+      0 0 90px rgba(91, 112, 255, 0.16);
+  
+    transform: translateY(25px) scale(0.97);
+    opacity: 0;
+  
+    transition:
+      transform 0.65s cubic-bezier(.2, .8, .2, 1),
+      opacity 0.65s ease;
+  }
+  
+  .event-detail.is-active .event-detail-inner {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  
+  /* 上部の小さな月モチーフ */
+  .event-letter-moon {
+    color: #e7c98e;
+    font-size: 27px;
+    margin-bottom: 12px;
+    text-shadow: 0 0 18px rgba(231, 201, 142, 0.8);
+  }
+  
+  .event-letter-label {
+    color: #d9bd8b;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    margin-bottom: 22px;
+  }
+  
+  .event-letter-date {
+    color: #d9bd8b;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    margin-bottom: 12px;
+  }
+  
+  .event-letter-title {
+    font-family: Georgia, serif;
+    font-size: clamp(25px, 5vw, 34px);
+    font-weight: normal;
+    line-height: 1.35;
+    margin: 0 0 22px;
+  }
+  
+  .event-letter-divider {
+    width: 100px;
+    height: 1px;
+    margin: 0 auto 24px;
+    background: linear-gradient(90deg, transparent, #d9bd8b, transparent);
+    box-shadow: 0 0 10px rgba(217, 189, 139, 0.5);
+  }
+  
+  .event-letter-description {
+    color: #e8e0f2;
+    font-size: 14px;
+    line-height: 2.1;
+    margin-bottom: 24px;
+  }
+  
+  .event-letter-meta {
+    color: #d9bd8b;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    line-height: 2;
+    margin-bottom: 24px;
+  }
+  
+  .event-letter-category {
+    display: inline-block;
+    padding: 7px 20px;
+    border: 1px solid rgba(217, 189, 139, 0.55);
+    color: #e8d3a8;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
+  
+  .event-letter-link {
+    display: inline-block;
+    margin-top: 24px;
+    color: #f1dcae;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    transition: text-shadow 0.3s ease;
+  }
+  
+  .event-letter-link:hover {
+    text-shadow: 0 0 12px #e8c98e;
+  }
+  
+  .event-letter-close {
+    display: block;
+    margin: 30px auto 0;
+    padding: 9px 25px;
+    border: 1px solid rgba(217, 189, 139, 0.45);
+    background: transparent;
+    color: #e8d3a8;
+    font-family: inherit;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .event-letter-close:hover {
+    background: rgba(217, 189, 139, 0.1);
+    box-shadow: 0 0 18px rgba(217, 189, 139, 0.2);
+  }
+  
+  @media (max-width: 600px) {
+    .event-detail {
+      padding: 18px;
+    }
+  
+    .event-detail-inner {
+      padding: 35px 22px;
+    }
+  }
+/* =================================
+   SCHEDULE FOOTER
+================================= */
+
+.schedule-page .about-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 8%;
+  border-top: 1px solid rgba(210, 190, 255, 0.2);
+  background: rgba(10, 9, 28, 0.85);
+}
+
+.schedule-page .about-footer p {
+  margin: 0;
+  color: #c9bdd9;
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+
+.schedule-page .about-footer a {
+  color: #e6d8ff;
+  font-family: Georgia, serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.schedule-page .about-footer a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(210, 180, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .schedule-page .about-footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 20px;
+  }
+}
+/* =================================
+   SCHEDULE — MOONLIGHT TYPOGRAPHY
+================================= */
+
+/* HERO */
+
+.schedule-page .schedule-hero .eyebrow,
+.schedule-page .schedule-hero h1,
+.schedule-page .schedule-hero h2,
+.schedule-page .schedule-hero .hero-description {
+  opacity: 0;
+  animation: scheduleTextReveal 1.3s ease forwards;
+}
+
+.schedule-page .schedule-hero .eyebrow {
+  animation-delay: 0.2s;
+}
+
+.schedule-page .schedule-hero h1 {
+  animation-delay: 0.45s;
+  text-shadow:
+    0 0 10px rgba(220, 205, 255, 0.3),
+    0 0 25px rgba(170, 145, 230, 0.2);
+}
+
+.schedule-page .schedule-hero h2 {
+  animation-delay: 0.8s;
+}
+
+.schedule-page .schedule-hero .hero-description {
+  animation-delay: 1.05s;
+}
+
+/* CALENDAR HEADING */
+
+.schedule-page .calendar-heading {
+  animation: scheduleTextReveal 1.2s ease 0.3s both;
+}
+
+.schedule-page .calendar-heading .eyebrow {
+  text-shadow: 0 0 12px rgba(200, 175, 255, 0.3);
+}
+
+.schedule-page #calendar-month {
+  text-shadow:
+    0 0 10px rgba(220, 200, 255, 0.25),
+    0 0 25px rgba(150, 125, 220, 0.2);
+}
+
+/* 月の光の動き */
+
+@keyframes scheduleTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .schedule-page .schedule-hero .eyebrow,
+  .schedule-page .schedule-hero h1,
+  .schedule-page .schedule-hero h2,
+  .schedule-page .schedule-hero .hero-description,
+  .schedule-page .calendar-heading {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+/* =================================
+   SCHEDULE — MOON CALENDAR MOTION
+================================= */
+
+/* カレンダーの登場 */
+
+/* スクロール前は非表示 */
+
+.schedule-page #calendar-grid {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+/* 画面に入ったら表示 */
+
+.schedule-page #calendar-grid.is-calendar-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 日付セルの初期状態 */
+
+.schedule-page .calendar-cell-reveal {
+  opacity: 0;
+  transform: translateY(12px) scale(0.96);
+}
+
+/* 順番に表示 */
+
+.schedule-page .calendar-cell-reveal.is-cell-visible {
+  animation: calendarCellReveal 0.7s ease both;
+  animation-delay: var(--calendar-delay, 0ms);
+}
+
+
+@keyframes calendarAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 曜日と日付のフェードイン */
+
+.schedule-page .calendar-weekday,
+.schedule-page .calendar-cell-reveal {
+  animation: calendarCellReveal 0.7s ease both;
+  animation-delay: var(--calendar-delay, 0ms);
+}
+
+@keyframes calendarCellReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+    filter: blur(3px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* TODAY — 月光のパルス */
+
+.schedule-page .calendar-day.is-today {
+  animation:
+    calendarCellReveal 0.7s ease both,
+    todayMoonPulse 4s ease-in-out 0.8s infinite;
+}
+
+@keyframes todayMoonPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(190, 165, 255, 0.15);
+  }
+
+  50% {
+    box-shadow:
+      0 0 12px rgba(190, 165, 255, 0.4),
+      0 0 24px rgba(155, 130, 230, 0.2);
+  }
+}
+
+/* 選択した日付 */
+
+.schedule-page .calendar-day.is-selected {
+  outline: 1px solid rgba(210, 190, 255, 0.8);
+  outline-offset: -2px;
+  box-shadow:
+    0 0 12px rgba(185, 155, 255, 0.3),
+    inset 0 0 12px rgba(185, 155, 255, 0.12);
+  transition:
+    box-shadow 0.35s ease,
+    outline-color 0.35s ease;
+}
+
+/* イベントラベル */
+
+.schedule-page .calendar-event {
+  animation: calendarEventReveal 0.6s ease both;
+}
+
+@keyframes calendarEventReveal {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 動きを控える設定 */
+
+@media (prefers-reduced-motion: reduce) {
+  .schedule-page .calendar-grid,
+  .schedule-page .calendar-weekday,
+  .schedule-page .calendar-cell-reveal,
+  .schedule-page .calendar-day.is-today,
+  .schedule-page .calendar-event {
+    animation: none;
+    filter: none;
+  }
+}

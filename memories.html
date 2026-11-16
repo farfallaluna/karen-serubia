@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEMORIES | Karen Serubia</title>
+  
+    <script src="js/main.js" defer></script>
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/motion.css">
+    <link rel="stylesheet" href="css/memories.css">
+  </head>
+
+<body class="memories-page">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Karen Serubia home">
+      <span class="brand-moon" aria-hidden="true">☾</span>
+      <span class="brand-copy">
+        <span class="brand-name">Karen Serubia</span>
+        <span class="brand-tagline">THE MOONLIT SANCTUARY</span>
+      </span>
+    </a>
+  
+    <button class="menu-toggle" type="button"
+      aria-label="メニューを開く"
+      aria-expanded="false"
+      aria-controls="global-nav">
+      <span></span><span></span><span></span>
+    </button>
+  
+    <nav class="global-nav" id="global-nav" aria-label="メインメニュー">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="family.html">FAMILY</a>
+      <a href="schedule.html">SCHEDULE</a>
+      <a href="memories.html" class="active">MEMORIES</a>
+      <a href="letter.html">LETTER</a>
+      <a href="music.html">MUSIC</a>
+      <a href="special.html">SPECIAL</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+     <!-- HERO + GALLERY -->
+      <div class="memory-flow">
+      
+          <!-- 花びら専用レイヤー -->
+          <div class="petal-container" aria-hidden="true"></div>
+      
+          <!-- 01. HERO -->
+          <section class="memories-hero">
+      
+      <div class="petal-container" aria-hidden="true"></div>
+      <div class="memories-hero-inner">
+
+        <p class="eyebrow">
+          MEMORIES OF OUR NIGHTS
+        </p>
+
+        <h1>
+          The Archive of Moonlight
+        </h1>
+
+        <div class="moon-divider">☾</div>
+
+        <h2>
+          心に灯る、私たちの思い出
+        </h2>
+
+        <p class="hero-description">
+          過ぎた夜も、ここではいつまでも優しく輝いている。
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- 02. MEMORY GALLERY -->
+    <section class="memory-gallery section-wrap">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          MEMORY GALLERY
+        </p>
+
+        <h2>
+          Fragments of our precious nights
+        </h2>
+
+        <div class="moon-divider">☾</div>
+
+      </div>
+
+
+      <!-- CATEGORY FILTER -->
+      <div class="memory-filters">
+
+        <button
+          class="memory-filter active"
+          type="button"
+          data-filter="ALL">
+          ALL
+        </button>
+
+        <button
+          class="memory-filter"
+          type="button"
+          data-filter="STREAM">
+          STREAM
+        </button>
+
+        <button
+          class="memory-filter"
+          type="button"
+          data-filter="EVENT">
+          EVENT
+        </button>
+
+        <button
+          class="memory-filter"
+          type="button"
+          data-filter="COLLABORATION">
+          COLLABORATION
+        </button>
+
+      </div>
+
+
+      <!-- MEMORY CARDS -->
+      <div
+        class="memory-grid"
+        id="memory-grid">
+
+        <!-- JavaScriptでカードを生成 -->
+
+      </div>
+
+
+      <!-- ARCHIVE NOTE -->
+      <div class="memory-note">
+
+        <p>
+          写真・コメントは掲載許可を得たもののみ使用し、
+          個人情報や非公開情報は掲載しません。
+        </p>
+
+        <div class="moon-divider">☾</div>
+
+      </div>
+
+    </section>
+
+    </div>
+<!-- /HERO + GALLERY -->
+
+
+<!-- 03. MEMORY CLOSING -->
+
+    <!-- 03. MEMORY CLOSING -->
+    <section class="memories-closing">
+
+      <div class="memories-closing-inner">
+
+        <div class="closing-butterfly">✧</div>
+
+        <p>
+          Every memory is a little moonlight.
+        </p>
+
+        <h2>
+          また、素敵な夜を一緒に。
+        </h2>
+
+        <div class="moon-divider">☾</div>
+
+        <p class="closing-signature">
+          Karen Serubia
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="about-footer">
+
+    <p>
+      © Karen Serubia — THE MOONLIT SANCTUARY
+    </p>
+
+    <a href="index.html">
+      BACK TO HOME ↑
+    </a>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="js/motion.js"></script>
+  <script src="js/memories-data.js"></script>
+  <script src="js/memories.js"></script>
+  <script src="js/memories-closing-motion.js"></script>
+
+</body>
+</html>

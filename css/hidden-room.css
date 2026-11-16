@@ -1,0 +1,1769 @@
+/* =========================================
+   THE HIDDEN ROOM
+   Karen Serubia — The Moonlit Sanctuary
+========================================= */
+
+.hidden-room-page {
+    background: #090817;
+    color: #f5e9e8;
+    overflow-x: hidden;
+  }
+  
+  .hidden-room-page main {
+    overflow: hidden;
+  }
+  
+  .hidden-section-inner {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+  
+  .hidden-room-page .eyebrow {
+    color: #dfbd91;
+    font-family: Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .hidden-room-page h2 {
+    color: #f5e8e5;
+    font-family: Georgia, serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .hidden-section-description {
+    color: rgba(245, 230, 230, 0.72);
+    font-size: 13px;
+    line-height: 2;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  
+  /* =========================================
+     01. ROOM ENTRANCE
+  ========================================= */
+  
+  .hidden-hero {
+    position: relative;
+    min-height: 850px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 150px 25px 120px;
+  
+    background:
+      linear-gradient(
+        180deg,
+        rgba(8, 7, 25, 0.35),
+        rgba(9, 8, 23, 0.55),
+        rgba(9, 8, 23, 0.8)
+      ),
+      url("../images/hidden-room-bg-top.png")
+      center center / cover no-repeat;
+  }
+  
+  .hidden-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+  
+    background:
+      radial-gradient(
+        circle at 50% 35%,
+        rgba(178, 153, 231, 0.2),
+        transparent 45%
+      );
+  
+    pointer-events: none;
+  }
+  
+  .hidden-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    text-align: center;
+  }
+  
+  .hidden-hero h1 {
+    color: #fff0e8;
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 7vw, 78px);
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+  
+    text-shadow: 0 0 30px rgba(190, 160, 255, 0.4);
+  }
+  
+  .hidden-moon {
+    color: #e8c995;
+    font-size: 46px;
+    margin: 30px auto;
+  
+    text-shadow: 0 0 25px rgba(232, 201, 149, 0.5);
+  }
+  
+  .hidden-hero h2 {
+    font-size: clamp(17px, 2.5vw, 25px);
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+  }
+  
+  .hidden-description {
+    color: rgba(245, 230, 230, 0.82);
+    font-size: 13px;
+    line-height: 2.5;
+    letter-spacing: 0.06em;
+    margin-top: 35px;
+  }
+  
+  .hidden-scroll {
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  
+    color: #d9bd98;
+    font-family: Georgia, serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+  }
+  
+  .hidden-scroll span {
+    font-size: 20px;
+  }
+  
+  
+  /* =========================================
+     02. LITTLE TREASURES
+  ========================================= */
+  
+  .hidden-treasures {
+    padding: 120px 20px 140px;
+  
+    background:
+      linear-gradient(
+        180deg,
+        rgba(9, 8, 23, 0.65),
+        rgba(9, 8, 23, 0.8)
+      ),
+      url("../images/hidden-room-bg-bottom.png")
+      center center / cover no-repeat;
+  }
+  
+  .hidden-treasures h2 {
+    margin-bottom: 20px;
+  }
+  
+  .treasure-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+  
+    margin-top: 65px;
+  }
+  
+  .treasure-card {
+    min-height: 300px;
+    padding: 45px 28px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    text-align: center;
+  
+    border: 1px solid rgba(207, 178, 148, 0.45);
+  
+    background:
+      linear-gradient(
+        145deg,
+        rgba(40, 30, 69, 0.72),
+        rgba(13, 12, 33, 0.92)
+      );
+  
+    box-shadow: inset 0 0 35px rgba(125, 93, 180, 0.08);
+  
+    transition: all 0.4s ease;
+  }
+  
+  .treasure-card:hover {
+    transform: translateY(-7px);
+    border-color: #e4c49c;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  }
+  
+  .treasure-symbol {
+    color: #e8c995;
+    font-size: 38px;
+    margin-bottom: 25px;
+  }
+  
+  .treasure-category {
+    color: #d9bd98;
+    font-family: Georgia, serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    margin-bottom: 15px;
+  }
+  
+  .treasure-card h3 {
+    color: #fff0e8;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  
+  .treasure-card p:last-child {
+    color: rgba(245, 230, 230, 0.72);
+    font-size: 12px;
+    line-height: 2;
+    margin-top: 18px;
+  }
+  
+  
+  /* =========================================
+     03. UNSEEN ART
+  ========================================= */
+  
+  .hidden-art {
+    position: relative;
+    isolation: isolate;
+    padding: 120px 20px 140px;
+
+    background:
+        linear-gradient(
+            rgba(9, 8, 23, 0.55),
+            rgba(9, 8, 23, 0.72)
+        ),
+        url("../images/hidden-room-unseen-art-bg.png")
+        center center / cover no-repeat;
+
+    border-top: 1px solid rgba(225, 190, 170, 0.2);
+    border-bottom: 1px solid rgba(225, 190, 170, 0.2);
+}
+  
+  .hidden-art h2 {
+    margin-bottom: 20px;
+  }
+  
+  .art-display {
+    max-width: 900px;
+    margin: 60px auto 0;
+    padding: 12px;
+  
+    border: 1px solid rgba(220, 185, 145, 0.65);
+    outline: 1px solid rgba(220, 185, 145, 0.2);
+    outline-offset: 7px;
+  
+    background: rgba(25, 19, 48, 0.8);
+  }
+  
+  .art-display-frame {
+    min-height: 420px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    border: 1px solid rgba(220, 185, 145, 0.25);
+  
+    background:
+      radial-gradient(
+        ellipse at center,
+        rgba(104, 79, 156, 0.3),
+        transparent 70%
+      ),
+      #100d24;
+  
+    text-align: center;
+  }
+  
+  .art-display-frame span {
+    color: #e8c995;
+    font-size: 45px;
+    margin-bottom: 25px;
+  }
+  
+  .art-display-frame p {
+    color: #e7d5c8;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+  }
+  
+  .art-display-frame small {
+    color: #a99ab7;
+    font-family: Georgia, serif;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    margin-top: 15px;
+  }
+  
+  
+  /* =========================================
+   04. PRIVATE MESSAGE — MOONLIT LETTER BACKGROUND
+========================================= */
+
+.hidden-message {
+  position: relative;
+  isolation: isolate;
+  padding: 120px 20px 140px;
+
+  background:
+      linear-gradient(
+          rgba(9, 8, 23, 0.48),
+          rgba(9, 8, 23, 0.68)
+      ),
+      url("../images/hidden-room-karen-letter-bg.png")
+      center center / cover no-repeat;
+}
+  
+  .hidden-message h2 {
+    margin-bottom: 55px;
+  }
+  
+  .hidden-message-frame {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 70px 65px;
+  
+    border: 1px solid rgba(220, 185, 145, 0.65);
+  
+    background:
+      linear-gradient(
+        135deg,
+        rgba(35, 27, 62, 0.85),
+        rgba(13, 12, 33, 0.95)
+      );
+  
+    box-shadow:
+      0 15px 45px rgba(0, 0, 0, 0.35),
+      inset 0 0 40px rgba(125, 93, 180, 0.1);
+  
+    text-align: center;
+  }
+  
+  .message-moon {
+    color: #e8c995;
+    font-size: 38px;
+    margin-bottom: 35px;
+  }
+  
+  .hidden-message-frame p {
+    color: rgba(245, 230, 230, 0.85);
+    font-size: 13px;
+    line-height: 2.7;
+    letter-spacing: 0.05em;
+    margin-bottom: 22px;
+  }
+  
+  .hidden-signature {
+    margin-top: 45px;
+    color: #d9bd98 !important;
+  
+    font-family: Georgia, serif;
+    font-size: 21px !important;
+    font-style: italic;
+    text-align: right;
+  }
+  
+  
+  /* =========================================
+     05. RETURN TO GARDEN
+  ========================================= */
+  
+  .hidden-ending {
+    padding: 120px 20px 140px;
+    text-align: center;
+  
+    background:
+      radial-gradient(
+        ellipse at center top,
+        rgba(112, 91, 169, 0.2),
+        transparent 65%
+      ),
+      #0b091b;
+  
+    border-top: 1px solid rgba(225, 190, 170, 0.25);
+  }
+  
+  .hidden-ending .ending-moon {
+    color: #e8c995;
+    font-size: 38px;
+    margin: 25px auto;
+  }
+  
+  .hidden-ending h2 {
+    margin-bottom: 30px;
+  }
+  
+  .hidden-ending p {
+    color: rgba(245, 230, 230, 0.8);
+    font-size: 13px;
+    line-height: 2.4;
+  }
+  
+  .return-garden {
+    display: inline-block;
+    margin-top: 45px;
+    padding: 17px 30px;
+  
+    border: 1px solid rgba(220, 185, 145, 0.75);
+  
+    color: #f5e8e5;
+    font-family: Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+  
+    transition: all 0.35s ease;
+  }
+  
+  .return-garden:hover {
+    background: rgba(120, 91, 157, 0.35);
+    border-color: #f0d5a8;
+    transform: translateY(-4px);
+  }
+  
+  
+  /* =========================================
+     06. RESPONSIVE
+  ========================================= */
+  
+  @media (max-width: 900px) {
+  
+    .hidden-hero {
+      min-height: 750px;
+    }
+  
+    .treasure-grid {
+      grid-template-columns: 1fr;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .treasure-card {
+      min-height: 250px;
+    }
+  
+    .art-display-frame {
+      min-height: 350px;
+    }
+  
+  }
+  
+  @media (max-width: 600px) {
+  
+    .hidden-hero {
+      min-height: 680px;
+      padding: 120px 20px 100px;
+    }
+  
+    .hidden-hero h1 {
+      font-size: 39px;
+    }
+  
+    .hidden-hero h2 {
+      font-size: 17px;
+    }
+  
+    .hidden-description {
+      font-size: 11px;
+    }
+  
+    .hidden-treasures,
+    .hidden-art,
+    .hidden-message,
+    .hidden-ending {
+      padding: 85px 18px;
+    }
+  
+    .treasure-grid {
+      gap: 18px;
+      margin-top: 40px;
+    }
+  
+    .treasure-card {
+      min-height: 230px;
+      padding: 35px 22px;
+    }
+  
+    .art-display-frame {
+      min-height: 260px;
+    }
+  
+    .hidden-message-frame {
+      padding: 50px 25px;
+    }
+  
+    .hidden-message-frame p {
+      font-size: 12px;
+    }
+  
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .hidden-room-page *,
+    .hidden-room-page *::before,
+    .hidden-room-page *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .hidden-reveal {
+      opacity: 1;
+      transform: none;
+      filter: none;
+      transition: none;
+    }
+  }
+/* =================================
+   MEMORIES FOOTER
+================================= */
+
+.special-page .about-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 8%;
+    border-top: 1px solid rgba(210, 190, 255, 0.2);
+    background: rgba(10, 9, 28, 0.85);
+  }
+  
+  @media (max-width: 768px) {
+    .special-page .about-footer {
+      flex-direction: column;
+      text-align: center;
+      padding: 28px 20px;
+    }
+  }
+/* =================================
+   UNSEEN ART — PRIVATE GALLERY
+================================= */
+
+.hidden-art-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .hidden-section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+  }
+  
+  .hidden-section-heading .hidden-eyebrow {
+    color: #c6a8e8;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 15px;
+  }
+  
+  .hidden-section-heading h2 {
+    color: #f0e5ff;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: 0.08em;
+    margin-bottom: 15px;
+  }
+  
+  .hidden-section-heading > p:last-child {
+    color: #c9bdd9;
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+  }
+  
+  /* Gallery Grid */
+  
+  .art-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    width: 100%;
+  }
+  
+  /* Artwork Card */
+  
+  .artwork-card {
+    position: relative;
+    padding: 12px;
+    border: 1px solid rgba(202, 174, 232, 0.55);
+    background: linear-gradient(
+      145deg,
+      rgba(50, 35, 83, 0.8),
+      rgba(13, 15, 39, 0.95)
+    );
+    box-shadow:
+      0 0 20px rgba(130, 90, 190, 0.12),
+      inset 0 0 15px rgba(210, 180, 255, 0.05);
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
+  }
+  
+  .artwork-card:hover {
+    transform: translateY(-7px);
+    box-shadow:
+      0 12px 30px rgba(0, 0, 0, 0.35),
+      0 0 25px rgba(170, 130, 230, 0.25);
+  }
+  
+  .artwork-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border: 1px solid rgba(220, 195, 240, 0.25);
+  }
+  
+  .artwork-info {
+    padding: 18px 8px 12px;
+    text-align: center;
+  }
+  
+  .artwork-info h3 {
+    color: #f1e6ff;
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+  
+  .artwork-info p {
+    color: #bcaed0;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    margin: 0;
+  }
+  
+  .art-gallery-note {
+    margin-top: 55px;
+    text-align: center;
+    color: #bda9d5;
+    font-family: Georgia, serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    letter-spacing: 0.12em;
+  }
+  
+  /* Responsive */
+  
+  @media (max-width: 768px) {
+    .art-gallery-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+  
+    .hidden-section-heading {
+      margin-bottom: 35px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .art-gallery-grid {
+      grid-template-columns: 1fr;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+  }
+/* =================================
+   ARTWORK VIEWER — MODAL
+================================= */
+
+.artwork-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+  }
+  
+  .artwork-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .artwork-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 5, 20, 0.94);
+    backdrop-filter: blur(12px);
+  }
+  
+  .artwork-modal-content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(250px, 0.8fr);
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1050px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 45px;
+    border: 1px solid rgba(210, 180, 130, 0.65);
+    background: linear-gradient(
+      145deg,
+      rgba(30, 24, 58, 0.98),
+      rgba(9, 12, 35, 0.99)
+    );
+    box-shadow:
+      0 0 40px rgba(130, 90, 190, 0.2),
+      inset 0 0 25px rgba(210, 180, 255, 0.04);
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+  }
+  
+  .artwork-modal.is-open .artwork-modal-content {
+    transform: translateY(0);
+  }
+  
+  .artwork-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    z-index: 2;
+    border: none;
+    background: transparent;
+    color: #e8d8f5;
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .artwork-modal-close:hover {
+    color: #d9b978;
+  }
+  
+  .artwork-modal-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    max-height: 70vh;
+    padding: 12px;
+    border: 1px solid rgba(210, 180, 130, 0.55);
+    background: rgba(5, 5, 20, 0.65);
+  }
+  
+  .artwork-modal-image img {
+    display: block;
+    max-width: 100%;
+    max-height: 65vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .artwork-modal-info {
+    color: #e9def5;
+    text-align: left;
+  }
+  
+  .artwork-modal-info .hidden-eyebrow {
+    color: #c6a8e8;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    line-height: 1.8;
+  }
+  
+  .artwork-modal-info h2 {
+    margin: 20px 0 12px;
+    color: #f3e8ff;
+    font-family: Georgia, serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    letter-spacing: 0.08em;
+  }
+  
+  .artwork-modal-info p {
+    color: #c9bdd9;
+    font-size: 0.85rem;
+    line-height: 1.9;
+  }
+  
+  /* Mobile */
+  
+  @media (max-width: 768px) {
+    .artwork-modal {
+      padding: 15px;
+    }
+  
+    .artwork-modal-content {
+      grid-template-columns: 1fr;
+      gap: 22px;
+      padding: 45px 22px 28px;
+    }
+  
+    .artwork-modal-image {
+      max-height: 55vh;
+    }
+  
+    .artwork-modal-image img {
+      max-height: 50vh;
+    }
+  
+    .artwork-modal-info {
+      text-align: center;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .artwork-modal,
+    .artwork-modal-content {
+      transition: none;
+    }
+  }
+/* Empty Gallery */
+
+.art-gallery-empty {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 65px 20px;
+    border: 1px solid rgba(202, 174, 232, 0.3);
+    background: rgba(20, 18, 48, 0.45);
+    color: #c9bdd9;
+    font-family: Georgia, serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    line-height: 2;
+    text-align: center;
+  }
+/* =========================================
+   HIDDEN ROOM — MIST TYPOGRAPHY
+========================================= */
+
+/* HEROの文字：霞から現れる */
+
+.hidden-hero-content .eyebrow,
+.hidden-hero-content h1,
+.hidden-hero-content .hidden-moon,
+.hidden-hero-content h2,
+.hidden-hero-content .hidden-description {
+  opacity: 0;
+  filter: blur(14px);
+  transform: translateY(12px);
+}
+
+.hidden-hero-content .mist-visible {
+  animation: mistEmergence 2.8s ease forwards;
+  animation-delay: var(--mist-delay, 0ms);
+}
+
+@keyframes mistEmergence {
+  0% {
+    opacity: 0;
+    filter: blur(14px);
+    transform: translateY(12px);
+  }
+
+  45% {
+    opacity: 0.45;
+    filter: blur(7px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/* タイトル：微細な霞の揺らぎ */
+
+.hidden-hero h1.mist-breathing {
+  animation: mistBreathing 8s ease-in-out infinite;
+}
+
+@keyframes mistBreathing {
+  0%, 100% {
+    text-shadow:
+      0 0 18px rgba(190, 160, 255, 0.25);
+  }
+
+  50% {
+    text-shadow:
+      0 0 32px rgba(190, 160, 255, 0.55),
+      0 0 55px rgba(160, 140, 230, 0.2);
+  }
+}
+
+/* 動きを控える設定 */
+
+@media (prefers-reduced-motion: reduce) {
+  .hidden-hero-content .eyebrow,
+  .hidden-hero-content h1,
+  .hidden-hero-content .hidden-moon,
+  .hidden-hero-content h2,
+  .hidden-hero-content .hidden-description {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    animation: none !important;
+  }
+}
+/* =========================================
+   TREASURES — MIST TYPOGRAPHY
+========================================= */
+
+.treasure-mist-hidden {
+  opacity: 0;
+  filter: blur(12px);
+  transform: translateY(22px);
+}
+
+.treasure-mist-visible {
+  animation: treasureMistReveal 2.2s ease forwards;
+  animation-delay: var(--treasure-delay, 0ms);
+}
+
+@keyframes treasureMistReveal {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(22px);
+  }
+
+  45% {
+    opacity: 0.5;
+    filter: blur(6px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/* カード内の文字がかすかに漂う */
+
+.treasure-card h3,
+.treasure-card p:last-child {
+  animation: treasureTextDrift 8s ease-in-out infinite;
+}
+
+.treasure-card:nth-child(2) h3,
+.treasure-card:nth-child(2) p:last-child {
+  animation-delay: -2s;
+}
+
+.treasure-card:nth-child(3) h3,
+.treasure-card:nth-child(3) p:last-child {
+  animation-delay: -4s;
+}
+
+@keyframes treasureTextDrift {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(190, 170, 255, 0.05);
+  }
+
+  50% {
+    text-shadow:
+      0 0 12px rgba(190, 170, 255, 0.3),
+      0 0 22px rgba(170, 150, 230, 0.12);
+  }
+}
+
+/* シンボルの光 */
+
+.treasure-symbol {
+  animation: treasureSymbolGlow 6s ease-in-out infinite;
+}
+
+@keyframes treasureSymbolGlow {
+  0%, 100% {
+    opacity: 0.75;
+    text-shadow: 0 0 8px rgba(232, 201, 149, 0.15);
+  }
+
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 22px rgba(232, 201, 149, 0.65);
+  }
+}
+
+/* 動きを控える設定 */
+
+@media (prefers-reduced-motion: reduce) {
+  .treasure-mist-hidden {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  .treasure-mist-visible,
+  .treasure-card h3,
+  .treasure-card p:last-child,
+  .treasure-symbol {
+    animation: none !important;
+  }
+}
+/* =========================================
+   UNSEEN ART — MIST TYPOGRAPHY
+========================================= */
+
+.art-mist-hidden {
+  opacity: 0;
+  filter: blur(16px);
+  transform: translateY(25px) scale(0.985);
+}
+
+.art-mist-visible {
+  animation: artMistReveal 2.5s ease forwards;
+  animation-delay: var(--art-mist-delay, 0ms);
+}
+
+@keyframes artMistReveal {
+  0% {
+    opacity: 0;
+    filter: blur(16px);
+    transform: translateY(25px) scale(0.985);
+  }
+
+  50% {
+    opacity: 0.45;
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 作品タイトルの淡い揺らぎ */
+
+.artwork-info h3 {
+  animation: artTitleMist 9s ease-in-out infinite;
+}
+
+@keyframes artTitleMist {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(190, 170, 255, 0.05);
+  }
+
+  50% {
+    text-shadow:
+      0 0 14px rgba(190, 170, 255, 0.35),
+      0 0 25px rgba(150, 130, 220, 0.15);
+  }
+}
+
+/* ギャラリー最後の英文 */
+
+.art-gallery-note {
+  animation: artNoteMist 7s ease-in-out infinite;
+}
+
+@keyframes artNoteMist {
+  0%, 100% {
+    opacity: 0.55;
+    filter: blur(0.5px);
+    text-shadow: 0 0 5px rgba(190, 170, 255, 0.05);
+  }
+
+  50% {
+    opacity: 1;
+    filter: blur(0);
+    text-shadow: 0 0 18px rgba(190, 170, 255, 0.35);
+  }
+}
+
+/* 動きを控える設定 */
+
+@media (prefers-reduced-motion: reduce) {
+  .art-mist-hidden {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  .art-mist-visible,
+  .artwork-info h3,
+  .art-gallery-note {
+    animation: none !important;
+  }
+}
+/* =========================================
+   PRIVATE LETTER — MIST TYPOGRAPHY
+========================================= */
+
+.message-mist-hidden {
+  opacity: 0;
+  filter: blur(12px);
+  transform: translateY(18px);
+}
+
+.message-mist-visible {
+  animation: messageMistReveal 2.8s ease forwards;
+  animation-delay: var(--message-mist-delay, 0ms);
+}
+
+@keyframes messageMistReveal {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(18px);
+  }
+
+  50% {
+    opacity: 0.5;
+    filter: blur(6px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/* 月のシンボル */
+
+.message-moon {
+  animation: messageMoonBreathing 7s ease-in-out infinite;
+}
+
+@keyframes messageMoonBreathing {
+  0%, 100% {
+    opacity: 0.7;
+    filter: blur(1px);
+    text-shadow: 0 0 8px rgba(232, 201, 149, 0.2);
+  }
+
+  50% {
+    opacity: 1;
+    filter: blur(0);
+    text-shadow:
+      0 0 18px rgba(232, 201, 149, 0.7),
+      0 0 35px rgba(190, 160, 255, 0.25);
+  }
+}
+
+/* 文章が霧の中で呼吸する */
+
+.hidden-message-frame > p:not(.hidden-signature) {
+  animation: messageTextBreathing 9s ease-in-out infinite;
+}
+
+.hidden-message-frame > p:nth-of-type(2) {
+  animation-delay: -3s;
+}
+
+.hidden-message-frame > p:nth-of-type(3) {
+  animation-delay: -6s;
+}
+
+@keyframes messageTextBreathing {
+  0%, 100% {
+    text-shadow: 0 0 4px rgba(190, 170, 255, 0.03);
+  }
+
+  50% {
+    text-shadow: 0 0 14px rgba(190, 170, 255, 0.22);
+  }
+}
+
+/* 最後の署名 */
+
+.hidden-signature {
+  animation: signatureMist 6s ease-in-out infinite;
+}
+
+@keyframes signatureMist {
+  0%, 100% {
+    opacity: 0.65;
+    text-shadow: 0 0 5px rgba(217, 189, 152, 0.1);
+  }
+
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 18px rgba(217, 189, 152, 0.5);
+  }
+}
+
+/* 動きを控える設定 */
+
+@media (prefers-reduced-motion: reduce) {
+  .message-mist-hidden {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  .message-mist-visible,
+  .message-moon,
+  .hidden-message-frame > p,
+  .hidden-signature {
+    animation: none !important;
+  }
+}
+/* =========================================
+   RETURN — FINAL MIST TYPOGRAPHY
+========================================= */
+
+.ending-mist-hidden {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateY(20px);
+}
+
+.ending-mist-visible {
+  animation: endingMistReveal 3s ease forwards;
+  animation-delay: var(--ending-mist-delay, 0ms);
+}
+
+@keyframes endingMistReveal {
+  0% {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateY(20px);
+  }
+
+  45% {
+    opacity: 0.45;
+    filter: blur(7px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/* 月の淡い光 */
+
+.ending-moon {
+  animation: endingMoonMist 8s ease-in-out infinite;
+}
+
+@keyframes endingMoonMist {
+  0%, 100% {
+    opacity: 0.65;
+    filter: blur(1px);
+    text-shadow: 0 0 8px rgba(232, 201, 149, 0.2);
+  }
+
+  50% {
+    opacity: 1;
+    filter: blur(0);
+    text-shadow:
+      0 0 22px rgba(232, 201, 149, 0.7),
+      0 0 45px rgba(170, 145, 230, 0.25);
+  }
+}
+
+/* エンディングタイトル */
+
+.hidden-ending h2 {
+  text-shadow:
+    0 0 15px rgba(190, 170, 255, 0.12);
+  animation: endingTitleMist 9s ease-in-out infinite;
+}
+
+@keyframes endingTitleMist {
+  0%, 100% {
+    text-shadow: 0 0 8px rgba(190, 170, 255, 0.08);
+  }
+
+  50% {
+    text-shadow:
+      0 0 20px rgba(190, 170, 255, 0.35),
+      0 0 38px rgba(150, 130, 220, 0.15);
+  }
+}
+
+/* 日本語メッセージ */
+
+.hidden-ending p {
+  animation: endingTextMist 8s ease-in-out infinite;
+}
+
+@keyframes endingTextMist {
+  0%, 100% {
+    opacity: 0.7;
+    text-shadow: 0 0 5px rgba(190, 170, 255, 0.05);
+  }
+
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 15px rgba(190, 170, 255, 0.25);
+  }
+}
+
+/* RETURN BUTTON */
+
+.return-garden {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(190, 160, 255, 0.08);
+  transition:
+    background 0.5s ease,
+    box-shadow 0.5s ease,
+    border-color 0.5s ease,
+    transform 0.5s ease;
+}
+
+.return-garden:hover {
+  box-shadow:
+    0 0 18px rgba(190, 160, 255, 0.3),
+    0 0 35px rgba(150, 130, 220, 0.15);
+}
+
+/* 動きを控える設定 */
+
+@media (prefers-reduced-motion: reduce) {
+  .ending-mist-hidden {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  .ending-mist-visible,
+  .ending-moon,
+  .hidden-ending h2,
+  .hidden-ending p {
+    animation: none !important;
+  }
+}
+/* =========================================
+   MIST REVEAL — PERMANENT VISIBILITY
+========================================= */
+
+.hidden-room-page .is-mist-revealed {
+  opacity: 1 !important;
+  filter: blur(0) !important;
+  transform: none !important;
+}
+/* =========================================
+   PRIVATE MESSAGE — VISIBILITY FIX
+========================================= */
+
+.hidden-message .message-mist-visible,
+.hidden-message .is-mist-revealed {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.hidden-message .is-mist-revealed {
+  animation: none;
+  transform: none;
+}
+
+.hidden-message .message-mist-hidden:not(.message-mist-visible):not(.is-mist-revealed) {
+  opacity: 0;
+  filter: blur(12px);
+}
+/* =========================================
+   ENDING — MIST REVEAL FIX
+========================================= */
+
+/* タイトル */
+.hidden-ending h2.ending-mist-visible {
+  animation:
+    endingMistReveal 3s ease var(--ending-delay, 0ms) forwards,
+    endingTitleMist 9s ease-in-out
+    calc(var(--ending-delay, 0ms) + 3s) infinite;
+}
+
+/* 日本語メッセージ */
+.hidden-ending p.ending-mist-visible {
+  animation:
+    endingMistReveal 3s ease var(--ending-delay, 0ms) forwards,
+    endingTextMist 8s ease-in-out
+    calc(var(--ending-delay, 0ms) + 3s) infinite;
+}
+
+/* 月 */
+.hidden-ending .ending-moon.ending-mist-visible {
+  animation:
+    endingMistReveal 3s ease var(--ending-delay, 0ms) forwards,
+    endingMoonMist 8s ease-in-out
+    calc(var(--ending-delay, 0ms) + 3s) infinite;
+}
+
+/* ボタン */
+.hidden-ending .return-garden.ending-mist-visible {
+  animation: endingMistReveal 3s ease var(--ending-delay, 0ms) forwards;
+}
+
+/* 表示完了後は透明にならない */
+.hidden-ending .is-mist-revealed {
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+}
+/* =========================================
+   HIDDEN ROOM — GOLDEN BUTTERFLY
+========================================= */
+
+.hidden-ending {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 蝶が飛ぶ軌道 */
+
+.ending-butterfly {
+  position: absolute;
+  top: 18%;
+  left: -8%;
+  z-index: 2;
+
+  width: 100px;
+  height: 80px;
+
+  pointer-events: none;
+
+  animation: butterflyFlight 14s ease-in-out infinite;
+}
+
+/* 蝶本体 */
+
+.butterfly-icon {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+
+  display: block;
+  font-size: 32px;
+
+  filter:
+      drop-shadow(0 0 8px rgba(255, 215, 130, 0.8));
+
+  transform-origin: center;
+
+  animation: butterflyFlap 0.55s ease-in-out infinite alternate;
+}
+
+/* 蝶の飛行 */
+
+@keyframes butterflyFlight {
+  0% {
+      transform: translate(0, 15px) rotate(-8deg);
+      opacity: 0;
+  }
+
+  10% {
+      opacity: 1;
+  }
+
+  50% {
+      transform: translate(48vw, -25px) rotate(5deg);
+  }
+
+  90% {
+      opacity: 1;
+  }
+
+  100% {
+      transform: translate(100vw, 10px) rotate(-8deg);
+      opacity: 0;
+  }
+}
+
+/* 羽ばたき */
+
+@keyframes butterflyFlap {
+  0% {
+      transform: scaleX(0.72) scaleY(1.05);
+  }
+
+  100% {
+      transform: scaleX(1.08) scaleY(0.92);
+  }
+}
+
+/* 金色の鱗粉 */
+
+.butterfly-star {
+  position: absolute;
+
+  color: #f5d47e;
+  font-size: 13px;
+
+  text-shadow:
+      0 0 6px rgba(255, 220, 130, 0.9),
+      0 0 15px rgba(255, 190, 70, 0.65);
+
+  animation: goldenStardust 2.4s ease-out infinite;
+}
+
+/* 星の位置とタイミング */
+
+.star-1 {
+  top: 25px;
+  left: 12px;
+  animation-delay: 0s;
+}
+
+.star-2 {
+  top: 48px;
+  left: 5px;
+  animation-delay: 0.4s;
+}
+
+.star-3 {
+  top: 12px;
+  left: -5px;
+  animation-delay: 0.8s;
+}
+
+.star-4 {
+  top: 58px;
+  left: 22px;
+  animation-delay: 1.2s;
+}
+
+.star-5 {
+  top: 35px;
+  left: -15px;
+  animation-delay: 1.6s;
+}
+
+.star-6 {
+  top: 5px;
+  left: 18px;
+  animation-delay: 2s;
+}
+
+/* 星が舞い、消えていく */
+
+@keyframes goldenStardust {
+  0% {
+      opacity: 0;
+      transform: translate(0, 0) scale(0.3) rotate(0deg);
+  }
+
+  30% {
+      opacity: 1;
+      transform: translate(-12px, -8px) scale(1) rotate(45deg);
+  }
+
+  100% {
+      opacity: 0;
+      transform: translate(-35px, -30px) scale(0.2) rotate(120deg);
+  }
+}
+
+/* スマートフォン */
+
+@media (max-width: 600px) {
+  .ending-butterfly {
+      top: 12%;
+      animation-duration: 12s;
+  }
+
+  .butterfly-icon {
+      font-size: 26px;
+  }
+}
+
+/* 動きを控える設定 */
+
+@media (prefers-reduced-motion: reduce) {
+  .ending-butterfly,
+  .butterfly-icon,
+  .butterfly-star {
+      animation: none !important;
+  }
+}
+/* =========================================
+   STAINED GLASS BUTTERFLY
+========================================= */
+
+.butterfly-flight {
+  position: relative;
+  width: 230px;
+  height: 220px;
+  margin: 0 auto 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+}
+
+.stained-butterfly {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: 65% 78%;
+  animation: butterflyFlight 2.8s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px rgba(60, 130, 255, 0.35));
+}
+
+@keyframes butterflyFlight {
+  0%, 100% {
+    transform: perspective(600px) rotateY(0deg) rotate(-2deg) scale(1);
+  }
+
+  50% {
+    transform: perspective(600px) rotateY(-18deg) rotate(2deg) scale(0.94);
+  }
+}
+
+/* GOLDEN BUTTERFLY DUST */
+
+.butterfly-sparkle {
+  position: absolute;
+  z-index: 1;
+  color: #f6d78d;
+  text-shadow:
+    0 0 7px #f6d78d,
+    0 0 16px rgba(255, 210, 120, 0.8);
+  opacity: 0;
+  pointer-events: none;
+  animation: goldenDust 3.5s ease-in-out infinite;
+}
+
+.sparkle-1 {
+  left: 5%;
+  top: 48%;
+  font-size: 19px;
+  animation-delay: 0s;
+}
+
+.sparkle-2 {
+  left: 18%;
+  top: 22%;
+  font-size: 13px;
+  animation-delay: 0.8s;
+}
+
+.sparkle-3 {
+  left: 0%;
+  top: 72%;
+  font-size: 16px;
+  animation-delay: 1.4s;
+}
+
+.sparkle-4 {
+  left: 30%;
+  top: 5%;
+  font-size: 11px;
+  animation-delay: 2s;
+}
+
+.sparkle-5 {
+  left: 12%;
+  top: 58%;
+  font-size: 22px;
+  animation-delay: 2.6s;
+}
+
+@keyframes goldenDust {
+  0% {
+    opacity: 0;
+    transform: translate(15px, 15px) scale(0.3) rotate(0deg);
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-55px, -65px) scale(1.2) rotate(100deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stained-butterfly,
+  .butterfly-sparkle {
+    animation: none;
+  }
+}
+/* =================================
+   ENDING BUTTERFLY — SIZE
+================================= */
+
+.ending-butterfly .butterfly-icon {
+  width: 110px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+}
+/* =================================
+   ENDING BUTTERFLY — CENTER POSITION
+================================= */
+
+.hidden-ending {
+  position: relative;
+  overflow: hidden;
+}
+
+.ending-butterfly {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+
+  width: 160px;
+  height: 140px;
+
+  margin: 0 auto 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: none;
+  animation: butterflyFloat 4s ease-in-out infinite;
+}
+
+.ending-butterfly .butterfly-icon {
+  width: 110px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@keyframes butterflyFloat {
+  0%, 100% {
+      transform: translate(0, 0) rotate(-4deg);
+  }
+
+  50% {
+      transform: translate(0, -14px) rotate(4deg);
+  }
+}

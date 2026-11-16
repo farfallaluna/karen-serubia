@@ -1,0 +1,1078 @@
+/* =================================
+   FAMILY — THE GARDEN OF BONDS
+================================= */
+
+.family-page {
+    background:
+      radial-gradient(ellipse at 50% 15%, rgba(111, 83, 157, 0.22), transparent 55%),
+      linear-gradient(180deg, #111126 0%, #17142e 48%, #100f24 100%);
+    color: #f1eafa;
+    overflow-x: hidden;
+  }
+  
+  /* HERO */
+  .family-hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    isolation: isolate;
+    overflow: hidden;
+  
+    background:
+      linear-gradient(rgba(13, 12, 35, 0.22), rgba(13, 12, 35, 0.58)),
+      url("../images/family-hero.png") center / cover no-repeat;
+  }
+  
+  .family-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(ellipse at 50% 45%,
+        rgba(207, 180, 255, 0.24),
+        transparent 58%);
+    animation: gardenGlow 8s ease-in-out infinite alternate;
+  }
+  
+  .family-hero-inner {
+    width: min(90%, 900px);
+    padding: 120px 20px 80px;
+  }
+  
+  .family-hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: 0.06em;
+    text-shadow: 0 0 30px rgba(207, 180, 255, 0.35);
+  }
+  
+  .family-hero h2 {
+    margin-top: 28px;
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    font-weight: 400;
+    letter-spacing: 0.16em;
+  }
+  
+  .family-hero .hero-description {
+    margin-top: 30px;
+    line-height: 2.3;
+    color: #d9cde9;
+    letter-spacing: 0.08em;
+  }
+  
+  /* COMMON SECTIONS */
+  .family-page .section-wrap {
+    width: min(1100px, 88%);
+    margin: 0 auto;
+    padding: 120px 0;
+  }
+  
+  .family-page .section-heading {
+    text-align: center;
+    margin-bottom: 65px;
+  }
+  
+  .family-page .section-heading h2 {
+    margin: 15px 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 400;
+    color: #e9dcff;
+    letter-spacing: 0.05em;
+  }
+  
+  .family-page .section-heading > p:last-child {
+    color: #c5b6d9;
+    letter-spacing: 0.1em;
+  }
+  
+  /* CONCEPT */
+  .concept-content {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2.5;
+    letter-spacing: 0.08em;
+    color: #ded3eb;
+  }
+  
+  /* THREE BONDS */
+  .bonds-grid,
+  .garden-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  
+  .bond-card,
+  .garden-card {
+    padding: 48px 25px;
+    text-align: center;
+    border: 1px solid rgba(210, 190, 255, 0.2);
+    border-radius: 3px;
+    background: linear-gradient(
+      145deg,
+      rgba(180, 155, 220, 0.12),
+      rgba(70, 60, 110, 0.08)
+    );
+    backdrop-filter: blur(8px);
+    transition: transform 0.6s ease, box-shadow 0.6s ease,
+                border-color 0.6s ease;
+  }
+  
+  .bond-card:hover,
+  .garden-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(220, 195, 255, 0.55);
+    box-shadow: 0 0 35px rgba(174, 139, 255, 0.18);
+  }
+  
+  .bond-icon {
+    margin-bottom: 22px;
+    color: #d9c0ff;
+    font-size: 2rem;
+    text-shadow: 0 0 18px rgba(205, 174, 255, 0.6);
+  }
+  
+  .bond-card h3,
+  .garden-card h3 {
+    margin-bottom: 18px;
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    color: #eadfff;
+  }
+  
+  .bond-card p,
+  .garden-card p {
+    color: #c9bdd9;
+    line-height: 2;
+    font-size: 0.92rem;
+  }
+  
+  /* FINAL MESSAGE */
+  .family-message {
+    padding: 150px 20px;
+    text-align: center;
+    background:
+      radial-gradient(ellipse at center,
+        rgba(153, 119, 205, 0.2),
+        transparent 65%);
+  }
+  
+  .family-message-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  
+  .family-message h2 {
+    margin: 25px 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1.3;
+    color: #eadfff;
+  }
+  
+  .family-message-inner > p:not(.eyebrow):not(.signature) {
+    margin: 18px 0;
+    line-height: 2.2;
+    color: #d8cce8;
+    letter-spacing: 0.06em;
+  }
+  
+  .family-message .signature {
+    margin-top: 55px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    letter-spacing: 0.12em;
+    color: #d7c0ff;
+  }
+  
+  /* GLOW ANIMATION */
+  @keyframes gardenGlow {
+    from {
+      opacity: 0.4;
+      transform: scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1.06);
+    }
+  }
+  
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .family-page .section-wrap {
+      padding: 85px 0;
+    }
+  
+    .bonds-grid,
+    .garden-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+  
+    .bond-card,
+    .garden-card {
+      padding: 38px 24px;
+    }
+  
+    .family-message {
+      padding: 100px 20px;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .family-hero::before {
+      animation: none;
+    }
+  
+    .bond-card,
+    .garden-card {
+      transition: none;
+    }
+  }
+/* =================================
+   FAMILY FOOTER
+================================= */
+
+.family-page .about-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 8%;
+    border-top: 1px solid rgba(210, 190, 255, 0.2);
+    background: rgba(10, 9, 28, 0.85);
+  }
+  
+  .family-page .about-footer p {
+    margin: 0;
+    color: #c9bdd9;
+    font-family: Georgia, serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+  }
+  
+  .family-page .about-footer a {
+    color: #e6d8ff;
+    font-family: Georgia, serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .family-page .about-footer a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(210, 180, 255, 0.8);
+  }
+  
+  @media (max-width: 768px) {
+    .family-page .about-footer {
+      flex-direction: column;
+      text-align: center;
+      padding: 28px 20px;
+    }
+  }
+/* =================================
+   GARDEN ATMOSPHERE
+================================= */
+
+.garden-atmosphere {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  /* 蛍の光 */
+  .firefly {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #e7d8ff;
+    box-shadow:
+      0 0 8px 3px rgba(210, 180, 255, 0.5),
+      0 0 22px 7px rgba(170, 140, 255, 0.2);
+    animation: fireflyFloat 9s ease-in-out infinite alternate;
+  }
+  
+  .firefly-1 { left: 12%; top: 25%; animation-delay: 0s; }
+  .firefly-2 { left: 78%; top: 35%; animation-delay: -3s; }
+  .firefly-3 { left: 35%; top: 65%; animation-delay: -5s; }
+  .firefly-4 { left: 88%; top: 78%; animation-delay: -2s; }
+  .firefly-5 { left: 58%; top: 18%; animation-delay: -6s; }
+  
+  @keyframes fireflyFloat {
+    0% {
+      transform: translate(0, 0) scale(0.6);
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.9;
+    }
+    100% {
+      transform: translate(30px, -45px) scale(1.3);
+      opacity: 0.35;
+    }
+  }
+  
+  /* 舞い落ちる花びら */
+  .garden-petal {
+    position: absolute;
+    top: -10%;
+    width: 10px;
+    height: 15px;
+    border-radius: 80% 0 80% 0;
+    background: rgba(220, 190, 255, 0.65);
+    box-shadow: 0 0 10px rgba(210, 170, 255, 0.3);
+    animation: gardenPetalFall 18s linear infinite;
+  }
+  
+  .petal-1 { left: 10%; animation-delay: 0s; }
+  .petal-2 { left: 28%; animation-delay: -7s; }
+  .petal-3 { left: 45%; animation-delay: -13s; }
+  .petal-4 { left: 65%; animation-delay: -4s; }
+  .petal-5 { left: 82%; animation-delay: -10s; }
+  .petal-6 { left: 94%; animation-delay: -15s; }
+  
+  @keyframes gardenPetalFall {
+    0% {
+      transform: translate(0, -5vh) rotate(0deg);
+      opacity: 0;
+    }
+    15% {
+      opacity: 0.8;
+    }
+    50% {
+      transform: translate(35px, 50vh) rotate(180deg);
+    }
+    85% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translate(-25px, 110vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  /* 動きを控えたい環境への配慮 */
+  @media (prefers-reduced-motion: reduce) {
+    .firefly,
+    .garden-petal {
+      animation: none;
+      display: none;
+    }
+  }
+
+/* =================================
+   FLOATING BLUE BUTTERFLY
+================================= */
+
+.garden-butterfly {
+    position: fixed;
+    width: 90px;
+    height: auto;
+    left: -120px;
+    top: 42%;
+    opacity: 0;
+    filter: drop-shadow(0 0 12px rgba(100, 170, 255, 0.7));
+    pointer-events: none;
+    animation: butterflyJourney 28s ease-in-out infinite;
+  }
+  
+  @keyframes butterflyJourney {
+    0% {
+      left: -120px;
+      top: 55%;
+      opacity: 0;
+      transform: rotate(-12deg) scale(0.8);
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    35% {
+      top: 38%;
+      transform: rotate(8deg) scale(1);
+    }
+  
+    65% {
+      top: 48%;
+      transform: rotate(-6deg) scale(0.95);
+    }
+  
+    88% {
+      opacity: 0.85;
+    }
+  
+    100% {
+      left: calc(100% + 120px);
+      top: 30%;
+      opacity: 0;
+      transform: rotate(12deg) scale(0.8);
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .garden-butterfly {
+      animation: none;
+      display: none;
+    }
+  }
+/* =================================
+   FLOATING BLUE BUTTERFLY
+================================= */
+
+.garden-atmosphere .garden-butterfly {
+    position: absolute !important;
+  
+    width: 55px !important;
+    max-width: none !important;
+    height: auto !important;
+  
+    left: -80px;
+    top: 45%;
+  
+    opacity: 0;
+    z-index: 11;
+  
+    filter: drop-shadow(0 0 8px rgba(100, 170, 255, 0.65));
+  
+    pointer-events: none;
+  
+    animation: butterflyJourney 24s linear infinite;
+  }
+  
+  @keyframes butterflyJourney {
+    0% {
+      left: -80px;
+      top: 55%;
+      opacity: 0;
+      transform: rotate(-10deg) scale(0.8);
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    30% {
+      top: 43%;
+      transform: rotate(8deg) scale(1);
+    }
+  
+    50% {
+      top: 48%;
+      transform: rotate(-5deg) scale(0.95);
+    }
+  
+    75% {
+      top: 35%;
+      transform: rotate(10deg) scale(1);
+    }
+  
+    90% {
+      opacity: 0.8;
+    }
+  
+    100% {
+      left: calc(100% + 80px);
+      top: 42%;
+      opacity: 0;
+      transform: rotate(-8deg) scale(0.8);
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .garden-butterfly {
+      animation: none;
+      display: none;
+    }
+  }
+/* =================================
+   FAMILY — MOONLIGHT TYPOGRAPHY
+================================= */
+
+/* 共通の文字演出 */
+
+.family-page .eyebrow,
+.family-page .section-heading h2,
+.family-page .section-heading > p:last-child,
+.family-page .family-hero h1,
+.family-page .family-hero h2,
+.family-page .hero-description,
+.family-page .scroll-label,
+.family-page .concept-content p,
+.family-page .bond-card h3,
+.family-page .bond-card p,
+.family-page .garden-card h3,
+.family-page .garden-card p,
+.family-page .family-message-inner h2,
+.family-page .family-message-inner > p:not(.eyebrow),
+.family-page .family-message-inner .signature {
+  animation: familyTextReveal 1.3s ease both;
+}
+
+/* HERO */
+
+.family-page .family-hero h1 {
+  animation-delay: 0.2s;
+}
+
+.family-page .family-hero h2 {
+  animation-delay: 0.65s;
+}
+
+.family-page .hero-description {
+  animation-delay: 0.9s;
+}
+
+.family-page .scroll-label {
+  animation-delay: 1.2s;
+}
+
+/* セクション見出し */
+
+.family-page .section-heading .eyebrow {
+  animation-delay: 0.1s;
+}
+
+.family-page .section-heading h2 {
+  animation-delay: 0.35s;
+}
+
+.family-page .section-heading > p:last-child {
+  animation-delay: 0.6s;
+}
+
+/* 本文 */
+
+.family-page .concept-content p:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.family-page .concept-content p:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.family-page .concept-content p:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* カード */
+
+.family-page .bond-card h3,
+.family-page .garden-card h3 {
+  animation-delay: 0.3s;
+}
+
+.family-page .bond-card p,
+.family-page .garden-card p {
+  animation-delay: 0.55s;
+}
+
+/* MESSAGE */
+
+.family-page .family-message-inner h2 {
+  animation-delay: 0.35s;
+}
+
+.family-page .family-message-inner > p:not(.eyebrow) {
+  animation-delay: 0.6s;
+}
+
+.family-page .family-message-inner .signature {
+  animation-delay: 1s;
+}
+
+/* アニメーション */
+
+@keyframes familyTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* 動きを控える設定 */
+
+@media (prefers-reduced-motion: reduce) {
+  .family-page .eyebrow,
+  .family-page .section-heading h2,
+  .family-page .section-heading > p:last-child,
+  .family-page .family-hero h1,
+  .family-page .family-hero h2,
+  .family-page .hero-description,
+  .family-page .scroll-label,
+  .family-page .concept-content p,
+  .family-page .bond-card h3,
+  .family-page .bond-card p,
+  .family-page .garden-card h3,
+  .family-page .garden-card p,
+  .family-page .family-message-inner h2,
+  .family-page .family-message-inner > p:not(.eyebrow),
+  .family-page .family-message-inner .signature {
+    animation: none;
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}
+/* =================================
+   FAMILY — SCROLL REVEAL
+================================= */
+
+.family-page .family-scroll-reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  filter: blur(5px);
+  transition:
+    opacity 1.1s ease,
+    transform 1.1s ease,
+    filter 1.1s ease;
+}
+
+.family-page .family-scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .family-page .family-scroll-reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
+/* =================================
+   FAMILY — MOONLIGHT GLOW
+================================= */
+
+/* 英語タイトルの淡い月光 */
+
+.family-page .family-hero h1,
+.family-page .section-heading h2,
+.family-page .family-message-inner h2 {
+  text-shadow:
+    0 0 8px rgba(220, 205, 255, 0.25),
+    0 0 20px rgba(174, 145, 230, 0.2),
+    0 0 38px rgba(130, 110, 210, 0.12);
+}
+
+/* HEROタイトルに流れる光 */
+
+.family-page .family-hero h1 {
+  background: linear-gradient(
+    110deg,
+    #f4edff 20%,
+    #ffffff 40%,
+    #d8c5ff 50%,
+    #f4edff 65%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation:
+    familyTextReveal 1.3s ease both,
+    familyMoonlightShimmer 7s ease-in-out 1.3s infinite;
+}
+
+@keyframes familyMoonlightShimmer {
+  0%, 100% {
+    background-position: 100% center;
+  }
+
+  50% {
+    background-position: 0% center;
+  }
+}
+
+/* 英語の小見出し */
+
+.family-page .eyebrow {
+  color: #d7c5f3;
+  text-shadow:
+    0 0 8px rgba(207, 178, 255, 0.35),
+    0 0 16px rgba(169, 139, 230, 0.2);
+}
+
+/* 日本語本文の柔らかな光 */
+
+.family-page .concept-content p,
+.family-page .bond-card p,
+.family-page .garden-card p,
+.family-page .family-message-inner > p {
+  text-shadow:
+    0 0 10px rgba(205, 190, 255, 0.12);
+}
+
+/* カードのタイトル */
+
+.family-page .bond-card h3,
+.family-page .garden-card h3 {
+  text-shadow:
+    0 0 8px rgba(205, 185, 255, 0.25),
+    0 0 18px rgba(160, 130, 220, 0.15);
+}
+
+/* 光の動きを控えたい場合 */
+
+@media (prefers-reduced-motion: reduce) {
+  .family-page .family-hero h1 {
+    animation: none;
+    background-position: center;
+  }
+}
+/* =================================
+   FAMILY — MOONLIGHT RAYS
+================================= */
+
+.family-page .bonds-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* 光の画像 */
+
+.family-page .bonds-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background-image:
+    linear-gradient(
+      rgba(13, 9, 35, 0.38),
+      rgba(13, 9, 35, 0.55)
+    ),
+    url("../images/light-rays.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.65;
+  filter: brightness(1.15) saturate(1.1);
+
+  animation: lightRayBreath 9s ease-in-out infinite;
+}
+
+/* 光の揺らぎ */
+
+.family-page .bonds-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at 25% 15%,
+      rgba(220, 190, 255, 0.22),
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 75% 35%,
+      rgba(255, 225, 255, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      ellipse at 50% 85%,
+      rgba(170, 150, 255, 0.18),
+      transparent 40%
+    );
+
+  opacity: 0.4;
+  animation: moonlightFlicker 7s ease-in-out infinite;
+}
+
+/* 光の呼吸 */
+
+@keyframes lightRayBreath {
+  0% {
+    opacity: 0.45;
+    filter: brightness(0.9) saturate(1);
+    background-position: center 45%;
+  }
+
+  27% {
+    opacity: 0.72;
+    filter: brightness(1.25) saturate(1.2);
+    background-position: center 48%;
+  }
+
+  43% {
+    opacity: 0.55;
+    filter: brightness(1.05) saturate(1.1);
+    background-position: center 50%;
+  }
+
+  76% {
+    opacity: 0.8;
+    filter: brightness(1.3) saturate(1.15);
+    background-position: center 47%;
+  }
+
+  100% {
+    opacity: 0.45;
+    filter: brightness(0.9) saturate(1);
+    background-position: center 45%;
+  }
+}
+
+/* 光のゆらめき */
+
+@keyframes moonlightFlicker {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+
+  18% {
+    opacity: 0.55;
+    transform: scale(1.03);
+  }
+
+  39% {
+    opacity: 0.32;
+    transform: scale(1.01);
+  }
+
+  67% {
+    opacity: 0.7;
+    transform: scale(1.04);
+  }
+
+  83% {
+    opacity: 0.4;
+    transform: scale(1.02);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .family-page .bonds-section::before,
+  .family-page .bonds-section::after {
+    animation: none;
+  }
+}
+/* =================================
+   FAMILY — GOLDEN LIGHT SWEEP
+================================= */
+
+.family-page .bond-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* カードを横切る光 */
+
+.family-page .bond-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 55%;
+  height: 200%;
+
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    rgba(255, 239, 190, 0.03) 30%,
+    rgba(255, 225, 155, 0.3) 50%,
+    rgba(255, 245, 215, 0.08) 65%,
+    transparent 100%
+  );
+
+  transform: rotate(15deg);
+  pointer-events: none;
+  z-index: 2;
+
+  animation: goldenLightSweep 8s ease-in-out infinite;
+}
+
+/* 3枚の光のタイミングをずらす */
+
+.family-page .bond-card:nth-child(2)::after {
+  animation-delay: 2.6s;
+}
+
+.family-page .bond-card:nth-child(3)::after {
+  animation-delay: 5.2s;
+}
+
+/* 枠の淡い輝き */
+
+.family-page .bond-card {
+  transition:
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.family-page .bond-card:hover {
+  border-color: rgba(238, 210, 155, 0.8);
+  box-shadow:
+    0 0 12px rgba(235, 205, 140, 0.16),
+    0 0 28px rgba(210, 175, 110, 0.1);
+}
+
+/* 光が横切る動き */
+
+@keyframes goldenLightSweep {
+  0%, 65% {
+    left: -100%;
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  90% {
+    left: 150%;
+    opacity: 0.7;
+  }
+
+  100% {
+    left: 150%;
+    opacity: 0;
+  }
+}
+
+/* 動きを控える設定 */
+
+@media (prefers-reduced-motion: reduce) {
+  .family-page .bond-card::after {
+    animation: none;
+  }
+
+  .family-page .bond-card {
+    transition: none;
+  }
+}
+/* =================================
+   FAMILY — BUTTERFLY DUST
+================================= */
+
+.family-page .garden-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 0.5s ease,
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* 青紫の光のベール */
+
+.family-page .garden-card::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  z-index: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 30% 40%,
+      rgba(115, 175, 255, 0.2),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 70% 65%,
+      rgba(195, 145, 255, 0.2),
+      transparent 32%
+    );
+
+  opacity: 0.25;
+  animation: butterflyDust 8s ease-in-out infinite alternate;
+}
+
+/* カードごとに光のタイミングをずらす */
+
+.family-page .garden-card:nth-child(2)::before {
+  animation-delay: -2.5s;
+}
+
+.family-page .garden-card:nth-child(3)::before {
+  animation-delay: -5s;
+}
+
+/* 文字を光の上に配置 */
+
+.family-page .garden-card h3,
+.family-page .garden-card p {
+  position: relative;
+  z-index: 1;
+}
+
+/* 蝶の鱗粉のような光 */
+
+@keyframes butterflyDust {
+  0% {
+    opacity: 0.18;
+    transform: translate(-3%, 2%) scale(0.95);
+  }
+
+  35% {
+    opacity: 0.55;
+    transform: translate(2%, -3%) scale(1.03);
+  }
+
+  70% {
+    opacity: 0.3;
+    transform: translate(-2%, -1%) scale(1);
+  }
+
+  100% {
+    opacity: 0.65;
+    transform: translate(3%, 2%) scale(1.06);
+  }
+}
+
+/* ホバー時 */
+
+.family-page .garden-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(180, 165, 255, 0.75);
+  box-shadow:
+    0 0 16px rgba(120, 155, 255, 0.2),
+    0 0 30px rgba(170, 125, 255, 0.12);
+}
+
+/* アクセシビリティ */
+
+@media (prefers-reduced-motion: reduce) {
+  .family-page .garden-card::before {
+    animation: none;
+  }
+
+  .family-page .garden-card {
+    transition: none;
+  }
+}

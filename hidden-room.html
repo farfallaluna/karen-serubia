@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>THE HIDDEN ROOM | Karen Serubia</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/motion.css">
+  <link rel="stylesheet" href="css/hidden-room.css">
+</head>
+
+<body class="hidden-room-page">
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <a href="index.html" class="site-logo">
+      <span class="logo-moon">☾</span>
+      <span>
+        <strong>Karen Serubia</strong>
+        <small>THE MOONLIT SANCTUARY</small>
+      </span>
+    </a>
+
+    <nav class="global-nav">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="family.html">FAMILY</a>
+      <a href="schedule.html">SCHEDULE</a>
+      <a href="memories.html">MEMORIES</a>
+      <a href="letter.html">LETTER</a>
+      <a href="music.html">MUSIC</a>
+      <a href="special.html" class="active">SPECIAL</a>
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- 01. ROOM ENTRANCE -->
+    <section class="hidden-hero">
+
+      <div class="hidden-hero-content">
+
+        <p class="eyebrow">BEYOND THE SECRET GARDEN</p>
+
+        <h1>The Hidden Room</h1>
+
+        <div class="hidden-moon">☾</div>
+
+        <h2>月明かりの奥に眠る、もうひとつの物語。</h2>
+
+        <p class="hidden-description">
+          ようこそ、秘密の部屋へ。<br>
+          ここには、まだ語られていない記憶と、<br>
+          大切に守られてきた宝物が眠っています。
+        </p>
+
+      </div>
+
+      <div class="hidden-scroll">
+        SCROLL TO DISCOVER
+        <span>↓</span>
+      </div>
+
+    </section>
+
+
+    <!-- 02. TREASURES -->
+    <section class="hidden-treasures">
+
+      <div class="hidden-section-inner">
+
+        <p class="eyebrow">THE KEEPSAKES</p>
+
+        <h2>Little Treasures</h2>
+
+        <p class="hidden-section-description">
+          この部屋に残された、小さな宝物たち。
+        </p>
+
+        <div class="treasure-grid">
+
+          <!-- PRECIOUS MOMENTS -->
+          <a href="precious-moments.html" class="treasure-card">
+            <div class="treasure-symbol">✧</div>
+            <p class="treasure-category">MEMORY</p>
+            <h3>Precious Moments</h3>
+            <p>大切な時間と、忘れたくない記憶。</p>
+          </a>
+        
+          <!-- WORDS OF MOONLIGHT -->
+          <a href="words-of-moonlight.html" class="treasure-card">
+            <div class="treasure-symbol">☾</div>
+            <p class="treasure-category">MESSAGE</p>
+            <h3>Words of Moonlight</h3>
+            <p>心に残しておきたい、言葉の欠片。</p>
+          </a>
+        
+          <!-- SELECT COLLECTION -->
+          <a href="select-collection.html" class="treasure-card">
+            <div class="treasure-symbol">♕</div>
+            <p class="treasure-category">COLLECTION</p>
+            <h3>Secret Collection</h3>
+            <p>この世界を彩る、特別なコレクション。</p>
+          </a>
+        
+        </div>
+        
+      </div>
+
+    </section>
+
+
+    <!-- 03. UNSEEN ART -->
+<section class="hidden-art">
+    <div class="hidden-art-inner">
+  
+      <div class="hidden-section-heading">
+        <p class="hidden-eyebrow">THE PRIVATE COLLECTION</p>
+        <h2>Unseen Art</h2>
+        <p>まだ誰にも見せていない、創作の断片。</p>
+      </div>
+  
+      <div class="art-gallery-grid" id="art-gallery">
+  
+        <!-- 作品が完成したら、ここにカードを追加 -->
+  
+      </div>
+  
+      <p class="art-gallery-note">
+        Each artwork holds a piece of my story.
+      </p>
+  
+    </div>
+  </section>
+
+    </section>
+<!-- ARTWORK VIEWER MODAL -->
+<div class="artwork-modal" id="artwork-modal" aria-hidden="true">
+
+    <div class="artwork-modal-backdrop"></div>
+  
+    <div class="artwork-modal-content" role="dialog" aria-modal="true" aria-label="Artwork details">
+  
+      <button
+        type="button"
+        class="artwork-modal-close"
+        id="artwork-modal-close"
+        aria-label="Close artwork"
+      >
+        ×
+      </button>
+  
+      <div class="artwork-modal-image">
+        <img id="modal-artwork-image" src="" alt="">
+      </div>
+  
+      <div class="artwork-modal-info">
+        <p class="hidden-eyebrow">FROM THE PRIVATE COLLECTION</p>
+        <h2 id="modal-artwork-title"></h2>
+        <p id="modal-artwork-date"></p>
+        <p id="modal-artwork-description"></p>
+      </div>
+  
+    </div>
+  </div>
+
+    <!-- 04. PRIVATE LETTER -->
+    <section class="hidden-message">
+
+      <div class="hidden-section-inner">
+
+        <p class="eyebrow">A SECRET MESSAGE</p>
+
+        <h2>A Word From Karen</h2>
+
+        <div class="hidden-message-frame">
+
+          <div class="message-moon">☾</div>
+
+          <p>
+            この場所を見つけてくれて、ありがとう。
+          </p>
+
+          <p>
+            誰かにとっては何気ない一日も、<br>
+            誰かにとっては忘れられない物語になる。
+          </p>
+
+          <p>
+            この部屋に残した小さな宝物が、<br>
+            あなたの心にも届きますように。
+          </p>
+
+          <p class="hidden-signature">
+            With love, Karen
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 05. RETURN -->
+    <section class="hidden-ending">
+
+      <div class="hidden-section-inner">
+        
+        <div class="ending-butterfly" aria-hidden="true">
+          <img
+              class="butterfly-icon"
+              src="images/butterfly-stained-glass.png"
+              alt="">
+          <span class="butterfly-star star-1">✦</span>
+          <span class="butterfly-star star-2">✧</span>
+          <span class="butterfly-star star-3">✦</span>
+          <span class="butterfly-star star-4">✧</span>
+          <span class="butterfly-star star-5">✦</span>
+          <span class="butterfly-star star-6">✧</span>
+      </div>
+
+        <div class="ending-moon">☾</div>
+
+        <h2>Until the Next Moonlight</h2>
+
+        <p>
+          秘密の部屋で過ごした時間が、<br>
+          あなたの記憶のひとつになりますように。
+        </p>
+
+        <a href="special.html" class="return-garden">
+          RETURN TO THE SECRET GARDEN ↑
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="about-footer">
+
+    <p>
+      © Karen Serubia — THE MOONLIT SANCTUARY
+    </p>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="js/motion.js"></script>
+  <script src="js/hidden-room-data.js"></script>
+  <script src="js/hidden-room.js"></script>
+  <script src="js/hidden-room-motion.js"></Script>
+
+</body>
+</html>

@@ -1,0 +1,605 @@
+
+/* Karen Serubia motion layer
+   Add class="motion-scene" to the HOME main visual container.
+   Keep your existing hero background, welcome text, buttons and player. */
+.motion-scene {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Soft atmospheric light overlay */
+.motion-scene::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 54% 25%, rgba(190,164,255,.16), transparent 34%),
+    linear-gradient(115deg, transparent 35%, rgba(177,156,255,.09) 50%, transparent 66%);
+  background-size: 100% 100%, 220% 100%;
+  animation: moonGlow 12s ease-in-out infinite alternate,
+             lightSweep 24s linear infinite;
+}
+
+/* Place all motion decorations behind text and controls */
+.motion-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.motion-layer img {
+  position: absolute;
+  display: block;
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Water reflection: use supplied water crop as a subtle overlay */
+.motion-water {
+  inset: auto 0 0;
+  width: 100%;
+  height: 36%;
+  object-fit: cover;
+  opacity: .22;
+  mix-blend-mode: screen;
+  animation: waterShimmer 13s ease-in-out infinite alternate;
+}
+
+/* The supplied butterfly crop contains a dark background.
+   screen blending makes the dark navy mostly disappear. */
+.motion-butterflies {
+  width: clamp(110px, 17vw, 245px);
+  left: 2%;
+  top: 30%;
+  opacity: .58;
+  mix-blend-mode: screen;
+  animation: butterflyFloat 13s ease-in-out infinite;
+}
+.motion-petals {
+  width: clamp(110px, 15vw, 210px);
+  right: 15%;
+  top: 19%;
+  opacity: .40;
+  mix-blend-mode: screen;
+  animation: petalsDrift 21s ease-in-out infinite;
+}
+.motion-wisteria {
+  width: clamp(150px, 22vw, 310px);
+  right: 0;
+  top: 10%;
+  opacity: .48;
+  mix-blend-mode: screen;
+  transform-origin: top center;
+  animation: wisteriaSway 9s ease-in-out infinite alternate;
+}
+.motion-sparkles {
+  width: clamp(110px, 17vw, 230px);
+  left: 39%;
+  top: 18%;
+  opacity: .30;
+  mix-blend-mode: screen;
+  animation: sparklePulse 6s ease-in-out infinite alternate;
+}
+.motion-rays {
+  width: 55%;
+  left: 22%;
+  top: 0;
+  opacity: .18;
+  mix-blend-mode: screen;
+  animation: rayBreath 15s ease-in-out infinite alternate;
+}
+
+/* Keep the actual interface above decorative overlays */
+.site-header, .welcome-panel, .enter-button, .music-box,
+.hero > :not(.motion-layer):not(.hero-image):not(.hero-shade):not(.ambient-glow) {
+  z-index: 3;
+}
+
+@keyframes moonGlow {
+  from { opacity: .45; }
+  to   { opacity: .95; }
+}
+@keyframes lightSweep {
+  from { background-position: 0 0, -120% 0; }
+  to   { background-position: 0 0, 120% 0; }
+}
+@keyframes waterShimmer {
+  from { transform: translateX(-1.5%) scale(1.02); opacity: .14; }
+  to   { transform: translateX(1.5%) scale(1.05); opacity: .30; }
+}
+@keyframes butterflyFloat {
+  0%,100% { transform: translate(0,0) rotate(-3deg); }
+  50% { transform: translate(18px,-20px) rotate(4deg); }
+}
+@keyframes petalsDrift {
+  0%,100% { transform: translate(0,0) rotate(0); }
+  50% { transform: translate(-18px,24px) rotate(7deg); }
+}
+@keyframes wisteriaSway {
+  from { transform: rotate(-1.5deg); }
+  to   { transform: rotate(1.5deg); }
+}
+@keyframes sparklePulse {
+  from { opacity: .15; transform: scale(.96); }
+  to   { opacity: .42; transform: scale(1.04); }
+}
+@keyframes rayBreath {
+  from { opacity: .10; transform: translateY(-1%); }
+  to   { opacity: .25; transform: translateY(1%); }
+}
+
+@media (max-width: 760px) {
+  .motion-water { height: 25%; opacity: .18; }
+  .motion-butterflies { width: 120px; left: -18px; top: 42%; opacity: .42; }
+  .motion-petals { width: 105px; right: 3%; top: 35%; opacity: .28; }
+  .motion-wisteria { width: 155px; right: -25px; top: 9%; opacity: .35; }
+  .motion-sparkles { width: 120px; left: 30%; top: 22%; opacity: .22; }
+  .motion-rays { width: 100%; left: 0; opacity: .12; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-scene::before, .motion-layer img {
+    animation: none !important;
+  }
+}
+/* ===== Motion Fix ===== */
+
+.motion-scene {
+  position: relative;
+  isolation: isolate;
+}
+
+.motion-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.motion-layer img {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+/* 藤の花：左右にゆっくり揺れる */
+.motion-wisteria {
+  top: 5%;
+  right: 0;
+  width: 260px;
+  transform-origin: top center;
+  animation: wisteriaMove 7s ease-in-out infinite alternate !important;
+}
+
+/* 星：淡く明滅 */
+.motion-sparkles {
+  top: 15%;
+  left: 35%;
+  width: 220px;
+  animation: starsTwinkle 4s ease-in-out infinite alternate !important;
+}
+
+/* 月光：呼吸するように明るさが変化 */
+.motion-rays {
+  top: 0;
+  left: 20%;
+  width: 60%;
+  animation: moonlightBreath 8s ease-in-out infinite alternate !important;
+}
+
+/* 水面：光の反射が揺らぐ */
+.motion-water {
+  bottom: 0;
+  left: -3%;
+  width: 106%;
+  height: 35%;
+  object-fit: cover;
+  animation: waterMove 9s ease-in-out infinite alternate !important;
+}
+
+/* Animation */
+@keyframes wisteriaMove {
+  from { transform: rotate(-2deg); }
+  to   { transform: rotate(2deg); }
+}
+
+@keyframes starsTwinkle {
+  from {
+    opacity: .15;
+    transform: scale(.97);
+    filter: brightness(.8);
+  }
+  to {
+    opacity: .75;
+    transform: scale(1.04);
+    filter: brightness(1.4);
+  }
+}
+
+@keyframes moonlightBreath {
+  from {
+    opacity: .12;
+    filter: brightness(.8);
+  }
+  to {
+    opacity: .55;
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes waterMove {
+  from {
+    transform: translateX(-1.5%) scale(1.01);
+    opacity: .15;
+  }
+  to {
+    transform: translateX(1.5%) scale(1.05);
+    opacity: .4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-wisteria,
+  .motion-sparkles,
+  .motion-rays,
+  .motion-water {
+    animation: none !important;
+  }
+}
+/* ===== LUNA NIGHT MOTION ===== */
+
+.motion-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* 月光の呼吸 */
+.motion-light {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 55% 25%,
+    rgba(190, 170, 255, 0.28),
+    transparent 48%
+  );
+  animation: moonBreath 8s ease-in-out infinite alternate;
+}
+
+/* 水面の光 */
+.motion-water {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(150, 135, 255, 0.08),
+    rgba(190, 170, 255, 0.20),
+    transparent
+  );
+  background-size: 100% 200%;
+  animation: waterShine 7s ease-in-out infinite alternate;
+}
+
+/* 星の明滅 */
+.motion-stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, #fff 1px, transparent 2px),
+    radial-gradient(circle, #c9b5ff 1px, transparent 2px);
+  background-size: 95px 110px, 145px 135px;
+  background-position: 20px 30px, 65px 80px;
+  opacity: .35;
+  animation: starTwinkle 4s ease-in-out infinite alternate;
+}
+
+/* アニメーション */
+@keyframes moonBreath {
+  from { opacity: .25; }
+  to   { opacity: .85; }
+}
+
+@keyframes waterShine {
+  from { background-position: 0 0; }
+  to   { background-position: 0 100%; }
+}
+
+@keyframes starTwinkle {
+  from { opacity: .15; }
+  to   { opacity: .65; }
+}
+
+/* ===== Star Layout & Twinkle Fix ===== */
+
+.motion-stars {
+  background-image:
+    radial-gradient(circle at 8% 18%, #fff 1px, transparent 2px),
+    radial-gradient(circle at 21% 73%, #cbbaff 1px, transparent 2px),
+    radial-gradient(circle at 37% 32%, #fff 1.5px, transparent 2.5px),
+    radial-gradient(circle at 49% 86%, #d9caff 1px, transparent 2px),
+    radial-gradient(circle at 63% 14%, #fff 1px, transparent 2px),
+    radial-gradient(circle at 76% 58%, #cbbaff 1.5px, transparent 2.5px),
+    radial-gradient(circle at 91% 27%, #fff 1px, transparent 2px),
+    radial-gradient(circle at 85% 89%, #e8dfff 1px, transparent 2px),
+    radial-gradient(circle at 15% 45%, #fff 1px, transparent 2px),
+    radial-gradient(circle at 56% 54%, #cbbaff 1px, transparent 2px);
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: .4;
+  animation: scatteredStars 5s ease-in-out infinite alternate;
+}
+
+@keyframes scatteredStars {
+  from {
+    opacity: .2;
+    filter: brightness(.8);
+  }
+  to {
+    opacity: .65;
+    filter: brightness(1.3);
+  }
+}
+/* ===== Moving Water Reflection ===== */
+
+.motion-water {
+  overflow: hidden;
+  background:
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(120, 120, 220, .04) 35%,
+      rgba(180, 160, 255, .16) 65%,
+      transparent 100%
+    );
+}
+
+/* 水面に流れる光 */
+.motion-water::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      100deg,
+      transparent 10%,
+      rgba(210, 195, 255, .0) 35%,
+      rgba(220, 210, 255, .30) 48%,
+      rgba(210, 195, 255, .0) 60%,
+      transparent 85%
+    );
+  background-size: 220% 100%;
+  animation: waterReflection 9s ease-in-out infinite alternate;
+}
+
+/* 小さな水面のきらめき */
+.motion-water::after {
+  content: "";
+  position: absolute;
+  inset: 20% 0;
+  background:
+    radial-gradient(ellipse at 25% 40%, rgba(220,210,255,.35), transparent 12%),
+    radial-gradient(ellipse at 68% 65%, rgba(190,175,255,.3), transparent 15%),
+    radial-gradient(ellipse at 85% 25%, rgba(220,210,255,.25), transparent 10%);
+  animation: waterSparkle 6s ease-in-out infinite alternate;
+}
+
+@keyframes waterReflection {
+  from { background-position: -100% 0; }
+  to   { background-position: 100% 0; }
+}
+
+@keyframes waterSparkle {
+  from {
+    opacity: .2;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: .7;
+    transform: translateY(3px);
+  }
+}
+
+/* ===== STAR DEPTH EFFECT ===== */
+
+.motion-stars {
+  background-image:
+    /* 小さな星 */
+    radial-gradient(circle, rgba(255,255,255,.85) 1px, transparent 1.8px),
+    radial-gradient(circle, rgba(190,175,255,.8) 1px, transparent 2px),
+
+    /* 中くらいの星 */
+    radial-gradient(circle, rgba(230,220,255,.95) 1.8px, transparent 3px),
+
+    /* 大きな星 */
+    radial-gradient(circle, rgba(255,245,255,1) 2.5px, transparent 4px);
+
+  background-size:
+    173px 197px,
+    257px 223px,
+    311px 293px,
+    419px 367px;
+
+  background-position:
+    13px 27px,
+    91px 53px,
+    47px 119px,
+    183px 71px;
+
+  background-repeat: repeat;
+  animation: starDepth 6s ease-in-out infinite alternate;
+}
+
+@keyframes starDepth {
+  0% {
+    opacity: .25;
+    filter: brightness(.85);
+  }
+
+  50% {
+    opacity: .48;
+    filter: brightness(1.1);
+  }
+
+  100% {
+    opacity: .7;
+    filter: brightness(1.35);
+  }
+}
+/* ===== WISTERIA & BUTTERFLY ===== */
+
+.motion-wisteria {
+  position: absolute;
+  top: 0;
+  right: 2%;
+  width: clamp(130px, 22vw, 280px);
+  height: auto;
+  transform-origin: top center;
+  opacity: .55;
+  mix-blend-mode: screen;
+  animation: wisteriaSway 8s ease-in-out infinite alternate;
+}
+
+.motion-butterfly {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  width: clamp(65px, 9vw, 115px);
+  height: auto;
+  opacity: .75;
+  mix-blend-mode: screen;
+  animation: butterflyFlight 12s ease-in-out infinite;
+}
+
+@keyframes wisteriaSway {
+  0% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes butterflyFlight {
+  0% {
+    transform: translate(0, 0) rotate(-5deg);
+  }
+  25% {
+    transform: translate(35px, -20px) rotate(5deg);
+  }
+  50% {
+    transform: translate(65px, 8px) rotate(-3deg);
+  }
+  75% {
+    transform: translate(30px, 30px) rotate(6deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(-5deg);
+  }
+}
+
+@media (max-width: 760px) {
+  .motion-wisteria {
+    width: 145px;
+    right: -15px;
+    opacity: .4;
+  }
+
+  .motion-butterfly {
+    width: 65px;
+    left: 2%;
+    top: 40%;
+    opacity: .6;
+  }
+}
+/* ===== FLOATING PURPLE PETALS ===== */
+
+.petal-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.petal {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  width: 12px;
+  height: 20px;
+  border-radius: 80% 10% 80% 10%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 220, 255, .85),
+    rgba(177, 126, 231, .55)
+  );
+  box-shadow: 0 0 8px rgba(204, 164, 255, .45);
+  opacity: 0;
+  animation: petalFall 14s linear infinite;
+}
+
+/* 花びらごとに位置・速度・大きさを変える */
+.petal-1 { left: 8%;  animation-delay: 0s;  animation-duration: 16s; }
+.petal-2 { left: 22%; animation-delay: 4s;  animation-duration: 19s; transform: scale(.7); }
+.petal-3 { left: 38%; animation-delay: 8s;  animation-duration: 15s; }
+.petal-4 { left: 53%; animation-delay: 2s;  animation-duration: 21s; transform: scale(.6); }
+.petal-5 { left: 68%; animation-delay: 6s;  animation-duration: 17s; }
+.petal-6 { left: 81%; animation-delay: 10s; animation-duration: 20s; transform: scale(.8); }
+.petal-7 { left: 92%; animation-delay: 3s;  animation-duration: 18s; }
+.petal-8 { left: 45%; animation-delay: 12s; animation-duration: 22s; transform: scale(.65); }
+
+@keyframes petalFall {
+  0% {
+    top: -10%;
+    margin-left: 0;
+    opacity: 0;
+    rotate: 0deg;
+  }
+
+  12% {
+    opacity: .75;
+  }
+
+  50% {
+    margin-left: 55px;
+    rotate: 150deg;
+  }
+
+  85% {
+    opacity: .55;
+  }
+
+  100% {
+    top: 110%;
+    margin-left: -35px;
+    opacity: 0;
+    rotate: 360deg;
+  }
+}
+
+/* スマホでは控えめに */
+@media (max-width: 760px) {
+  .petal {
+    width: 9px;
+    height: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petal {
+    animation: none !important;
+    display: none;
+  }
+}
