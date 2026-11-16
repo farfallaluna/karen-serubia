@@ -80,4 +80,33 @@ document.addEventListener("DOMContentLoaded", () => {
       musicStatus.textContent = "音源を読み込めません。ファイルの場所を確認してください。";
     });
   });
-  
+// =================================
+// MOBILE MENU
+// =================================
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const globalNav = document.querySelector(".global-nav");
+
+  if (!menuToggle || !globalNav) return;
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+
+    menuToggle.setAttribute("aria-expanded", String(!isOpen));
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "メニューを開く" : "メニューを閉じる"
+    );
+
+    globalNav.classList.toggle("is-open", !isOpen);
+  });
+
+  globalNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "メニューを開く");
+      globalNav.classList.remove("is-open");
+    });
+  });
+});
