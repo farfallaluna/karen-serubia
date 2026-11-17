@@ -1767,3 +1767,33 @@
       transform: translate(0, -14px) rotate(4deg);
   }
 }
+/* =================================
+   HIDDEN ROOM — COPYRIGHT FOOTER
+================================= */
+
+.hidden-room-page .about-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px 8%;
+
+  border-top: 1px solid rgba(210, 190, 255, 0.2);
+  background: rgba(10, 9, 28, 0.85);
+
+  text-align: center;
+}
+
+.hidden-room-page .about-footer p {
+  color: #e7d5c8;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .hidden-room-page .about-footer {
+    padding: 28px 20px;
+  }
+}

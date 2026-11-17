@@ -4,11 +4,23 @@
 
 const artworkData = [
    {
-     title: "Moonlit Butterfly",
-     date: "2026.01.12",
-     description: "境界クリエイターとしての私",
-     image: "images/hidden-room/test-artwork.jpg"
-   }
+     title: "酔いどれ知らず",
+     date: "2026.09.12",
+     description: "歌ってみたを出したい曲の一つ。",
+     image: "images/hidden-room/test-artwork.png"
+   },
+   {
+    title: "shadow shadow",
+    date: "2026.09.15",
+    description: "歌ってみたを出したい曲の一つ。",
+    image: "images/hidden-room/test-artwork2.png"
+  },
+  {
+    title: "Halloween",
+    date: "2026.10.30",
+    description: "ハロウィンぽくしたくて作った。",
+    image: "images/hidden-room/test-artwork3.png"
+  }
  ];
  
  window.artworkData = artworkData;

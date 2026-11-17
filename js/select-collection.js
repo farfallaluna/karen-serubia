@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         title: "Melodies of My Soul",
         subtitle: "心に響く、忘れられない旋律。",
         extra: [],
-        image: "images/collection-melodies.jpg",
+        image: "images/collection-melodies.png",
         description: "歌声や旋律、記憶に残る音楽。心に寄り添い、感情を彩る音のコレクション。",
         gallery: [
           "images/collection-melodies-01.png",
