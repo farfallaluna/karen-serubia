@@ -5,19 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CONNECT | Karen Serubia</title>
   <meta name="description" content="Find Karen Serubia on social media.">
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/content.css">
 </head>
 
 <body>
 
+  <!-- CONNECT NAVIGATION -->
   <header class="connect-header">
     <a href="index.html" class="connect-logo">Karen Serubia</a>
-    <a href="index.html" class="connect-back">BACK TO HOME</a>
+
+    <nav class="connect-nav" aria-label="CONNECT navigation">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="family.html">FAMILY</a>
+      <a href="schedule.html">SCHEDULE</a>
+      <a href="memories.html">MEMORIES</a>
+      <a href="letter.html">LETTER</a>
+      <a href="music.html">MUSIC</a>
+      <a href="special.html">SPECIAL</a>
+      <a href="content.html" class="active">CONNECT</a>
+    </nav>
   </header>
 
   <main class="connect-main">
 
+    <!-- HERO -->
     <section class="connect-hero">
       <span class="connect-eyebrow">MOONLIT CONNECTION</span>
       <h1>CONNECT</h1>
@@ -28,36 +42,57 @@
       </p>
     </section>
 
-    <section class="connect-links">
+    <!-- LATEST UPDATES -->
+    <section class="connect-updates">
+      <div class="connect-section-heading">
+        <span class="connect-eyebrow">FROM THE SANCTUARY</span>
+        <h2>LATEST UPDATES</h2>
+        <p>月明かりの中から届く、新しいお知らせ。</p>
+      </div>
 
-      <a class="connect-card" href="https://wavejp.onelink.me/cCTa/inappshareprofilejp?af_dp=wavelive%3A%2F%2F&w_user=ecd4c437-b8e3-474d-b31a-c574b41d177b" target="_blank" rel="noopener noreferrer">
-        <span class="connect-number">01</span>
-        <span class="connect-platform">WAVE</span>
-        <span class="connect-description">Live Streaming</span>
-        <span class="connect-arrow">↗</span>
-      </a>
+      <div id="connect-update-list" class="connect-update-list">
+        <p class="connect-loading">Loading updates...</p>
+      </div>
+    </section>
 
-      <a class="connect-card" href="https://x.com/ks_greedyhope?s=11" target="_blank" rel="noopener noreferrer">
-        <span class="connect-number">02</span>
-        <span class="connect-platform">X</span>
-        <span class="connect-description">Daily Updates</span>
-        <span class="connect-arrow">↗</span>
-      </a>
+    <!-- SOCIAL LINKS -->
+    <section class="connect-social">
+      <div class="connect-section-heading">
+        <span class="connect-eyebrow">FIND ME HERE</span>
+        <h2>SOCIAL LINKS</h2>
+      </div>
 
-      <a class="connect-card" href="https://www.instagram.com/karenserubia_greedyhope?exln=MWFnZTltOWVjOWl5NA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
-        <span class="connect-number">03</span>
-        <span class="connect-platform">Instagram</span>
-        <span class="connect-description">Visual Stories</span>
-        <span class="connect-arrow">↗</span>
-      </a>
+      <div class="connect-links">
 
-      <a class="connect-card" href="https://youtube.com/@karenserubia?si=is0Ic-wHTHymAP7D" target="_blank" rel="noopener noreferrer">
-        <span class="connect-number">04</span>
-        <span class="connect-platform">YouTube</span>
-        <span class="connect-description">Videos & Archives</span>
-        <span class="connect-arrow">↗</span>
-      </a>
+        <a class="connect-card" href="https://wavejp.onelink.me/cCTa/inappshareprofilejp?af_dp=wavelive%3A%2F%2F&w_user=ecd4c437-b8e3-474d-b31a-c574b41d177b" target="_blank" rel="noopener noreferrer">
+          <span class="connect-number">01</span>
+          <span class="connect-platform">WAVE</span>
+          <span class="connect-description">Live Streaming</span>
+          <span class="connect-arrow">↗</span>
+        </a>
 
+        <a class="connect-card" href="https://x.com/ks_greedyhope?s=11" target="_blank" rel="noopener noreferrer">
+          <span class="connect-number">02</span>
+          <span class="connect-platform">X</span>
+          <span class="connect-description">Daily Updates</span>
+          <span class="connect-arrow">↗</span>
+        </a>
+
+        <a class="connect-card" href="https://www.instagram.com/karenserubia_greedyhope?exln=MWFnZTltOWVjOWl5NA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+          <span class="connect-number">03</span>
+          <span class="connect-platform">Instagram</span>
+          <span class="connect-description">Visual Stories</span>
+          <span class="connect-arrow">↗</span>
+        </a>
+
+        <a class="connect-card" href="https://youtube.com/@karenserubia?si=is0Ic-wHTHymAP7D" target="_blank" rel="noopener noreferrer">
+          <span class="connect-number">04</span>
+          <span class="connect-platform">YouTube</span>
+          <span class="connect-description">Videos & Archives</span>
+          <span class="connect-arrow">↗</span>
+        </a>
+
+      </div>
     </section>
 
     <p class="connect-message">
@@ -70,6 +105,11 @@
   <footer class="connect-footer">
     <p>© Karen Serubia — THE MOONLIT SANCTUARY</p>
   </footer>
+
+  <!-- DATA -->
+  <script src="js/schedule-data.js"></script>
+  <script src="js/letter-data.js"></script>
+  <script src="js/connect.js"></script>
 
 </body>
 </html>

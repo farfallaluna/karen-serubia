@@ -208,4 +208,245 @@
     ),
     url("../images/connect-background.png")
     center center / cover no-repeat;
-} 
+}
+/* =========================================
+   CONNECT NAVIGATION
+========================================= */
+
+.connect-header {
+  position: relative;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.connect-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.connect-nav a {
+  color: #d8c5f5;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.connect-nav a:hover,
+.connect-nav a.active {
+  color: #e9c982;
+}
+
+/* =========================================
+   LATEST UPDATES
+========================================= */
+
+.connect-updates {
+  width: min(100%, 900px);
+  margin: 0 auto 100px;
+}
+
+.connect-section-heading {
+  margin-bottom: 35px;
+}
+
+.connect-section-heading h2 {
+  margin: 12px 0;
+  font-family: Georgia, serif;
+  font-size: clamp(25px, 5vw, 36px);
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+
+.connect-section-heading p {
+  color: #c9bfdc;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.connect-update-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  text-align: left;
+}
+
+.connect-update-card {
+  position: relative;
+  padding: 25px;
+  border: 1px solid rgba(218, 192, 255, 0.25);
+  background: linear-gradient(
+    145deg,
+    rgba(73, 53, 107, 0.4),
+    rgba(25, 20, 48, 0.75)
+  );
+}
+
+.connect-update-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.connect-update-category {
+  color: #d6b978;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.connect-new-badge {
+  padding: 4px 9px;
+  border: 1px solid #d8bd83;
+  color: #e9c982;
+  font-family: Georgia, serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.connect-update-card h3 {
+  margin: 0 0 12px;
+  color: #f4eaff;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.connect-update-description {
+  color: #bdb0d1;
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.connect-update-date {
+  display: block;
+  margin-top: 18px;
+  color: #a99abf;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.connect-update-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: #e4ca91;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.connect-loading {
+  color: #c9bfdc;
+  font-size: 12px;
+}
+
+.connect-social {
+  margin-top: 30px;
+}
+
+@media (max-width: 850px) {
+  .connect-nav {
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .connect-header {
+    justify-content: center;
+    padding: 20px 5%;
+  }
+
+  .connect-nav {
+    gap: 12px 14px;
+  }
+
+  .connect-nav a {
+    font-size: 9px;
+  }
+
+  .connect-update-list {
+    grid-template-columns: 1fr;
+  }
+
+  .connect-updates {
+    margin-bottom: 75px;
+  }
+
+  .connect-update-card {
+    padding: 22px;
+  }
+}
+/* =========================================
+   CONNECT PAGE ANIMATION
+========================================= */
+
+@keyframes connectFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CONNECTページ全体 */
+
+.connect-main .connect-hero {
+  animation: connectFadeUp 0.9s ease both;
+}
+
+/* LATEST UPDATES */
+
+.connect-main .connect-updates {
+  animation: connectFadeUp 0.9s ease 0.2s both;
+}
+
+/* SOCIAL LINKS */
+
+.connect-main .connect-social {
+  animation: connectFadeUp 0.9s ease 0.4s both;
+}
+
+/* 動きを控えたい場合 */
+
+@media (prefers-reduced-motion: reduce) {
+  .connect-main .connect-hero,
+  .connect-main .connect-updates,
+  .connect-main .connect-social {
+    animation: none;
+  }
+}
+/* SOCIAL CARDS */
+.connect-main .connect-card {
+  animation: connectFadeUp 0.8s ease both;
+}
+
+.connect-main .connect-card:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.connect-main .connect-card:nth-child(2) {
+  animation-delay: 0.65s;
+}
+
+.connect-main .connect-card:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.connect-main .connect-card:nth-child(4) {
+  animation-delay: 0.95s;
+}
+
+/* FINAL MESSAGE */
+.connect-main .connect-message {
+  animation: connectFadeUp 1s ease 1.1s both;
+}
