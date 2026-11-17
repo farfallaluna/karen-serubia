@@ -29,16 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             {
               type: "image",
-              src: "images/collection-visual-poetry-01.jpg",
+              src: "images/collection-visual-poetry-01.png",
               title: "Visual Poetry"
             }
           ],
-        image: "images/collection-visual-poetry.jpg",
+        image: "images/collection-visual-poetry.png",
         description: "色彩、造形、光と影。心を惹きつけた美しい作品やデザインを集めたコレクション。",
         gallery: [
-          "images/collection-visual-poetry-01.jpg",
-          "images/collection-visual-poetry-02.jpg",
-          "images/collection-visual-poetry-03.jpg"
+          "images/collection-visual-poetry-01.png",
+          "images/collection-visual-poetry-02.png",
+          "images/collection-visual-poetry-03.png"
         ],
         link: "#"
       },
@@ -51,9 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
         image: "images/collection-melodies.jpg",
         description: "歌声や旋律、記憶に残る音楽。心に寄り添い、感情を彩る音のコレクション。",
         gallery: [
-          "images/collection-melodies-01.jpg",
-          "images/collection-melodies-02.jpg",
-          "images/collection-melodies-03.jpg"
+          "images/collection-melodies-01.png",
+          "images/collection-melodies-02.png",
+          "images/collection-melodies-03.png"
         ],
         link: "#"
       },
@@ -63,12 +63,12 @@ document.addEventListener("DOMContentLoaded", () => {
         title: "Fragments of Words",
         subtitle: "心に残る、言葉の欠片。",
         extra: [],
-        image: "images/collection-fragments.jpg",
+        image: "images/collection-fragments.png",
         description: "何度も読み返したい言葉や物語。心に残った文章を集めたコレクション。",
         gallery: [
-          "images/collection-fragments-01.jpg",
-          "images/collection-fragments-02.jpg",
-          "images/collection-fragments-03.jpg"
+          "images/collection-fragments-01.png",
+          "images/collection-fragments-02.png",
+          "images/collection-fragments-03.png"
         ],
         link: "#"
       },
@@ -78,12 +78,12 @@ document.addEventListener("DOMContentLoaded", () => {
         title: "Little Treasures",
         subtitle: "日常に隠れた、小さな宝物。",
         extra: [],
-        image: "images/collection-treasures.jpg",
+        image: "images/collection-treasures.png",
         description: "好きなもの、大切なもの、何気ない日常の中で見つけた特別な宝物たち。",
         gallery: [
-          "images/collection-treasures-01.jpg",
-          "images/collection-treasures-02.jpg",
-          "images/collection-treasures-03.jpg"
+          "images/collection-treasures-01.png",
+          "images/collection-treasures-02.png",
+          "images/collection-treasures-03.png"
         ],
         link: "#"
       }
@@ -177,4 +177,3 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-  
